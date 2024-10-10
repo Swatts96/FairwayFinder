@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Course Mapping</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Golf Course Mapping</h1>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    const map = L.map('map').setView([44.681986, -63.744311], 8); // Centering on Nova Scotia
+
+    // Load and display map tiles from OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Sample golf course data
+    const golfCourses = [
+      {
+        name: "Ashburn Golf Club",
+        lat: 44.6894,
+        lng: -63.7543,
+        teeBoxes: "Blue: 6700 yards, White: 6400 yards, Red: 6000 yards"
+      },
+      {
+        name: "Glen Arbour Golf Course",
+        lat: 44.7167,
+        lng: -63.8324,
+        teeBoxes: "Blue: 7200 yards, White: 6900 yards, Red: 6500 yards"
+      }
+      // Add more golf courses here
+    ];
+
+    // Add markers for each golf course
+    golfCourses.forEach(course => {
+      const marker = L.marker([course.lat, course.lng]).addTo(map);
+      marker.bindPopup(`<b>${course.name}</b><br>${course.teeBoxes}`);
+    });
+  </script>
+</body>
+</html>
