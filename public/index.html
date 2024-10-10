@@ -18,36 +18,29 @@
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script>
-    // Initialize the map
-    const map = L.map('map').setView([44.681986, -63.744311], 8); // Centering on Nova Scotia
+    // Initialize the map centered on Nova Scotia
+    const map = L.map('map').setView([44.681986, -63.744311], 8);
 
     // Load and display map tiles from OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Sample golf course data
-    const golfCourses = [
-      {
-        name: "Ashburn Golf Club",
-        lat: 44.6894,
-        lng: -63.7543,
-        teeBoxes: "Blue: 6700 yards, White: 6400 yards, Red: 6000 yards"
-      },
-      {
-        name: "Glen Arbour Golf Course",
-        lat: 44.7167,
-        lng: -63.8324,
-        teeBoxes: "Blue: 7200 yards, White: 6900 yards, Red: 6500 yards"
-      }
-      // Add more golf courses here
-    ];
-
-    // Add markers for each golf course
-    golfCourses.forEach(course => {
-      const marker = L.marker([course.lat, course.lng]).addTo(map);
-      marker.bindPopup(`<b>${course.name}</b><br>${course.teeBoxes}`);
-    });
+    // Fetch the golf courses data from the JSON file
+    fetch('courses.json') // Make sure 'courses.json' is in the same directory as the HTML file or provide the correct path
+      .then(response => response.json())
+      .then(golfCourses => {
+        golfCourses.forEach(course => {
+          // Check if coordinates are available before adding markers
+          if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
+            const marker = L.marker([course.coordinates.latitude, course.coordinates.longitude]).addTo(map);
+            marker.bindPopup(`<b>${course.name}</b><br>Location: ${course.location}<br>Holes: ${course.holes}<br>Type: ${course.type}`);
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching the courses data:', error);
+      });
   </script>
 </body>
 </html>
