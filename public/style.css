@@ -1,0 +1,35 @@
+/* Map styling */
+#map {
+    height: 600px;
+    width: 100%;
+  }
+  
+  /* Search bar styling */
+  #searchBar {
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    width: 350px;
+    z-index: 1000;
+  }
+  
+  #searchInput {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #searchBar button {
+    padding: 5px 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #searchBar button:hover {
+    background-color: #45a049;
+  }
+  
