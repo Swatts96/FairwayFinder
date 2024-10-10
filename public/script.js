@@ -6,6 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
+// Store markers globally for filtering and search
 let markers = {};
 let searchResults = [];
 let currentIndex = 0;
@@ -17,44 +18,63 @@ fetch('courses.json')
     golfCourses.forEach(course => {
       if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
         // Add a marker for each course
-        const marker = L.marker([course.coordinates.latitude, course.coordinates.longitude]).addTo(map);
+        const marker = L.marker([course.coordinates.latitude, course.coordinates.longitude]);
 
         // Create a popup content with course details
         const popupContent = `
           <b>${course.name}</b><br>
-          Location: ${course.location}<br>
-          Holes: ${course.holes}<br>
-          Type: ${course.type}<br>
-          Style: ${course.style ? course.style : 'N/A'}<br>
-          Par: ${course.par}<br>
-          Length: ${course.length}<br>
-          Slope: ${course.slope ? course.slope : 'N/A'}<br>
-          Rating: ${course.rating ? course.rating : 'N/A'}
+          <b>Location:</b> ${course.location}<br>
+          <b>Holes:</b> ${course.holes}<br>
+          <b>Type:</b> ${course.type}<br>
+          <b>Style:</b> ${course.style ? course.style : 'N/A'}<br>
+          <b>Par:</b> ${course.par}<br>
+          <b>Length:</b> ${course.length}<br>
+          <b>Slope:</b> ${course.slope ? course.slope : 'N/A'}<br>
+          <b>Rating:</b> ${course.rating ? course.rating : 'N/A'}
         `;
         marker.bindPopup(popupContent);
 
-        // Store the marker for search functionality
-        markers[course.name.toLowerCase()] = { lat: course.coordinates.latitude, lng: course.coordinates.longitude };
-
-        // Show label on hover
-        marker.on('mouseover', function () {
-          this.bindTooltip(course.name, {
-            permanent: false,
-            direction: 'top',
-            className: 'course-label' // Add CSS for better styling if needed
-          }).openTooltip();
-        });
-
-        // Remove the tooltip when the mouse leaves the marker
-        marker.on('mouseout', function () {
-          this.closeTooltip();
-        });
+        // Add the marker to the map and store it for filtering
+        marker.addTo(map);
+        markers[course.name.toLowerCase()] = {
+          marker: marker,
+          holes: course.holes
+        };
       }
     });
   })
   .catch(error => {
     console.error('Error fetching the courses data:', error);
   });
+
+// Function to display all courses
+function showAllCourses() {
+  Object.values(markers).forEach(({ marker }) => {
+    marker.addTo(map);
+  });
+}
+
+// Function to display only 18-hole courses
+function show18HoleCourses() {
+  Object.values(markers).forEach(({ marker, holes }) => {
+    if (holes === 18) {
+      marker.addTo(map);
+    } else {
+      map.removeLayer(marker);
+    }
+  });
+}
+
+// Function to display only 9-hole courses
+function show9HoleCourses() {
+  Object.values(markers).forEach(({ marker, holes }) => {
+    if (holes === 9) {
+      marker.addTo(map);
+    } else {
+      map.removeLayer(marker);
+    }
+  });
+}
 
 // Search functionality
 function searchCourse() {
@@ -71,7 +91,7 @@ function searchCourse() {
 
 // Function to center the map on the current course in searchResults
 function highlightCourse(courseName) {
-  const coordinates = markers[courseName];
+  const coordinates = markers[courseName].marker.getLatLng();
   map.setView([coordinates.lat, coordinates.lng], 12); // Zoom to the selected course
 }
 

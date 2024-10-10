@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fairway Finder</title>
+  <title>Golf Course Mapping</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" /> <!-- External CSS -->
 </head>
@@ -20,9 +20,14 @@
 
   <!-- Main Content -->
   <main>
-    <h1>Fairway Finder</h1>
-    <h2>Nova Scotia</h2>
-    <h4>Author: Sam Watts</h4>
+    <h1>Golf Course Mapping</h1>
+
+    <!-- Button toggles -->
+    <div id="filterButtons">
+      <button onclick="showAllCourses()">All Courses</button>
+      <button onclick="show18HoleCourses()">18-Hole Courses</button>
+      <button onclick="show9HoleCourses()">9-Hole Courses</button>
+    </div>
     
     <!-- Search bar with arrows -->
     <div id="searchBar">
@@ -40,6 +45,32 @@
       <p id="courseDetails">Click on a marker to view course details.</p>
     </div>
   </main>
+  
+  <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <ul class="footer-links">
+            <li><a href="#">Ad Choices</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Notice</a></li>
+            <li><a href="#">CA Notice</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Special Offers</a></li>
+        </ul>
+        <div class="footer-right">
+            <p>&copy; 2024 Golf Mapping App. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="icons/twitter.svg" alt="X (formerly Twitter)" /></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="script.js"></script> <!-- External JS File -->
