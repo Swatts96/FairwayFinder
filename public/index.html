@@ -10,10 +10,26 @@
       height: 600px;
       width: 100%;
     }
+    #searchBar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    }
   </style>
 </head>
 <body>
   <h1>Golf Course Mapping</h1>
+  <br>
+  <br>
+  <div id="searchBar">
+    <input type="text" id="searchInput" placeholder="Search for a golf course..." />
+    <button onclick="searchCourse()">Search</button>
+  </div>
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -26,21 +42,59 @@
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
+    // Store markers globally for searching later
+    const markers = {};
+
     // Fetch the golf courses data from the JSON file
-    fetch('courses.json') // Make sure 'courses.json' is in the same directory as the HTML file or provide the correct path
+    fetch('courses.json')
       .then(response => response.json())
       .then(golfCourses => {
         golfCourses.forEach(course => {
-          // Check if coordinates are available before adding markers
           if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
+            // Add a marker for each course
             const marker = L.marker([course.coordinates.latitude, course.coordinates.longitude]).addTo(map);
-            marker.bindPopup(`<b>${course.name}</b><br>Location: ${course.location}<br>Holes: ${course.holes}<br>Type: ${course.type}`);
+
+            // Create a popup content with course details
+            const popupContent = `
+              <b>${course.name}</b><br>
+              Location: ${course.location}<br>
+              Holes: ${course.holes}<br>
+              Type: ${course.type}<br>
+              Style: ${course.style ? course.style : 'N/A'}<br>
+              Par: ${course.par}<br>
+              Length: ${course.length}<br>
+              Slope: ${course.slope ? course.slope : 'N/A'}<br>
+              Rating: ${course.rating ? course.rating : 'N/A'}
+            `;
+            marker.bindPopup(popupContent);
+
+            // Display the name above the marker
+            const label = L.divIcon({
+              className: 'course-label',
+              html: `<strong>${course.name}</strong>`,
+              iconSize: [100, 30]
+            });
+            L.marker([course.coordinates.latitude, course.coordinates.longitude], { icon: label }).addTo(map);
+
+            // Store the marker for search functionality
+            markers[course.name.toLowerCase()] = [course.coordinates.latitude, course.coordinates.longitude];
           }
         });
       })
       .catch(error => {
         console.error('Error fetching the courses data:', error);
       });
+
+    // Search functionality
+    function searchCourse() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      if (markers[searchInput]) {
+        const [lat, lng] = markers[searchInput];
+        map.setView([lat, lng], 12); // Zoom to the selected course
+      } else {
+        alert('Golf course not found');
+      }
+    }
   </script>
 </body>
 </html>
