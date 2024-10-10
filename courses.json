@@ -8,7 +8,10 @@
       "length": "6415 yards",
       "slope": 131,
       "rating": 70.5,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.8297,
+        "longitude": -64.2144
+      }
     },
     {
       "name": "Bacon's Par-3 Golf Course",
@@ -19,7 +22,10 @@
       "length": "",
       "slope": "",
       "rating": "",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.8425,
+        "longitude": -64.2164
+      }
     },
     {
       "name": "Antigonish Golf and Country Club",
@@ -30,7 +36,10 @@
       "length": "6640 yards",
       "slope": 136,
       "rating": 72.4,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.6226,
+        "longitude": -61.9936
+      }
     },
     {
       "name": "Granite Springs Golf Club",
@@ -41,7 +50,10 @@
       "length": "6448 yards",
       "slope": 146,
       "rating": 71.6,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.522,
+        "longitude": -63.8789
+      }
     },
     {
       "name": "The Lakes Golf Club",
@@ -52,7 +64,10 @@
       "length": "6904 yards",
       "slope": 147,
       "rating": 74.1,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.9418,
+        "longitude": -60.498
+      }
     },
     {
       "name": "Eden Golf and Country Club",
@@ -63,7 +78,10 @@
       "length": "6187 yards",
       "slope": 122,
       "rating": 70.2,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.8415,
+        "longitude": -65.2926
+      }
     },
     {
       "name": "Brookfield Golf and Country Club",
@@ -74,7 +92,10 @@
       "length": "5587 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.2302,
+        "longitude": -63.2774
+      }
     },
     {
       "name": "Chester Golf Club",
@@ -85,7 +106,10 @@
       "length": "6086 yards",
       "slope": 131,
       "rating": 70.9,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.5401,
+        "longitude": -64.2405
+      }
     },
     {
       "name": "Mill Ridge Golf Course",
@@ -96,7 +120,10 @@
       "length": "",
       "slope": "",
       "rating": "",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.5387,
+        "longitude": -64.2283
+      }
     },
     {
       "name": "Sherwood Golf and Country Club",
@@ -107,7 +134,10 @@
       "length": "6495 yards",
       "slope": 127,
       "rating": 67.6,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.5533,
+        "longitude": -64.2246
+      }
     },
     {
       "name": "Clare Golf and Country Club",
@@ -118,7 +148,10 @@
       "length": "6146 yards",
       "slope": 118,
       "rating": 69.8,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.3486,
+        "longitude": -66.0974
+      }
     },
     {
       "name": "Springhill Centennial Golf Club",
@@ -129,7 +162,10 @@
       "length": "3001 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.6486,
+        "longitude": -64.0489
+      }
     },
     {
       "name": "Debert Golf Club",
@@ -140,7 +176,10 @@
       "length": "2918 yards",
       "slope": 117,
       "rating": 34.6,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.4328,
+        "longitude": -63.4961
+      }
     },
     {
       "name": "Harbour Ridge Golf Club",
@@ -151,7 +190,10 @@
       "length": "2301 yards",
       "slope": 101,
       "rating": 31.6,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.6965,
+        "longitude": -63.3228
+      }
     },
     {
       "name": "Avon Valley Golf and Country Club",
@@ -162,7 +204,10 @@
       "length": "6106 yards",
       "slope": 127,
       "rating": 69.8,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.9973,
+        "longitude": -64.1796
+      }
     },
     {
       "name": "Passchendaele Golf Club",
@@ -173,7 +218,10 @@
       "length": "2528 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.2027,
+        "longitude": -60.0541
+      }
     },
     {
       "name": "Indian Lake Golf Course",
@@ -184,7 +232,10 @@
       "length": "1631 yards",
       "slope": 103,
       "rating": 29.7,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.6832,
+        "longitude": -63.7158
+      }
     },
     {
       "name": "Above Par Golf Course",
@@ -195,7 +246,10 @@
       "length": "1445 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.9845,
+        "longitude": -64.9364
+      }
     },
     {
       "name": "Greenwood Golf Club",
@@ -206,7 +260,10 @@
       "length": "6164 yards",
       "slope": 122,
       "rating": 70,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.9782,
+        "longitude": -64.9297
+      }
     },
     {
       "name": "Ashburn Golf Club - Old",
@@ -217,7 +274,24 @@
       "length": "5210 yards",
       "slope": 119,
       "rating": 65.2,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.6522,
+        "longitude": -63.6318
+      }
+    },
+    {
+      "name": "Ashburn Golf Club - Old",
+      "location": "Halifax, Nova Scotia",
+      "holes": 18,
+      "type": "Private",
+      "par": 67,
+      "length": "5210 yards",
+      "slope": 119,
+      "rating": 65.2,
+      "coordinates": {
+        "latitude": 44.6522,
+        "longitude": -63.6318
+      }
     },
     {
       "name": "Prospect Short Game Golf",
@@ -225,7 +299,10 @@
       "holes": 9,
       "type": "Public",
       "style": "Pitch & Putt",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.5543,
+        "longitude": -63.7367
+      }
     },
     {
       "name": "The Cape Breton Highlands Golf Course",
@@ -237,7 +314,10 @@
       "length": "6592 yards",
       "slope": 155,
       "rating": 80.4,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.6718,
+        "longitude": -60.3781
+      }
     },
     {
       "name": "Island Green Golf Club",
@@ -248,7 +328,10 @@
       "length": "1505 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.0807,
+        "longitude": -64.4818
+      }
     },
     {
       "name": "Bluenose Golf and Country Club",
@@ -259,7 +342,10 @@
       "length": "5295 yards",
       "slope": 108,
       "rating": 66.7,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.3775,
+        "longitude": -64.3086
+      }
     },
     {
       "name": "River Oaks Golf Club - North",
@@ -270,7 +356,10 @@
       "length": "5887 yards",
       "slope": 120,
       "rating": 69.7,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.8531,
+        "longitude": -63.3468
+      }
     },
     {
       "name": "River Oaks Golf Club - South",
@@ -281,7 +370,10 @@
       "length": "3113 yards",
       "slope": 124,
       "rating": 35.4,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.8531,
+        "longitude": -63.3468
+      }
     },
     {
       "name": "Uniacke Pines Golf Course",
@@ -293,7 +385,10 @@
       "length": "2257 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.9288,
+        "longitude": -63.9183
+      }
     },
     {
       "name": "KenWo Country Club",
@@ -304,7 +399,10 @@
       "length": "6230 yards",
       "slope": 130,
       "rating": 76.2,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.0763,
+        "longitude": -64.4577
+      }
     },
     {
       "name": "Renfrew Camping & Golf",
@@ -315,7 +413,10 @@
       "length": "1472 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.0733,
+        "longitude": -63.8447
+      }
     },
     {
       "name": "Seaview Golf and Country Club",
@@ -326,7 +427,10 @@
       "length": "6174 yards",
       "slope": 131,
       "rating": 71.3,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.2065,
+        "longitude": -60.2652
+      }
     },
     {
       "name": "Parrsboro Golf Club",
@@ -338,7 +442,10 @@
       "length": "2343 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.3976,
+        "longitude": -64.324
+      }
     },
     {
       "name": "Alderdale Greens Golf Course",
@@ -349,7 +456,10 @@
       "length": "2445 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.1035,
+        "longitude": -60.2154
+      }
     },
     {
       "name": "Hartlen Point Forces Golf Club",
@@ -360,7 +470,10 @@
       "length": "6482 yards",
       "slope": 115,
       "rating": 70.5,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.6265,
+        "longitude": -63.4917
+      }
     },
     {
       "name": "Juniper Hollow Par 3 Golf Course",
@@ -372,7 +485,10 @@
       "length": "1519 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.0559,
+        "longitude": -60.1787
+      }
     },
     {
       "name": "Lingan Golf and Country Club",
@@ -383,7 +499,10 @@
       "length": "6620 yards",
       "slope": 125,
       "rating": 71.4,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.1095,
+        "longitude": -60.1928
+      }
     },
     {
       "name": "Links at Brunello",
@@ -394,7 +513,10 @@
       "length": "7089 yards",
       "slope": 141,
       "rating": 74.4,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.625,
+        "longitude": -63.7203
+      }
     },
     {
       "name": "Dundee Resort and Golf Club",
@@ -405,7 +527,10 @@
       "length": "6384 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.7,
+        "longitude": -61.155
+      }
     },
     {
       "name": "Annapolis Royal Golf & Country Club",
@@ -416,7 +541,10 @@
       "length": "5473 yards",
       "slope": 117,
       "rating": 67.1,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.7432,
+        "longitude": -65.5111
+      }
     },
     {
       "name": "Baddeck Forks Golf Club",
@@ -424,10 +552,10 @@
       "holes": 9,
       "type": "Public",
       "par": 36,
-      "length": "2857 yards",
-      "slope": 102,
-      "rating": 32.25,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.107,
+        "longitude": -60.7548
+      }
     },
     {
       "name": "Bell Bay Golf Club",
@@ -438,7 +566,10 @@
       "length": "7037 yards",
       "slope": 144,
       "rating": 74.8,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.1022,
+        "longitude": -60.7848
+      }
     },
     {
       "name": "Lost Creek Golf Club and Village",
@@ -449,7 +580,10 @@
       "length": "5919 yards",
       "slope": 130,
       "rating": 69.4,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.8636,
+        "longitude": -63.7643
+      }
     },
     {
       "name": "Berwick Heights Golf Course",
@@ -460,7 +594,10 @@
       "length": "6464 yards",
       "slope": 127,
       "rating": 71.5,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.0658,
+        "longitude": -64.6416
+      }
     },
     {
       "name": "Olde Town Golf Course",
@@ -471,7 +608,10 @@
       "length": "2500 yards",
       "slope": 112,
       "rating": 33.2,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.3645,
+        "longitude": -64.5196
+      }
     },
     {
       "name": "Osprey Ridge Golf Club",
@@ -482,7 +622,10 @@
       "length": "6607 yards",
       "slope": 139,
       "rating": 72.6,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 44.3574,
+        "longitude": -64.5152
+      }
     },
     {
       "name": "Cambridge Cliffs Golf Club",
@@ -494,7 +637,10 @@
       "length": "2156 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.2436,
+        "longitude": -64.0991
+      }
     },
     {
       "name": "Eagle Crest Golf Course",
@@ -505,7 +651,10 @@
       "length": "6288 yards",
       "slope": "N/A",
       "rating": "N/A",
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 45.1455,
+        "longitude": -64.5586
+      }
     },
     {
       "name": "Le Portage Golf Club",
@@ -516,7 +665,10 @@
       "length": "6777 yards",
       "slope": 137,
       "rating": 72.7,
-      "coordinates": ""
+      "coordinates": {
+        "latitude": 46.6233,
+        "longitude": -61.0162
+      }
     },
     {
       "name": "River Hills Golf and Country Club",
@@ -526,7 +678,11 @@
       "par": 72,
       "length": "6479 yards",
       "slope": 142,
-      "rating": 72
+      "rating": 72,
+      "coordinates": {
+        "latitude": 43.9784,
+        "longitude": -65.9345
+      }
     },
     {
       "name": "Brightwood Golf and Country Club",
@@ -536,7 +692,11 @@
       "par": 68,
       "length": "5554 yards",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 44.6863,
+        "longitude": -63.5801
+      }
     },
     {
       "name": "Grandview Golf and Country Club",
@@ -546,7 +706,11 @@
       "par": 72,
       "length": "6584 yards",
       "slope": 139,
-      "rating": 72.2
+      "rating": 72.2,
+      "coordinates": {
+        "latitude": 44.7625,
+        "longitude": -63.5825
+      }
     },
     {
       "name": "The Links at Montague",
@@ -557,7 +721,11 @@
       "par": 31,
       "length": "1880 yards",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 44.7048,
+        "longitude": -63.5152
+      }
     },
     {
       "name": "Digby Pines Golf Resort and Spa Golf Course",
@@ -567,7 +735,11 @@
       "par": 71,
       "length": "6283 yards",
       "slope": 127,
-      "rating": 70.7
+      "rating": 70.7,
+      "coordinates": {
+        "latitude": 44.624,
+        "longitude": -65.7605
+      }
     },
     {
       "name": "Ashburn Golf Club - New",
@@ -577,7 +749,11 @@
       "par": 72,
       "length": "7039 yards",
       "slope": 139,
-      "rating": 74.3
+      "rating": 74.3,
+      "coordinates": {
+        "latitude": 44.8101,
+        "longitude": -63.6038
+      }
     },
     {
       "name": "Lionel's Golf Center",
@@ -588,7 +764,11 @@
       "par": 31,
       "length": "1872 yards",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 46.0373,
+        "longitude": -60.0184
+      }
     },
     {
       "name": "Airlane Golf Club",
@@ -598,7 +778,11 @@
       "par": 36,
       "length": "3008 yards",
       "slope": 126,
-      "rating": 34.6
+      "rating": 34.6,
+      "coordinates": {
+        "latitude": 44.878,
+        "longitude": -63.5083
+      }
     },
     {
       "name": "Greenfield Golf Club",
@@ -609,7 +793,11 @@
       "par": 60,
       "length": "2866 yards",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 44.3973,
+        "longitude": -64.9475
+      }
     },
     {
       "name": "Osprey Shores Golf Resort",
@@ -619,7 +807,11 @@
       "par": 35,
       "length": "2691 yards",
       "slope": 112,
-      "rating": 34
+      "rating": 34,
+      "coordinates": {
+        "latitude": 45.3963,
+        "longitude": -61.5024
+      }
     },
     {
       "name": "Glen Arbour Golf Course - Short Course",
@@ -630,7 +822,11 @@
       "par": 27,
       "length": "844 yards",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 44.7435,
+        "longitude": -63.7972
+      }
     },
     {
       "name": "Aspotogan Ridge Golf Club",
@@ -640,7 +836,11 @@
       "par": 70,
       "length": "5480 yards",
       "slope": 126,
-      "rating": 67.2
+      "rating": 67.2,
+      "coordinates": {
+        "latitude": 44.5482,
+        "longitude": -64.0487
+      }
     },
     {
       "name": "Cabot Cliffs",
@@ -651,7 +851,11 @@
       "par": 72,
       "length": "6768 yards",
       "slope": 148,
-      "rating": 80.3
+      "rating": 80.3,
+      "coordinates": {
+        "latitude": 46.2115,
+        "longitude": -61.31
+      }
     },
     {
       "name": "Cabot Links",
@@ -662,7 +866,11 @@
       "par": 70,
       "length": "6854 yards",
       "slope": 132,
-      "rating": 73.7
+      "rating": 73.7,
+      "coordinates": {
+        "latitude": 46.2315,
+        "longitude": -61.3048
+      }
     },
     {
       "name": "Cabot Links - The Nest",
@@ -673,7 +881,11 @@
       "par": "N/A",
       "length": "N/A",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 46.2288,
+        "longitude": -61.3026
+      }
     },
     {
       "name": "Paragon Golf and Country Club",
@@ -683,7 +895,11 @@
       "par": 72,
       "length": "6358 yards",
       "slope": 122,
-      "rating": 70.8
+      "rating": 70.8,
+      "coordinates": {
+        "latitude": 44.9865,
+        "longitude": -64.922
+      }
     },
     {
       "name": "Rosevale Par 3 Family Golf Course",
@@ -693,7 +909,11 @@
       "par": 29,
       "length": "1272 yards",
       "slope": 100,
-      "rating": 28.5
+      "rating": 28.5,
+      "coordinates": {
+        "latitude": 45.0164,
+        "longitude": -64.0871
+      }
     },
     {
       "name": "Abercrombie Golf Club",
@@ -703,7 +923,11 @@
       "par": 71,
       "length": "6345 yards",
       "slope": 134,
-      "rating": 71.1
+      "rating": 71.1,
+      "coordinates": {
+        "latitude": 45.5932,
+        "longitude": -62.6455
+      }
     },
     {
       "name": "Eagle's Chance Golf Club",
@@ -713,7 +937,11 @@
       "par": "N/A",
       "length": "N/A",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 45.6014,
+        "longitude": -62.6798
+      }
     },
     {
       "name": "Glen Lovat Golf Club",
@@ -723,7 +951,11 @@
       "par": 72,
       "length": "6431 yards",
       "slope": 139,
-      "rating": 72
+      "rating": 72,
+      "coordinates": {
+        "latitude": 45.6007,
+        "longitude": -62.6476
+      }
     },
     {
       "name": "Linacy Greens Golf Club",
@@ -733,7 +965,11 @@
       "par": 72,
       "length": "5838 yards",
       "slope": 118,
-      "rating": 67.8
+      "rating": 67.8,
+      "coordinates": {
+        "latitude": 45.6037,
+        "longitude": -62.6209
+      }
     },
     {
       "name": "Coyote Hill Golf Course",
@@ -743,7 +979,11 @@
       "par": 35,
       "length": "2677 yards",
       "slope": "N/A",
-      "rating": 33.1
+      "rating": 33.1,
+      "coordinates": {
+        "latitude": 44.9843,
+        "longitude": -63.9547
+      }
     },
     {
       "name": "River Run Golf Club",
@@ -753,7 +993,11 @@
       "par": 34,
       "length": "2637 yards",
       "slope": 115,
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 45.3616,
+        "longitude": -63.3102
+      }
     },
     {
       "name": "Oakfield Golf and Country Club",
@@ -763,7 +1007,11 @@
       "par": 72,
       "length": "6747 yards",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 44.8807,
+        "longitude": -63.559
+      }
     },
     {
       "name": "Pictou Harbour Golf Club",
@@ -773,7 +1021,11 @@
       "par": 32,
       "length": "2400 yards",
       "slope": 99,
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 45.6763,
+        "longitude": -62.7138
+      }
     },
     {
       "name": "Northumberland Links",
@@ -784,7 +1036,11 @@
       "par": 72,
       "length": "6623 yards",
       "slope": 132,
-      "rating": 72.5
+      "rating": 72.5,
+      "coordinates": {
+        "latitude": 45.8731,
+        "longitude": -63.6688
+      }
     },
     {
       "name": "The Links at Penn Hills",
@@ -794,7 +1050,11 @@
       "par": 72,
       "length": "7236 yards",
       "slope": 136,
-      "rating": 75
+      "rating": 75,
+      "coordinates": {
+        "latitude": 45.0928,
+        "longitude": -63.4821
+      }
     },
     {
       "name": "Fox Hollow Golf Club",
@@ -804,7 +1064,11 @@
       "par": 72,
       "length": "6596 yards",
       "slope": 132,
-      "rating": 72.4
+      "rating": 72.4,
+      "coordinates": {
+        "latitude": 45.1391,
+        "longitude": -63.3678
+      }
     },
     {
       "name": "Brule Point Golf",
@@ -814,7 +1078,11 @@
       "par": 36,
       "length": "2903 yards",
       "slope": 108,
-      "rating": 33.4
+      "rating": 33.4,
+      "coordinates": {
+        "latitude": 45.7395,
+        "longitude": -63.2776
+      }
     },
     {
       "name": "Mountain Golf Club",
@@ -824,14 +1092,22 @@
       "par": 71,
       "length": "6126 yards",
       "slope": 126,
-      "rating": 69.3
+      "rating": 69.3,
+      "coordinates": {
+        "latitude": 45.357,
+        "longitude": -63.2821
+      }
     },
     {
       "name": "Ridgewood Golf Club",
       "location": "Truro, Nova Scotia",
       "holes": 9,
       "type": "Public",
-      "style": "Parkland"
+      "style": "Parkland",
+      "coordinates": {
+        "latitude": 45.3686,
+        "longitude": -63.2933
+      }
     },
     {
       "name": "Truro Golf Club",
@@ -841,7 +1117,11 @@
       "par": 71,
       "length": "6339 yards",
       "slope": 129,
-      "rating": 71.1
+      "rating": 71.1,
+      "coordinates": {
+        "latitude": 45.3591,
+        "longitude": -63.2796
+      }
     },
     {
       "name": "Fox Harb'r Resort",
@@ -852,7 +1132,11 @@
       "par": 72,
       "length": "7253 yards",
       "slope": 141,
-      "rating": 75.4
+      "rating": 75.4,
+      "coordinates": {
+        "latitude": 45.8254,
+        "longitude": -63.4801
+      }
     },
     {
       "name": "Fox Harb'r Resort - Par-3",
@@ -863,7 +1147,11 @@
       "par": 27,
       "length": "1039 yards",
       "slope": "N/A",
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 45.8255,
+        "longitude": -63.48
+      }
     },
     {
       "name": "West Pubnico Golf and Country Club",
@@ -873,7 +1161,11 @@
       "par": 72,
       "length": "6052 yards",
       "slope": 124,
-      "rating": "N/A"
+      "rating": "N/A",
+      "coordinates": {
+        "latitude": 43.6732,
+        "longitude": -65.7783
+      }
     },
     {
       "name": "White Point Golf Club",
@@ -883,7 +1175,11 @@
       "par": 35,
       "length": "2991 yards",
       "slope": 115,
-      "rating": 33.5
+      "rating": 33.5,
+      "coordinates": {
+        "latitude": 43.9674,
+        "longitude": -64.7284
+      }
     },
     {
       "name": "Yarmouth Links Golf Club",
@@ -894,6 +1190,10 @@
       "par": 72,
       "length": "6039 yards",
       "slope": 120,
-      "rating": 69.8
+      "rating": 69.8,
+      "coordinates": {
+        "latitude": 43.8376,
+        "longitude": -66.1145
+      }
     }
   ]
