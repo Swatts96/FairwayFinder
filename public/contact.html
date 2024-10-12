@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" /> <!-- External CSS -->
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courselist.html">Courses</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+<main>
+    <div class="contactus">
+    <h1>Questions? Inquiries? Praises?? Contact Us Now!</h1>
+
+    <div class="contactbox"
+    <form action="submit_form.php" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+    <h2>NOTE: THIS IS MISSING BACKEND PROCESSING!!!</h2>
+    </div>
+</main>
+
+      <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <ul class="footer-links">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="footer-right">
+            <p>&copy; 2024 Fairyway Finder App. </p>
+            <p> Made by Sam Watt for INFT4000/3280/Special Topics I </p>
+            <div class="social-icons">
+                <a href="#"><img src="icons/twitter.svg" alt="X (formerly Twitter)" /></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
