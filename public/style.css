@@ -140,13 +140,11 @@ body {
   z-index: 1000; /* Ensure it appears above other content */
 }
 
-
 #courseInfo {
   background-color: #f8f9fa; /* Light background */
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
 }
-
 
 /* Course info */
 #courseInfo .course-details-grid {
@@ -160,14 +158,47 @@ body {
   padding: 5px;
 }
 
-.course-image {
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Aligns the menu below the icon */
+  right: 0;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px 0;
 }
 
+/* Links inside the dropdown */
+.dropdown-menu a {
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
 
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
 
+.user-icon {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  margin-left: 5px;
+}
 
+.user-menu-container .user-icon {
+  width: 55px; /* Set an initial size if needed */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
 
+.user-menu-container .user-icon:hover {
+  transform: scale(1.1) translateY(-2px); /* Slightly enlarge and lift */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
