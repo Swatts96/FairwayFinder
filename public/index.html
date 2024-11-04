@@ -23,6 +23,27 @@
       <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
+
+  
+
+    <!-- Login/Logout Button -->
+<div class="login-logout-container text-center ml-auto">
+  <button id="loginLogoutBtn" class="btn custom-btn" onclick="handleLoginLogout()">Login</button>
+</div>
+
+
+  <!-- User Icon and Dropdown Menu -->
+  <div class="user-menu-container text-center">
+    <img src="../images/user.png" alt="User Icon" class="user-icon" onclick="toggleUserMenu()" />
+  
+    <!-- Dropdown Menu -->
+    <div id="userDropdownMenu" class="dropdown-menu">
+      <a href="#" onclick="viewScores()">My Scores & Rounds</a>
+      <a href="#" onclick="viewFriends()">Friends List</a>
+      <a href="#" onclick="viewFavorites()">Favorite Courses</a>
+    </div>
+  </div>
+
   </div>
 </nav>
 
@@ -61,7 +82,6 @@
     
     <!-- Course Info Section -->
     <div id="courseInfo" class="bg-white p-4 rounded shadow">
-      <h2 class="h4">Selected Course Information</h2>
       <p id="courseDetails">Click on a marker to view course details.</p>
     </div>
     <br>

@@ -39,37 +39,69 @@ function populateMarkers(golfCourses) {
         { icon: golfCourseIcon }
       );
 
-      // Create popup content
-      const popupContent = `
-        <b>${course.name}</b><br>
-        Location: ${course.location}<br>
-        Holes: ${course.holes}<br>
-        Type: ${course.type}<br>
-        Style: ${course.style || 'N/A'}<br>
-        Par: ${course.par}<br>
-        Length: ${course.length}<br>
-        Slope: ${course.slope || 'N/A'}<br>
-        Rating: ${course.rating || 'N/A'}<br>
-        <a href="${course.website}" target="_blank">Visit Website</a>
-      `;
-
-      // Bind popup to marker
-      marker.bindPopup(popupContent);
-
-      // Add the marker to the map and store it for filtering
-      marker.addTo(map);
+      // Store the marker for filtering
       markers[course.name.toLowerCase()] = {
         marker: marker,
         holes: course.holes
       };
 
-      // Event listener to update selected course details when popup opens
-      marker.on('popupopen', () => {
+      // Event listener to update selected course details when marker is clicked
+      marker.on('click', () => {
         updateSelectedCourseInfo(course);
       });
+
+      // Add hover event to show tooltip with course name
+      marker.on('mouseover', () => {
+        const tooltip = L.tooltip({
+          permanent: false,
+          direction: 'top',
+          className: 'course-tooltip'
+        })
+        .setContent(course.name)
+        .setLatLng(marker.getLatLng())
+        .addTo(map);
+        
+        marker.on('mouseout', () => {
+          map.removeLayer(tooltip);
+        });
+      });
+
+      // Add the marker to the map
+      marker.addTo(map);
     }
   });
 }
+
+// Function to update the selected course details in the #courseInfo section
+function updateSelectedCourseInfo(course) {
+  const courseDetailsContainer = document.getElementById("courseInfo");
+
+  // Format course name for the image file
+  const formattedCourseName = course.name.toLowerCase().replace(/ /g, '-') + '.jpg';
+  const imagePath = `/images/${formattedCourseName}`;
+
+  // Create image element if the image exists
+  const courseImage = `<img src="${imagePath}" alt="${course.name}" class="course-image" onerror="this.style.display='none'">`;
+
+  courseDetailsContainer.innerHTML = `
+    <h2 class="h4">Selected Course Information</h2>
+    ${courseImage}
+    <div class="course-details-grid">
+      <div><strong>Name:</strong> ${course.name}</div>
+      <div><strong>Location:</strong> ${course.location}</div>
+      <div><strong>Holes:</strong> ${course.holes}</div>
+      <div><strong>Type:</strong> ${course.type}</div>
+      <div><strong>Style:</strong> ${course.style || 'N/A'}</div>
+      <div><strong>Par:</strong> ${course.par}</div>
+      <div><strong>Length:</strong> ${course.length}</div>
+      <div><strong>Slope:</strong> ${course.slope || 'N/A'}</div>
+      <div><strong>Rating:</strong> ${course.rating || 'N/A'}</div>
+      ${course.website ? `<div><strong>Website:</strong> <a href="${course.website}" target="_blank">Visit Website</a></div>` : ''}
+    </div>
+  `;
+}
+
+
 
 // Function to show all courses
 function showAllCourses() {
@@ -109,35 +141,6 @@ function show9HoleCourses() {
 }
 
 
-
-// Function to update the selected course details in the #courseInfo section
-function updateSelectedCourseInfo(course) {
-  const courseDetailsContainer = document.getElementById("courseInfo");
-
-  // Format course name for the image file
-  const formattedCourseName = course.name.toLowerCase().replace(/ /g, '-') + '.jpg';
-  const imagePath = `/images/${formattedCourseName}`;
-
-  // Create image element if the image exists
-  const courseImage = `<img src="${imagePath}" alt="${course.name}" class="course-image" onerror="this.style.display='none'">`;
-
-  courseDetailsContainer.innerHTML = `
-    <h2 class="h4">Selected Course Information</h2>
-    ${courseImage}
-    <div class="course-details-grid">
-      <div><strong>Name:</strong> ${course.name}</div>
-      <div><strong>Location:</strong> ${course.location}</div>
-      <div><strong>Holes:</strong> ${course.holes}</div>
-      <div><strong>Type:</strong> ${course.type}</div>
-      <div><strong>Style:</strong> ${course.style || 'N/A'}</div>
-      <div><strong>Par:</strong> ${course.par}</div>
-      <div><strong>Length:</strong> ${course.length}</div>
-      <div><strong>Slope:</strong> ${course.slope || 'N/A'}</div>
-      <div><strong>Rating:</strong> ${course.rating || 'N/A'}</div>
-      ${course.website ? `<div><strong>Website:</strong> <a href="${course.website}" target="_blank">Visit Website</a></div>` : ''}
-    </div>
-  `;
-}
 
 
 // Search functionality using dynamically loaded course data
@@ -181,3 +184,19 @@ function cycleResults(direction) {
     highlightCourse(searchResults[currentIndex]);
   }
 }
+
+// Toggle dropdown menu visibility
+function toggleUserMenu() {
+  const userMenu = document.getElementById("userDropdownMenu");
+  userMenu.style.display = userMenu.style.display === "block" ? "none" : "block";
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  const userMenu = document.getElementById("userDropdownMenu");
+  if (!event.target.matches('.user-icon')) {
+    if (userMenu.style.display === "block") {
+      userMenu.style.display = "none";
+    }
+  }
+};
