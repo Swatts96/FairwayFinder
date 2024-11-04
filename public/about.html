@@ -5,81 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Fairway Finder</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css" /> <!-- External CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="courselist.html">Courses</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- Main Content -->
-  <main class="about-page">
-    <h1>About Fairway Finder</h1>
-    
-    <!-- App Introduction -->
-    <section class="about-section">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="index.html">Fairway Finder</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="courselist.html">Courses</a></li>
+      <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="aboutHero d-flex align-items-center">
+  <div class="overlay w-100 d-flex justify-content-center text-center">
+    <h4 class="text-light">From the valley to the city, <br> to Yarmouth from Inverness</h4>
+  </div>
+</section>
+
+
+<!-- Main Content -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6 mb-4">
       <h2>What is Fairway Finder?</h2>
       <p>Fairway Finder is a web application designed to help golfers easily discover golf courses around Nova Scotia. Whether you're new to golf or a seasoned player, Fairway Finder provides an interactive map, course details, and filters to help you find the perfect course for your needs.</p>
-    </section>
+    </div>
 
-    <!-- App Inspiration -->
-    <section class="inspiration-section">
+    <div class="col-md-6 mb-4">
       <h2>Inspiration Behind the App</h2>
-      <p>The inspiration for Fairway Finder came from the frustration of manually researching golf courses across Nova Scotia. Golfers, especially newcomers, often face difficulties in discovering courses without extensive searches—Googling, calling, and asking questions. It's even more challenging when you arrive at a course and find out it's beyond your budget. Fairway Finder solves this problem by offering a simple platform where you can browse, filter, and find affordable courses with ease.</p>
-    </section>
+      <p>The inspiration for Fairway Finder came from the frustration of manually researching golf courses across Nova Scotia. Golfers, especially newcomers, often face difficulties in discovering courses without extensive searches—Googling, calling, and asking questions. It's even more challenging when you arrive at a course and find out it's beyond your budget.</p>
+    </div>
 
-    <!-- App Goals -->
-    <section class="goals-section">
+    <div class="col-md-6 mb-4">
       <h2>Our Goals</h2>
       <ul>
         <li>Create a centralized platform for finding and comparing golf courses in Nova Scotia.</li>
         <li>Provide up-to-date course information, such as pricing, hole count, and reviews.</li>
         <li>Make it easy for new golfers to navigate and choose courses that fit their budget and preferences.</li>
       </ul>
-    </section>
+    </div>
 
-    <!-- Future Plans -->
-    <section class="future-goals-section">
+    <div class="col-md-6 mb-4">
       <h2>Future Goals</h2>
       <ul>
         <li>Expand course coverage to include golf courses outside of Nova Scotia.</li>
         <li>Introduce user accounts for personalized course tracking and review submissions.</li>
         <li>Integrate booking functionality so golfers can reserve tee times directly from the app.</li>
-        <li>Offer more detailed course analytics, including difficulty ratings and weather conditions.</li>
       </ul>
-    </section>
-  </main>
-
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-container">
-        <ul class="footer-links">
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
-        <div class="footer-right">
-            <p>&copy; 2024 Fairway Finder App. </p>
-            <p> Made by Sam Watt for INFT4000/3280/Special Topics I </p>
-            <div class="social-icons">
-                <a href="#"><img src="icons/twitter.svg" alt="X (formerly Twitter)" /></a>
-                <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
-                <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
-            </div>
-        </div>
     </div>
-  </footer>
+  </div>
+</div>
 
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="script.js"></script> <!-- External JS File -->
+<!-- Footer -->
+<footer class="custom-footer text-center py-4">
+  <ul class="list-inline mb-2">
+    <li class="list-inline-item"><a href="#" class="footer-link">Terms of Use</a></li>
+    <li class="list-inline-item"><a href="#" class="footer-link">Contact Us</a></li>
+    <li class="list-inline-item"><a href="#" class="footer-link">FAQ</a></li>
+  </ul>
+  <p>&copy; 2024 Fairway Finder App.</p>
+  <p>Made by Sam Watt for INFT4000/3280/Special Topics I</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

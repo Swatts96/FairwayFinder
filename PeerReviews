@@ -1,0 +1,21 @@
+Fairyway Finder - Peer Review notes 
+
+Kyle 
+
+- Add dropdown menu to search for courses 
+- Expand on course information underneath map upon course selection
+- Fix course list - Load 10 at a time with grid, and images. 
+
+
+
+Ryan Morris - 
+
+Add map.flyTo to do a flyin to leaflet 
+	- define target zoom 
+	- animation duration 
+	
+- Leaflet formatting and restricting maps 
+- Page element formatting 
+
+	
+	

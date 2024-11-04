@@ -5,68 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Golf Course Mapping</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css" /> <!-- External CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" /> <!-- Additional custom CSS -->
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="courselist.html">Courses</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+
+<!-- Custom Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="index.html">Fairway Finder</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="courselist.html">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Main Content -->
-  <main class="courselist">
-    <h1>Fairway Finder</h1>
+  <main class="container mt-4">
 
-    <!-- Button toggles -->
-    <div id="filterButtons">
-      <button onclick="showAllCourses()">All Courses</button>
-      <button onclick="show18HoleCourses()">18-Hole Courses</button>
-      <button onclick="show9HoleCourses()">9-Hole Courses</button>
-    </div>
-    
-    <!-- Search bar with arrows -->
-    <div id="searchBar">
-      <input type="text" id="searchInput" placeholder="Search for a golf course..." oninput="searchCourse()" />
-      <button onclick="cycleResults('prev')">⬆️</button>
-      <button onclick="cycleResults('next')">⬇️</button>
-    </div>
-    
-    <!-- Map -->
-    <div id="map"></div>
+   <!-- Filter Section -->
+<div class="jumbotron text-center py-4" style="background-color: #f0e0c6;">  
+  <img src="../images/FairwayFinderLogo.png" alt="Fairway Finder Logo" class="mb-3"><br>
+     <div class="searchBox py-4">
+      <!-- Course Type Buttons -->
+      <div class="btn-group mb-3" role="group">
+        <button onclick="showAllCourses()" class="btn custom-btn">All Courses</button>
+        <button onclick="show18HoleCourses()" class="btn custom-btn">18-Hole Courses</button>
+        <button onclick="show9HoleCourses()" class="btn custom-btn">9-Hole Courses</button>
+      </div>          
+
+    <!-- Searchable Dropdown Section -->
+    <div class="input-group w-50 mx-auto position-relative">
+      <input type="text" id="courseSearchInput" class="form-control" placeholder="Search for a golf course..." oninput="searchCourseDropdown()" />
+      <div class="input-group-append">
+        <button onclick="cycleResults('prev')" class="btn btn-secondary">⬆️</button>
+        <button onclick="cycleResults('next')" class="btn btn-secondary">⬇️</button>
+      </div>
+
+  <!-- Dropdown Menu for Filtered Courses -->
+  <div class="dropdown-menu w-100 position-absolute" id="dropdownCourseList" style="top: 100%;"></div>
+</div>
+</div> 
+<br>
+
+
+    <!-- Map Section -->
+    <div id="map" class="mb-4" style="height: 600px; border-radius: 10px;"></div>
     
     <!-- Course Info Section -->
-    <div id="courseInfo">
-      <h2>Selected Course Information</h2>
+    <div id="courseInfo" class="bg-white p-4 rounded shadow">
+      <h2 class="h4">Selected Course Information</h2>
       <p id="courseDetails">Click on a marker to view course details.</p>
     </div>
+    <br>
   </main>
 
   <!-- Footer Section -->
-<footer>
-    <div class="footer-container">
-        <ul class="footer-links">
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
-        <div class="footer-right">
-            <p>&copy; 2024 Fairyway Finder App. </p>
-            <p> Made by Sam Watt for INFT4000/3280/Special Topics I </p>
-            <div class="social-icons">
-                <a href="#"><img src="icons/twitter.svg" alt="X (formerly Twitter)" /></a>
-                <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
-                <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
-            </div>
-        </div>
+  <footer class="custom-footer py-4">
+    <div class="container text-center">
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#" class="footer-link">Terms of Use</a></li>
+        <li class="list-inline-item"><a href="#" class="footer-link">Contact Us</a></li>
+        <li class="list-inline-item"><a href="#" class="footer-link">FAQ</a></li>
+      </ul>
+      <p class="mb-1">&copy; 2024 Fairway Finder App</p>
+      <p>Made by Sam Watt for INFT4000/3280/Special Topics I</p>
+      <div>
+        <a href="#" class="text-white mx-2"><img src="icons/twitter.svg" alt="X (formerly Twitter)" style="width: 24px;"></a>
+        <a href="#" class="text-white mx-2"><img src="icons/instagram.svg" alt="Instagram" style="width: 24px;"></a>
+        <a href="#" class="text-white mx-2"><img src="icons/facebook.svg" alt="Facebook" style="width: 24px;"></a>
+      </div>
     </div>
-</footer>
+  </footer>
+  
 
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="script.js"></script> <!-- External JS File -->
 </body>
