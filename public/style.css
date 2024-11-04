@@ -148,8 +148,7 @@ body {
 }
 
 
-/* CourseInfo */
-
+/* Course info */
 #courseInfo .course-details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -160,6 +159,7 @@ body {
 #courseInfo .course-details-grid div {
   padding: 5px;
 }
+
 
 
 
