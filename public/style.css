@@ -160,6 +160,13 @@ body {
   padding: 5px;
 }
 
+.course-image {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
 
 
 

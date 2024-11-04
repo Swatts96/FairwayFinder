@@ -71,11 +71,59 @@ function populateMarkers(golfCourses) {
   });
 }
 
+// Function to show all courses
+function showAllCourses() {
+  // Remove all markers from the map
+  Object.values(markers).forEach(item => map.removeLayer(item.marker));
+
+  // Add all markers back to the map
+  Object.values(markers).forEach(item => {
+    item.marker.addTo(map);
+  });
+}
+
+// Function to show only 18-hole courses
+function show18HoleCourses() {
+  // Remove all markers from the map
+  Object.values(markers).forEach(item => map.removeLayer(item.marker));
+
+  // Add only 18-hole course markers to the map
+  Object.values(markers).forEach(item => {
+    if (item.holes === 18) {
+      item.marker.addTo(map);
+    }
+  });
+}
+
+// Function to show only 9-hole courses
+function show9HoleCourses() {
+  // Remove all markers from the map
+  Object.values(markers).forEach(item => map.removeLayer(item.marker));
+
+  // Add only 9-hole course markers to the map
+  Object.values(markers).forEach(item => {
+    if (item.holes === 9) {
+      item.marker.addTo(map);
+    }
+  });
+}
+
+
+
 // Function to update the selected course details in the #courseInfo section
 function updateSelectedCourseInfo(course) {
   const courseDetailsContainer = document.getElementById("courseInfo");
+
+  // Format course name for the image file
+  const formattedCourseName = course.name.toLowerCase().replace(/ /g, '-') + '.jpg';
+  const imagePath = `/images/${formattedCourseName}`;
+
+  // Create image element if the image exists
+  const courseImage = `<img src="${imagePath}" alt="${course.name}" class="course-image" onerror="this.style.display='none'">`;
+
   courseDetailsContainer.innerHTML = `
     <h2 class="h4">Selected Course Information</h2>
+    ${courseImage}
     <div class="course-details-grid">
       <div><strong>Name:</strong> ${course.name}</div>
       <div><strong>Location:</strong> ${course.location}</div>
@@ -90,6 +138,7 @@ function updateSelectedCourseInfo(course) {
     </div>
   `;
 }
+
 
 // Search functionality using dynamically loaded course data
 function searchCourseDropdown() {
