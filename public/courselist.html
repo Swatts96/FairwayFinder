@@ -3,132 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golf Course List</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css" /> <!-- External CSS -->
+  <title>Golf Course List - Fairway Finder</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="courselist.html">Courses</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="index.html">Fairway Finder</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item active"><a class="nav-link" href="courselist.html">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
-  </nav>
-
-  <!-- Main Content -->
-  <main>
-    <h1>Golf Courses in Nova Scotia</h1>
-    <ul class="course-list">
-      <li><b>Abercrombie Golf Club</b> - <a href="https://example.com/abercrombie-golf" target="_blank">Visit Website</a></li>
-<li><b>Above Par Golf Course</b> - <a href="https://example.com/above-par-golf" target="_blank">Visit Website</a></li>
-<li><b>Airlane Golf Club</b> - <a href="https://example.com/airlane-golf" target="_blank">Visit Website</a></li>
-<li><b>Alderdale Greens Golf Course</b> - <a href="https://example.com/alderdale-golf" target="_blank">Visit Website</a></li>
-<li><b>Amherst Golf Club</b> - <a href="https://example.com/amherst-golf-club" target="_blank">Visit Website</a></li>
-<li><b>Annapolis Royal Golf & Country Club</b> - <a href="https://example.com/annapolis-royal" target="_blank">Visit Website</a></li>
-<li><b>Antigonish Golf and Country Club</b> - <a href="https://example.com/antigonish-golf-club" target="_blank">Visit Website</a></li>
-<li><b>Ashburn Golf Club - New</b> - <a href="https://example.com/ashburn-new" target="_blank">Visit Website</a></li>
-<li><b>Ashburn Golf Club - Old</b> - <a href="https://example.com/ashburn-old" target="_blank">Visit Website</a></li>
-<li><b>Aspotogan Ridge Golf Club</b> - <a href="https://example.com/aspotogan-ridge" target="_blank">Visit Website</a></li>
-<li><b>Avon Valley Golf and Country Club</b> - <a href="https://example.com/avon-valley" target="_blank">Visit Website</a></li>
-<li><b>Bacon's Par-3 Golf Course</b> - <a href="https://example.com/bacons-par3" target="_blank">Visit Website</a></li>
-<li><b>Baddeck Forks Golf Club</b> - <a href="https://example.com/baddeck-forks" target="_blank">Visit Website</a></li>
-<li><b>Bell Bay Golf Club</b> - <a href="https://example.com/bell-bay" target="_blank">Visit Website</a></li>
-<li><b>Berwick Heights Golf Course</b> - <a href="https://example.com/berwick-heights" target="_blank">Visit Website</a></li>
-<li><b>Bluenose Golf and Country Club</b> - <a href="https://example.com/bluenose-golf" target="_blank">Visit Website</a></li>
-<li><b>Brightwood Golf and Country Club</b> - <a href="https://example.com/brightwood-golf" target="_blank">Visit Website</a></li>
-<li><b>Brookfield Golf and Country Club</b> - <a href="https://example.com/brookfield-golf" target="_blank">Visit Website</a></li>
-<li><b>Brule Point Golf</b> - <a href="https://example.com/brule-point" target="_blank">Visit Website</a></li>
-<li><b>Cabot Cliffs</b> - <a href="https://example.com/cabot-cliffs" target="_blank">Visit Website</a></li>
-<li><b>Cabot Links</b> - <a href="https://example.com/cabot-links" target="_blank">Visit Website</a></li>
-<li><b>Cabot Links - The Nest</b> - <a href="https://example.com/cabot-nest" target="_blank">Visit Website</a></li>
-<li><b>Cambridge Cliffs Golf Club</b> - <a href="https://example.com/cambridge-cliffs" target="_blank">Visit Website</a></li>
-<li><b>Chester Golf Club</b> - <a href="https://example.com/chester-golf" target="_blank">Visit Website</a></li>
-<li><b>Clare Golf and Country Club</b> - <a href="https://example.com/clare-golf" target="_blank">Visit Website</a></li>
-<li><b>Coyote Hill Golf Course</b> - <a href="https://example.com/coyote-hill" target="_blank">Visit Website</a></li>
-<li><b>Debert Golf Club</b> - <a href="https://example.com/debert-golf" target="_blank">Visit Website</a></li>
-<li><b>Digby Pines Golf Resort and Spa Golf Course</b> - <a href="https://example.com/digby-pines" target="_blank">Visit Website</a></li>
-<li><b>Dundee Resort and Golf Club</b> - <a href="https://example.com/dundee-golf" target="_blank">Visit Website</a></li>
-<li><b>Eagle Crest Golf Course</b> - <a href="https://example.com/eagle-crest" target="_blank">Visit Website</a></li>
-<li><b>Eagle's Chance Golf Club</b> - <a href="https://example.com/eagles-chance" target="_blank">Visit Website</a></li>
-<li><b>Eden Golf and Country Club</b> - <a href="https://example.com/eden-golf" target="_blank">Visit Website</a></li>
-<li><b>Fox Harb'r Resort</b> - <a href="https://example.com/fox-harbr" target="_blank">Visit Website</a></li>
-<li><b>Fox Harb'r Resort - Par-3</b> - <a href="https://example.com/fox-harbr-par3" target="_blank">Visit Website</a></li>
-<li><b>Fox Hollow Golf Club</b> - <a href="https://example.com/fox-hollow" target="_blank">Visit Website</a></li>
-<li><b>Glen Arbour Golf Course - Short Course</b> - <a href="https://example.com/glen-arbour-short" target="_blank">Visit Website</a></li>
-<li><b>Glen Lovat Golf Club</b> - <a href="https://example.com/glen-lovat" target="_blank">Visit Website</a></li>
-<li><b>Grandview Golf and Country Club</b> - <a href="https://example.com/grandview-golf" target="_blank">Visit Website</a></li>
-<li><b>Granite Springs Golf Club</b> - <a href="https://example.com/granite-springs" target="_blank">Visit Website</a></li>
-<li><b>Greenfield Golf Club</b> - <a href="https://example.com/greenfield-golf" target="_blank">Visit Website</a></li>
-<li><b>Greenwood Golf Club</b> - <a href="https://example.com/greenwood-golf" target="_blank">Visit Website</a></li>
-<li><b>Harbour Ridge Golf Club</b> - <a href="https://example.com/harbour-ridge" target="_blank">Visit Website</a></li>
-<li><b>Hartlen Point Forces Golf Club</b> - <a href="https://example.com/hartlen-point" target="_blank">Visit Website</a></li>
-<li><b>Indian Lake Golf Course</b> - <a href="https://example.com/indian-lake" target="_blank">Visit Website</a></li>
-<li><b>Island Green Golf Club</b> - <a href="https://example.com/island-green" target="_blank">Visit Website</a></li>
-<li><b>Juniper Hollow Par 3 Golf Course</b> - <a href="https://example.com/juniper-hollow" target="_blank">Visit Website</a></li>
-<li><b>KenWo Country Club</b> - <a href="https://example.com/kenwo-country-club" target="_blank">Visit Website</a></li>
-<li><b>Le Portage Golf Club</b> - <a href="https://example.com/le-portage" target="_blank">Visit Website</a></li>
-<li><b>Linacy Greens Golf Club</b> - <a href="https://example.com/linacy-greens" target="_blank">Visit Website</a></li>
-<li><b>Lingan Golf and Country Club</b> - <a href="https://example.com/lingan-golf" target="_blank">Visit Website</a></li>
-<li><b>Links at Brunello</b> - <a href="https://example.com/brunello" target="_blank">Visit Website</a></li>
-<li><b>Lionel's Golf Center</b> - <a href="https://example.com/lionels-golf-center" target="_blank">Visit Website</a></li>
-<li><b>The Lakes Golf Club</b> - <a href="https://example.com/the-lakes" target="_blank">Visit Website</a></li>
-<li><b>The Links at Montague</b> - <a href="https://example.com/links-at-montague" target="_blank">Visit Website</a></li>
-<li><b>The Links at Penn Hills</b> - <a href="https://example.com/penn-hills" target="_blank">Visit Website</a></li>
-<li><b>Lost Creek Golf Club and Village</b> - <a href="https://example.com/lost-creek" target="_blank">Visit Website</a></li>
-<li><b>Mill Ridge Golf Course</b> - <a href="https://example.com/mill-ridge" target="_blank">Visit Website</a></li>
-<li><b>Mountain Golf Club</b> - <a href="https://example.com/mountain-golf" target="_blank">Visit Website</a></li>
-<li><b>Northumberland Links</b> - <a href="https://example.com/northumberland-links" target="_blank">Visit Website</a></li>
-<li><b>Oakfield Golf and Country Club</b> - <a href="https://example.com/oakfield-golf" target="_blank">Visit Website</a></li>
-<li><b>Olde Town Golf Course</b> - <a href="https://example.com/olde-town" target="_blank">Visit Website</a></li>
-<li><b>Osprey Ridge Golf Club</b> - <a href="https://example.com/osprey-ridge" target="_blank">Visit Website</a></li>
-<li><b>Osprey Shores Golf Resort</b> - <a href="https://example.com/osprey-shores" target="_blank">Visit Website</a></li>
-<li><b>Paragon Golf and Country Club</b> - <a href="https://example.com/paragon-golf" target="_blank">Visit Website</a></li>
-<li><b>Parrsboro Golf Club</b> - <a href="https://example.com/parrsboro-golf" target="_blank">Visit Website</a></li>
-<li><b>Passchendaele Golf Club</b> - <a href="https://example.com/passchendaele-golf" target="_blank">Visit Website</a></li>
-<li><b>Pictou Harbour Golf Club</b> - <a href="https://example.com/pictou-harbour" target="_blank">Visit Website</a></li>
-<li><b>Prospect Short Game Golf</b> - <a href="https://example.com/prospect-short-game" target="_blank">Visit Website</a></li>
-<li><b>Renfrew Camping & Golf</b> - <a href="https://example.com/renfrew-golf" target="_blank">Visit Website</a></li>
-<li><b>River Hills Golf and Country Club</b> - <a href="https://example.com/river-hills" target="_blank">Visit Website</a></li>
-<li><b>River Oaks Golf Club - North</b> - <a href="https://example.com/river-oaks-north" target="_blank">Visit Website</a></li>
-<li><b>River Run Golf Club</b> - <a href="https://example.com/river-run" target="_blank">Visit Website</a></li>
-<li><b>Ridgewood Golf Club</b> - <a href="https://example.com/ridgewood-golf" target="_blank">Visit Website</a></li>
-<li><b>Rosevale Par 3 Family Golf Course</b> - <a href="https://example.com/rosevale-par3" target="_blank">Visit Website</a></li>
-<li><b>Sherwood Golf and Country Club</b> - <a href="https://example.com/sherwood-golf" target="_blank">Visit Website</a></li>
-<li><b>Seaview Golf and Country Club</b> - <a href="https://example.com/seaview-golf" target="_blank">Visit Website</a></li>
-<li><b>Springhill Centennial Golf Club</b> - <a href="https://example.com/springhill-golf" target="_blank">Visit Website</a></li>
-<li><b>Truro Golf Club</b> - <a href="https://example.com/truro-golf" target="_blank">Visit Website</a></li>
-<li><b>Uniacke Pines Golf Course</b> - <a href="https://example.com/uniacke-pines" target="_blank">Visit Website</a></li>
-<li><b>West Pubnico Golf and Country Club</b> - <a href="https://example.com/west-pubnico" target="_blank">Visit Website</a></li>
-<li><b>White Point Golf Club</b> - <a href="https://example.com/white-point" target="_blank">Visit Website</a></li>
-<li><b>Yarmouth Links Golf Club</b> - <a href="https://example.com/yarmouth-links" target="_blank">Visit Website</a></li>
-
-    </ul>
-  </main>
-
-
-    <!-- Footer Section -->
-<footer>
-  <div class="footer-container">
-      <ul class="footer-links">
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">FAQ</a></li>
-      </ul>
-      <div class="footer-right">
-          <p>&copy; 2024 Fairyway Finder App. </p>
-          <p> Made by Sam Watt for INFT4000/3280/Special Topics I </p>
-          <div class="social-icons">
-              <a href="#"><img src="icons/twitter.svg" alt="X (formerly Twitter)" /></a>
-              <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
-              <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
-          </div>
-      </div>
   </div>
+</nav>
+
+<!-- Course List -->
+<div class="container my-5">
+  <h1 class="text-center mb-4">Golf Courses in Nova Scotia</h1>
+  <div class="row" id="courseGrid">
+    <!-- Course cards will be added here -->
+  </div>
+  <div class="text-center mt-4">
+    <button id="loadMore" class="btn btn-primary">Load More</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="custom-footer text-center py-4">
+  <ul class="list-inline mb-2">
+    <li class="list-inline-item"><a href="#" class="footer-link">Terms of Use</a></li>
+    <li class="list-inline-item"><a href="#" class="footer-link">Contact Us</a></li>
+    <li class="list-inline-item"><a href="#" class="footer-link">FAQ</a></li>
+  </ul>
+  <p>&copy; 2024 Fairway Finder App.</p>
+  <p>Made by Sam Watt for INFT4000/3280/Special Topics I</p>
 </footer>
 
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script> <!-- External JS File -->
 </body>
 </html>

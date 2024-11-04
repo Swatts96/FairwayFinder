@@ -1,172 +1,166 @@
-/* Overall body styling */
+/* Custom Style Adjustments */
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light background color */
-  }
-  
-  /* Navigation bar styling */
-  #navbar {
-    background-color: #174a6f;
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  #navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #navbar ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  #navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  #navbar ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Main content styling */
-  main {
-    padding: 20px;
-    text-align: center;
-    margin-left: 5px;
-  }
-  
-  /* Map styling */
-  #map {
-    height: 600px;
-    width: 100%;
-    margin-bottom: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-  }
-  
-  /* Search bar styling */
-  #searchBar {
-    display: inline-block;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  #searchInput {
-    width: 200px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  #searchBar button {
-    padding: 8px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  #searchBar button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Course info section styling */
-  #courseInfo {
-    padding: 20px;
-    background-color: white;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  #courseInfo h2 {
-    margin-bottom: 10px;
-  }
-  
-  #courseInfo p {
-    font-size: 16px;
-  }
-  
-/* Footer Info section styling */ 
-
-  footer {
-    background-color: #174a6f;;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f0e0c6;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+#map {
+  border: 2px solid #ccc;
 }
 
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+/* Leaflet Popup Styling */
+.leaflet-popup-content-wrapper {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2.3px solid #000;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(1, 0, 0, 0.1);
 }
 
-.footer-links li {
-    margin: 0 10px;
+.leaflet-popup-content {
+  color: #000;
+  font-size: 16px;
 }
 
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
+.leaflet-popup-content b {
+  font-weight: bold;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.leaflet-popup-content a {
+  color: #007BFF;
 }
 
-.footer-right {
-    margin-top: 20px;
+.leaflet-popup-content a:hover {
+  text-decoration: underline;
 }
 
-.footer-right p {
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    margin: 0 10px;
+.leaflet-popup-close-button {
+  color: #8e0000;
+  font-size: 22px;
 }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1); /* This makes the icon white */
+  filter: invert(1);
 }
 
-.contactus {
-  font-size: large;
+.custom-btn {
+  background-color: #336fd8f2; /* Replace with your preferred color */
+  color: white;
+}
+
+.custom-btn:hover {
+  background-color: hsl(84, 77%, 45%); /* Darker shade for hover */
+}
+
+
+/* Navbar */ 
+
+.custom-navbar {
+  background-color: #174a6f; /* Change this color to your preferred navbar color */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: white; /* Navbar text color */
+}
+
+.custom-navbar .nav-link:hover {
+  color: #c3e3ff; /* Lighter shade for hover effect */
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: white; /* Toggler button border color */
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%281,1,1,1%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+  /* Adjust to a color that matches your theme */
+}
+
+/* Footer */ 
+
+.custom-footer {
+  background-color: #174a6f; /* Change to your footer background color */
+  color: white; /* Footer text color */
+}
+
+.custom-footer .footer-link {
+  color: #c3e3ff; /* Footer link color */
+  text-decoration: none;
+}
+
+.custom-footer .footer-link:hover {
+  color: #ffffff; /* Lighter color on hover */
+}
+
+.custom-footer .social-icons img {
+  filter: invert(1); /* White color for icons */
+}
+
+/* Hero section */ 
+
+.aboutHero {
+  position: relative;
+  height: 300px; /* Adjust height as needed */
+  background-image: url('../images/golfoverhead.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutHero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 43, 74, 0.451); /* Semi-transparent overlay */
+}
+
+.aboutHero h4 {
+  position: relative;
+  z-index: 1; /* Ensures the text is above the overlay */
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #f0e0c6; /* Text color matching your palette */
   padding: 20px;
-  border: 4px solid #0b385b;
-  border-radius: 20px;
+  font-family: 'Gloock', serif; /* Use the custom font you imported */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow for readability */
 }
 
-.contactbox {
-  background-color: #c3e3ff;
-  border: 2px solid #0b385b;
-  border-radius: 20px;
-  
+/* Dropdown */
 
+#dropdownCourseList {
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000; /* Ensure it appears above other content */
 }
+
+
+#courseInfo {
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+
+/* CourseInfo */
+
+#courseInfo .course-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+#courseInfo .course-details-grid div {
+  padding: 5px;
+}
+
+
+
+
