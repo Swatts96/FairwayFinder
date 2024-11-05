@@ -83,6 +83,13 @@ function updateSelectedCourseInfo(course) {
   // Create image element if the image exists
   const courseImage = `<img src="${imagePath}" alt="${course.name}" class="course-image" onerror="this.style.display='none'">`;
 
+  // Generate pricing details if available
+  const pricingDetails = course.pricing
+    ? `<div><strong>Weekday Price (18 holes):</strong> ${course.pricing.weekday['18_holes'] || 'N/A'}</div>
+       <div><strong>Weekend Price (18 holes):</strong> ${course.pricing.weekend['18_holes'] || 'N/A'}</div>`
+    : '<div><strong>Pricing:</strong> Not available</div>';
+
+  // Set inner HTML with additional fields for description, website, and pricing
   courseDetailsContainer.innerHTML = `
     <h2 class="h4">Selected Course Information</h2>
     ${courseImage}
@@ -96,7 +103,9 @@ function updateSelectedCourseInfo(course) {
       <div><strong>Length:</strong> ${course.length}</div>
       <div><strong>Slope:</strong> ${course.slope || 'N/A'}</div>
       <div><strong>Rating:</strong> ${course.rating || 'N/A'}</div>
+      <div><strong>Description:</strong> ${course.description || 'N/A'}</div>
       ${course.website ? `<div><strong>Website:</strong> <a href="${course.website}" target="_blank">Visit Website</a></div>` : ''}
+      ${pricingDetails}
     </div>
   `;
 }

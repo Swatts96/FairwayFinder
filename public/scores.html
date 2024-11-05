@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Scores & Rounds</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>My Scores & Rounds</h2>
+    <div class="form-group">
+      <label for="courseSelect">Select Course</label>
+      <select class="form-control" id="courseSelect">
+        <!-- Populate dynamically with course options -->
+        <option>Select a course...</option>
+      </select>
+    </div>
+    <div id="scoreContainer" class="mt-3">
+      <h4>Scorecard</h4>
+      <div id="scoreInputs" class="row">
+        <!-- Dynamically generate score inputs for each hole here -->
+      </div>
+      <button class="btn btn-primary mt-3" onclick="saveScore()">Save Score</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

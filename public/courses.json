@@ -1,1199 +1,2066 @@
 [
-    {
-      "name": "Amherst Golf Club",
-      "location": "Amherst, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 71,
-      "length": "6415 yards",
-      "slope": 131,
-      "rating": 70.5,
-      "coordinates": {
-        "latitude": 45.8297,
-        "longitude": -64.2144
-      }
-    },
-    {
-      "name": "Bacon's Par-3 Golf Course",
-      "location": "Amherst, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": "",
-      "length": "",
-      "slope": "",
-      "rating": "",
-      "coordinates": {
-        "latitude": 45.8425,
-        "longitude": -64.2164
-      }
-    },
-    {
-      "name": "Antigonish Golf and Country Club",
-      "location": "Antigonish, Subd. A, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6640 yards",
-      "slope": 136,
-      "rating": 72.4,
-      "coordinates": {
-        "latitude": 45.6226,
-        "longitude": -61.9936
-      }
-    },
-    {
-      "name": "Granite Springs Golf Club",
-      "location": "Bayside, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6448 yards",
-      "slope": 146,
-      "rating": 71.6,
-      "coordinates": {
-        "latitude": 44.522,
-        "longitude": -63.8789
-      }
-    },
-    {
-      "name": "The Lakes Golf Club",
-      "location": "Ben Eoin, Nova Scotia",
-      "holes": 18,
-      "type": "Public/Resort",
-      "par": 72,
-      "length": "6904 yards",
-      "slope": 147,
-      "rating": 74.1,
-      "coordinates": {
-        "latitude": 45.9418,
-        "longitude": -60.498
-      }
-    },
-    {
-      "name": "Eden Golf and Country Club",
-      "location": "Bridgetown, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6187 yards",
-      "slope": 122,
-      "rating": 70.2,
-      "coordinates": {
-        "latitude": 44.8415,
-        "longitude": -65.2926
-      }
-    },
-    {
-      "name": "Brookfield Golf and Country Club",
-      "location": "Brookfield, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "par": 70,
-      "length": "5587 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.2302,
-        "longitude": -63.2774
-      }
-    },
-    {
-      "name": "Chester Golf Club",
-      "location": "Chester, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 70,
-      "length": "6086 yards",
-      "slope": 131,
-      "rating": 70.9,
-      "coordinates": {
-        "latitude": 44.5401,
-        "longitude": -64.2405
-      }
-    },
-    {
-      "name": "Mill Ridge Golf Course",
-      "location": "Chester, Nova Scotia",
-      "holes": 18,
-      "type": "Private",
-      "par": "",
-      "length": "",
-      "slope": "",
-      "rating": "",
-      "coordinates": {
-        "latitude": 44.5387,
-        "longitude": -64.2283
-      }
-    },
-    {
-      "name": "Sherwood Golf and Country Club",
-      "location": "Chester, Nova Scotia",
-      "holes": 18,
-      "type": "Resort",
-      "par": 71,
-      "length": "6495 yards",
-      "slope": 127,
-      "rating": 67.6,
-      "coordinates": {
-        "latitude": 44.5533,
-        "longitude": -64.2246
-      }
-    },
-    {
-      "name": "Clare Golf and Country Club",
-      "location": "Church Point, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 71,
-      "length": "6146 yards",
-      "slope": 118,
-      "rating": 69.8,
-      "coordinates": {
-        "latitude": 44.3486,
-        "longitude": -66.0974
-      }
-    },
-    {
-      "name": "Springhill Centennial Golf Club",
-      "location": "Collingwood Corner, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private",
-      "par": 36,
-      "length": "3001 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.6486,
-        "longitude": -64.0489
-      }
-    },
-    {
-      "name": "Debert Golf Club",
-      "location": "Debert, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private",
-      "par": 36,
-      "length": "2918 yards",
-      "slope": 117,
-      "rating": 34.6,
-      "coordinates": {
-        "latitude": 45.4328,
-        "longitude": -63.4961
-      }
-    },
-    {
-      "name": "Harbour Ridge Golf Club",
-      "location": "East Petpeswick, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 35,
-      "length": "2301 yards",
-      "slope": 101,
-      "rating": 31.6,
-      "coordinates": {
-        "latitude": 44.6965,
-        "longitude": -63.3228
-      }
-    },
-    {
-      "name": "Avon Valley Golf and Country Club",
-      "location": "Falmouth, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 71,
-      "length": "6106 yards",
-      "slope": 127,
-      "rating": 69.8,
-      "coordinates": {
-        "latitude": 44.9973,
-        "longitude": -64.1796
-      }
-    },
-    {
-      "name": "Passchendaele Golf Club",
-      "location": "Glace Bay, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 36,
-      "length": "2528 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 46.2027,
-        "longitude": -60.0541
-      }
-    },
-    {
-      "name": "Indian Lake Golf Course",
-      "location": "Halifax, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 30,
-      "length": "1631 yards",
-      "slope": 103,
-      "rating": 29.7,
-      "coordinates": {
-        "latitude": 44.6832,
-        "longitude": -63.7158
-      }
-    },
-    {
-      "name": "Above Par Golf Course",
-      "location": "Greenwood, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 30,
-      "length": "1445 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 44.9845,
-        "longitude": -64.9364
-      }
-    },
-    {
-      "name": "Greenwood Golf Club",
-      "location": "Greenwood, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6164 yards",
-      "slope": 122,
-      "rating": 70,
-      "coordinates": {
-        "latitude": 44.9782,
-        "longitude": -64.9297
-      }
-    },
-    {
-      "name": "Ashburn Golf Club - Old",
-      "location": "Halifax, Nova Scotia",
-      "holes": 18,
-      "type": "Private",
-      "par": 67,
-      "length": "5210 yards",
-      "slope": 119,
-      "rating": 65.2,
-      "coordinates": {
-        "latitude": 44.6522,
-        "longitude": -63.6318
-      }
-    },
-    {
-      "name": "Ashburn Golf Club - Old",
-      "location": "Halifax, Nova Scotia",
-      "holes": 18,
-      "type": "Private",
-      "par": 67,
-      "length": "5210 yards",
-      "slope": 119,
-      "rating": 65.2,
-      "coordinates": {
-        "latitude": 44.6522,
-        "longitude": -63.6318
-      }
-    },
-    {
-      "name": "Prospect Short Game Golf",
-      "location": "Hatchet Lake, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Pitch & Putt",
-      "coordinates": {
-        "latitude": 44.5543,
-        "longitude": -63.7367
-      }
-    },
-    {
-      "name": "The Cape Breton Highlands Golf Course",
-      "location": "Ingonish Beach, Nova Scotia",
-      "holes": 18,
-      "type": "Public/Resort",
-      "style": "Links",
-      "par": 72,
-      "length": "6592 yards",
-      "slope": 155,
-      "rating": 80.4,
-      "coordinates": {
-        "latitude": 46.6718,
-        "longitude": -60.3781
-      }
-    },
-    {
-      "name": "Island Green Golf Club",
-      "location": "Kentville, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 32,
-      "length": "1505 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.0807,
-        "longitude": -64.4818
-      }
-    },
-    {
-      "name": "Bluenose Golf and Country Club",
-      "location": "Lunenburg, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private",
-      "par": 70,
-      "length": "5295 yards",
-      "slope": 108,
-      "rating": 66.7,
-      "coordinates": {
-        "latitude": 44.3775,
-        "longitude": -64.3086
-      }
-    },
-    {
-      "name": "River Oaks Golf Club - North",
-      "location": "Meaghers Grant, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private/Resort",
-      "par": 70,
-      "length": "5887 yards",
-      "slope": 120,
-      "rating": 69.7,
-      "coordinates": {
-        "latitude": 44.8531,
-        "longitude": -63.3468
-      }
-    },
-    {
-      "name": "River Oaks Golf Club - South",
-      "location": "Meaghers Grant, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private/Resort",
-      "par": 36,
-      "length": "3113 yards",
-      "slope": 124,
-      "rating": 35.4,
-      "coordinates": {
-        "latitude": 44.8531,
-        "longitude": -63.3468
-      }
-    },
-    {
-      "name": "Uniacke Pines Golf Course",
-      "location": "Mount Uniacke, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Parkland",
-      "par": 33,
-      "length": "2257 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 44.9288,
-        "longitude": -63.9183
-      }
-    },
-    {
-      "name": "KenWo Country Club",
-      "location": "New Minas, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 70,
-      "length": "6230 yards",
-      "slope": 130,
-      "rating": 76.2,
-      "coordinates": {
-        "latitude": 45.0763,
-        "longitude": -64.4577
-      }
-    },
-    {
-      "name": "Renfrew Camping & Golf",
-      "location": "Nine Mile River, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 27,
-      "length": "1472 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.0733,
-        "longitude": -63.8447
-      }
-    },
-    {
-      "name": "Seaview Golf and Country Club",
-      "location": "North Sydney, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 71,
-      "length": "6174 yards",
-      "slope": 131,
-      "rating": 71.3,
-      "coordinates": {
-        "latitude": 46.2065,
-        "longitude": -60.2652
-      }
-    },
-    {
-      "name": "Parrsboro Golf Club",
-      "location": "Parrsboro, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private",
-      "style": "Executive",
-      "par": 33,
-      "length": "2343 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.3976,
-        "longitude": -64.324
-      }
-    },
-    {
-      "name": "Alderdale Greens Golf Course",
-      "location": "Point Edward, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 27,
-      "length": "2445 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 46.1035,
-        "longitude": -60.2154
-      }
-    },
-    {
-      "name": "Hartlen Point Forces Golf Club",
-      "location": "Shearwater, Nova Scotia",
-      "holes": 18,
-      "type": "Military",
-      "par": 71,
-      "length": "6482 yards",
-      "slope": 115,
-      "rating": 70.5,
-      "coordinates": {
-        "latitude": 44.6265,
-        "longitude": -63.4917
-      }
-    },
-    {
-      "name": "Juniper Hollow Par 3 Golf Course",
-      "location": "Sydney, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Parkland",
-      "par": 29,
-      "length": "1519 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 46.0559,
-        "longitude": -60.1787
-      }
-    },
-    {
-      "name": "Lingan Golf and Country Club",
-      "location": "Sydney, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6620 yards",
-      "slope": 125,
-      "rating": 71.4,
-      "coordinates": {
-        "latitude": 46.1095,
-        "longitude": -60.1928
-      }
-    },
-    {
-      "name": "Links at Brunello",
-      "location": "Timberlea, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "par": 72,
-      "length": "7089 yards",
-      "slope": 141,
-      "rating": 74.4,
-      "coordinates": {
-        "latitude": 44.625,
-        "longitude": -63.7203
-      }
-    },
-    {
-      "name": "Dundee Resort and Golf Club",
-      "location": "West Bay, Nova Scotia",
-      "holes": 18,
-      "type": "Resort",
-      "par": 72,
-      "length": "6384 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.7,
-        "longitude": -61.155
-      }
-    },
-    {
-      "name": "Annapolis Royal Golf & Country Club",
-      "location": "Annapolis Royal, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 70,
-      "length": "5473 yards",
-      "slope": 117,
-      "rating": 67.1,
-      "coordinates": {
-        "latitude": 44.7432,
-        "longitude": -65.5111
-      }
-    },
-    {
-      "name": "Baddeck Forks Golf Club",
-      "location": "Baddeck, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 36,
-      "coordinates": {
-        "latitude": 46.107,
-        "longitude": -60.7548
-      }
-    },
-    {
-      "name": "Bell Bay Golf Club",
-      "location": "Baddeck, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "par": 72,
-      "length": "7037 yards",
-      "slope": 144,
-      "rating": 74.8,
-      "coordinates": {
-        "latitude": 46.1022,
-        "longitude": -60.7848
-      }
-    },
-    {
-      "name": "Lost Creek Golf Club and Village",
-      "location": "Beaver Bank, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 71,
-      "length": "5919 yards",
-      "slope": 130,
-      "rating": 69.4,
-      "coordinates": {
-        "latitude": 44.8636,
-        "longitude": -63.7643
-      }
-    },
-    {
-      "name": "Berwick Heights Golf Course",
-      "location": "Kings, Subd. A, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "par": 72,
-      "length": "6464 yards",
-      "slope": 127,
-      "rating": 71.5,
-      "coordinates": {
-        "latitude": 45.0658,
-        "longitude": -64.6416
-      }
-    },
-    {
-      "name": "Olde Town Golf Course",
-      "location": "Bridgewater, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 34,
-      "length": "2500 yards",
-      "slope": 112,
-      "rating": 33.2,
-      "coordinates": {
-        "latitude": 44.3645,
-        "longitude": -64.5196
-      }
-    },
-    {
-      "name": "Osprey Ridge Golf Club",
-      "location": "Bridgewater, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6607 yards",
-      "slope": 139,
-      "rating": 72.6,
-      "coordinates": {
-        "latitude": 44.3574,
-        "longitude": -64.5152
-      }
-    },
-    {
-      "name": "Cambridge Cliffs Golf Club",
-      "location": "Walton, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Links",
-      "par": 31,
-      "length": "2156 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.2436,
-        "longitude": -64.0991
-      }
-    },
-    {
-      "name": "Eagle Crest Golf Course",
-      "location": "Centreville, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "par": 72,
-      "length": "6288 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.1455,
-        "longitude": -64.5586
-      }
-    },
-    {
-      "name": "Le Portage Golf Club",
-      "location": "Cheticamp, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "par": 72,
-      "length": "6777 yards",
-      "slope": 137,
-      "rating": 72.7,
-      "coordinates": {
-        "latitude": 46.6233,
-        "longitude": -61.0162
-      }
-    },
-    {
-      "name": "River Hills Golf and Country Club",
-      "location": "Clyde River, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6479 yards",
-      "slope": 142,
-      "rating": 72,
-      "coordinates": {
-        "latitude": 43.9784,
-        "longitude": -65.9345
-      }
-    },
-    {
-      "name": "Brightwood Golf and Country Club",
-      "location": "Dartmouth, Nova Scotia",
-      "holes": 18,
-      "type": "Private",
-      "par": 68,
-      "length": "5554 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 44.6863,
-        "longitude": -63.5801
-      }
-    },
-    {
-      "name": "Grandview Golf and Country Club",
-      "location": "Dartmouth, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6584 yards",
-      "slope": 139,
-      "rating": 72.2,
-      "coordinates": {
-        "latitude": 44.7625,
-        "longitude": -63.5825
-      }
-    },
-    {
-      "name": "The Links at Montague",
-      "location": "Dartmouth, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Links/Executive",
-      "par": 31,
-      "length": "1880 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 44.7048,
-        "longitude": -63.5152
-      }
-    },
-    {
-      "name": "Digby Pines Golf Resort and Spa Golf Course",
-      "location": "Digby, Nova Scotia",
-      "holes": 18,
-      "type": "Resort",
-      "par": 71,
-      "length": "6283 yards",
-      "slope": 127,
-      "rating": 70.7,
-      "coordinates": {
-        "latitude": 44.624,
-        "longitude": -65.7605
-      }
-    },
-    {
-      "name": "Ashburn Golf Club - New",
-      "location": "Fall River, Nova Scotia",
-      "holes": 18,
-      "type": "Private",
-      "par": 72,
-      "length": "7039 yards",
-      "slope": 139,
-      "rating": 74.3,
-      "coordinates": {
-        "latitude": 44.8101,
-        "longitude": -63.6038
-      }
-    },
-    {
-      "name": "Lionel's Golf Center",
-      "location": "Gardiner Mines, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Executive",
-      "par": 31,
-      "length": "1872 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 46.0373,
-        "longitude": -60.0184
-      }
-    },
-    {
-      "name": "Airlane Golf Club",
-      "location": "Goffs, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 36,
-      "length": "3008 yards",
-      "slope": 126,
-      "rating": 34.6,
-      "coordinates": {
-        "latitude": 44.878,
-        "longitude": -63.5083
-      }
-    },
-    {
-      "name": "Greenfield Golf Club",
-      "location": "Greenfield, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "style": "Executive",
-      "par": 60,
-      "length": "2866 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 44.3973,
-        "longitude": -64.9475
-      }
-    },
-    {
-      "name": "Osprey Shores Golf Resort",
-      "location": "Guysborough, Nova Scotia",
-      "holes": 9,
-      "type": "Resort",
-      "par": 35,
-      "length": "2691 yards",
-      "slope": 112,
-      "rating": 34,
-      "coordinates": {
-        "latitude": 45.3963,
-        "longitude": -61.5024
-      }
-    },
-    {
-      "name": "Glen Arbour Golf Course - Short Course",
-      "location": "Hammonds Plains, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Executive",
-      "par": 27,
-      "length": "844 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 44.7435,
-        "longitude": -63.7972
-      }
-    },
-    {
-      "name": "Aspotogan Ridge Golf Club",
-      "location": "Hubbards, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 70,
-      "length": "5480 yards",
-      "slope": 126,
-      "rating": 67.2,
-      "coordinates": {
-        "latitude": 44.5482,
-        "longitude": -64.0487
-      }
-    },
-    {
-      "name": "Cabot Cliffs",
-      "location": "Inverness, Nova Scotia",
-      "holes": 18,
-      "type": "Resort",
-      "style": "Links",
-      "par": 72,
-      "length": "6768 yards",
-      "slope": 148,
-      "rating": 80.3,
-      "coordinates": {
-        "latitude": 46.2115,
-        "longitude": -61.31
-      }
-    },
-    {
-      "name": "Cabot Links",
-      "location": "Inverness, Nova Scotia",
-      "holes": 18,
-      "type": "Resort",
-      "style": "Links",
-      "par": 70,
-      "length": "6854 yards",
-      "slope": 132,
-      "rating": 73.7,
-      "coordinates": {
-        "latitude": 46.2315,
-        "longitude": -61.3048
-      }
-    },
-    {
-      "name": "Cabot Links - The Nest",
-      "location": "Inverness, Nova Scotia",
-      "holes": 10,
-      "type": "Resort",
-      "style": "Executive",
-      "par": "N/A",
-      "length": "N/A",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 46.2288,
-        "longitude": -61.3026
-      }
-    },
-    {
-      "name": "Paragon Golf and Country Club",
-      "location": "Kingston, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6358 yards",
-      "slope": 122,
-      "rating": 70.8,
-      "coordinates": {
-        "latitude": 44.9865,
-        "longitude": -64.922
-      }
-    },
-    {
-      "name": "Rosevale Par 3 Family Golf Course",
-      "location": "West Hants, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 29,
-      "length": "1272 yards",
-      "slope": 100,
-      "rating": 28.5,
-      "coordinates": {
-        "latitude": 45.0164,
-        "longitude": -64.0871
-      }
-    },
-    {
-      "name": "Abercrombie Golf Club",
-      "location": "New Glasgow, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 71,
-      "length": "6345 yards",
-      "slope": 134,
-      "rating": 71.1,
-      "coordinates": {
-        "latitude": 45.5932,
-        "longitude": -62.6455
-      }
-    },
-    {
-      "name": "Eagle's Chance Golf Club",
-      "location": "New Glasgow, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": "N/A",
-      "length": "N/A",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.6014,
-        "longitude": -62.6798
-      }
-    },
-    {
-      "name": "Glen Lovat Golf Club",
-      "location": "New Glasgow, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6431 yards",
-      "slope": 139,
-      "rating": 72,
-      "coordinates": {
-        "latitude": 45.6007,
-        "longitude": -62.6476
-      }
-    },
-    {
-      "name": "Linacy Greens Golf Club",
-      "location": "New Glasgow, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "5838 yards",
-      "slope": 118,
-      "rating": 67.8,
-      "coordinates": {
-        "latitude": 45.6037,
-        "longitude": -62.6209
-      }
-    },
-    {
-      "name": "Coyote Hill Golf Course",
-      "location": "Newport Corner, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "par": 35,
-      "length": "2677 yards",
-      "slope": "N/A",
-      "rating": 33.1,
-      "coordinates": {
-        "latitude": 44.9843,
-        "longitude": -63.9547
-      }
-    },
-    {
-      "name": "River Run Golf Club",
-      "location": "North River, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private",
-      "par": 34,
-      "length": "2637 yards",
-      "slope": 115,
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.3616,
-        "longitude": -63.3102
-      }
-    },
-    {
-      "name": "Oakfield Golf and Country Club",
-      "location": "Oakfield, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6747 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 44.8807,
-        "longitude": -63.559
-      }
-    },
-    {
-      "name": "Pictou Harbour Golf Club",
-      "location": "Pictou, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private",
-      "par": 32,
-      "length": "2400 yards",
-      "slope": 99,
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.6763,
-        "longitude": -62.7138
-      }
-    },
-    {
-      "name": "Northumberland Links",
-      "location": "Pugwash, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "style": "Links",
-      "par": 72,
-      "length": "6623 yards",
-      "slope": 132,
-      "rating": 72.5,
-      "coordinates": {
-        "latitude": 45.8731,
-        "longitude": -63.6688
-      }
-    },
-    {
-      "name": "The Links at Penn Hills",
-      "location": "Shubenacadie, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "7236 yards",
-      "slope": 136,
-      "rating": 75,
-      "coordinates": {
-        "latitude": 45.0928,
-        "longitude": -63.4821
-      }
-    },
-    {
-      "name": "Fox Hollow Golf Club",
-      "location": "Stewiacke, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6596 yards",
-      "slope": 132,
-      "rating": 72.4,
-      "coordinates": {
-        "latitude": 45.1391,
-        "longitude": -63.3678
-      }
-    },
-    {
-      "name": "Brule Point Golf",
-      "location": "Tatamagouche, Nova Scotia",
-      "holes": 14,
-      "type": "Semi-Private",
-      "par": 36,
-      "length": "2903 yards",
-      "slope": 108,
-      "rating": 33.4,
-      "coordinates": {
-        "latitude": 45.7395,
-        "longitude": -63.2776
-      }
-    },
-    {
-      "name": "Mountain Golf Club",
-      "location": "Truro, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "par": 71,
-      "length": "6126 yards",
-      "slope": 126,
-      "rating": 69.3,
-      "coordinates": {
-        "latitude": 45.357,
-        "longitude": -63.2821
-      }
-    },
-    {
-      "name": "Ridgewood Golf Club",
-      "location": "Truro, Nova Scotia",
-      "holes": 9,
-      "type": "Public",
-      "style": "Parkland",
-      "coordinates": {
-        "latitude": 45.3686,
-        "longitude": -63.2933
-      }
-    },
-    {
-      "name": "Truro Golf Club",
-      "location": "Truro, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 71,
-      "length": "6339 yards",
-      "slope": 129,
-      "rating": 71.1,
-      "coordinates": {
-        "latitude": 45.3591,
-        "longitude": -63.2796
-      }
-    },
-    {
-      "name": "Fox Harb'r Resort",
-      "location": "Wallace, Nova Scotia",
-      "holes": 18,
-      "type": "Resort",
-      "style": "Links/Parkland",
-      "par": 72,
-      "length": "7253 yards",
-      "slope": 141,
-      "rating": 75.4,
-      "coordinates": {
-        "latitude": 45.8254,
-        "longitude": -63.4801
-      }
-    },
-    {
-      "name": "Fox Harb'r Resort - Par-3",
-      "location": "Wallace, Nova Scotia",
-      "holes": 9,
-      "type": "Resort",
-      "style": "Executive",
-      "par": 27,
-      "length": "1039 yards",
-      "slope": "N/A",
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 45.8255,
-        "longitude": -63.48
-      }
-    },
-    {
-      "name": "West Pubnico Golf and Country Club",
-      "location": "Pubnico, Nova Scotia",
-      "holes": 18,
-      "type": "Semi-Private",
-      "par": 72,
-      "length": "6052 yards",
-      "slope": 124,
-      "rating": "N/A",
-      "coordinates": {
-        "latitude": 43.6732,
-        "longitude": -65.7783
-      }
-    },
-    {
-      "name": "White Point Golf Club",
-      "location": "White Point, Nova Scotia",
-      "holes": 9,
-      "type": "Semi-Private/Resort",
-      "par": 35,
-      "length": "2991 yards",
-      "slope": 115,
-      "rating": 33.5,
-      "coordinates": {
-        "latitude": 43.9674,
-        "longitude": -64.7284
-      }
-    },
-    {
-      "name": "Yarmouth Links Golf Club",
-      "location": "Yarmouth, Nova Scotia",
-      "holes": 18,
-      "type": "Public",
-      "style": "Links",
-      "par": 72,
-      "length": "6039 yards",
-      "slope": 120,
-      "rating": 69.8,
-      "coordinates": {
-        "latitude": 43.8376,
-        "longitude": -66.1145
+  {
+    "name": "Amherst Golf Club",
+    "location": "Amherst, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 71,
+    "length": "6415 yards",
+    "slope": 131,
+    "rating": 70.5,
+    "coordinates": {
+      "latitude": 45.8297,
+      "longitude": -64.2144
+    },
+    "description": "Amherst Golf Club offers a scenic 18-hole course with well-maintained fairways, perfect for all skill levels.",
+    "website": "http://www.amherstgolfclub.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$40",
+        "9_holes": "$25"
+      },
+      "weekend": {
+        "18_holes": "$50",
+        "9_holes": "$30"
       }
     }
-  ]
+  },
+  {
+    "name": "Bacon's Par-3 Golf Course",
+    "location": "Amherst, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": "",
+    "length": "",
+    "slope": "",
+    "rating": "",
+    "coordinates": {
+      "latitude": 45.8425,
+      "longitude": -64.2164
+    },
+    "description": "Bacon's Par-3 Golf Course is a beginner-friendly course with scenic views, ideal for a quick round.",
+    "website": "http://www.baconspar3.com",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Antigonish Golf and Country Club",
+    "location": "Antigonish, Subd. A, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6640 yards",
+    "slope": 136,
+    "rating": 72.4,
+    "coordinates": {
+      "latitude": 45.6226,
+      "longitude": -61.9936
+    },
+    "description": "Antigonish Golf and Country Club features a challenging course layout, surrounded by beautiful landscapes.",
+    "website": "http://www.antigonishgolfclub.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$55",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Granite Springs Golf Club",
+    "location": "Bayside, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6448 yards",
+    "slope": 146,
+    "rating": 71.6,
+    "coordinates": {
+      "latitude": 44.522,
+      "longitude": -63.8789
+    },
+    "description": "Granite Springs offers a premier golfing experience with stunning ocean views and challenging fairways.",
+    "website": "http://www.granitespringsgolf.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$55",
+        "9_holes": "$35"
+      },
+      "weekend": {
+        "18_holes": "$65",
+        "9_holes": "$40"
+      }
+    }
+  },
+  {
+    "name": "The Lakes Golf Club",
+    "location": "Ben Eoin, Nova Scotia",
+    "holes": 18,
+    "type": "Public/Resort",
+    "par": 72,
+    "length": "6904 yards",
+    "slope": 147,
+    "rating": 74.1,
+    "coordinates": {
+      "latitude": 45.9418,
+      "longitude": -60.498
+    },
+    "description": "The Lakes Golf Club provides a resort-style course with rolling fairways and beautiful lake views.",
+    "website": "https://www.thelakesgolfclub.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$70",
+        "9_holes": "$40"
+      },
+      "weekend": {
+        "18_holes": "$80",
+        "9_holes": "$45"
+      }
+    }
+  },
+  {
+    "name": "Eden Golf and Country Club",
+    "location": "Bridgetown, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6187 yards",
+    "slope": 122,
+    "rating": 70.2,
+    "coordinates": {
+      "latitude": 44.8415,
+      "longitude": -65.2926
+    },
+    "description": "Eden Golf and Country Club offers a serene golfing experience with a variety of challenges for all levels.",
+    "website": "https://www.edengolf.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$35",
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "18_holes": "$45",
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "Brookfield Golf and Country Club",
+    "location": "Brookfield, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "par": 70,
+    "length": "5587 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.2302,
+      "longitude": -63.2774
+    },
+    "description": "Brookfield Golf and Country Club is a local favorite, offering a relaxed 18-hole course.",
+    "website": "http://www.brookfieldgcc.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$30",
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "18_holes": "$40",
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "Chester Golf Club",
+    "location": "Chester, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 70,
+    "length": "6086 yards",
+    "slope": 131,
+    "rating": 70.9,
+    "coordinates": {
+      "latitude": 44.5401,
+      "longitude": -64.2405
+    },
+    "description": "Chester Golf Club provides a beautiful waterfront course with challenging holes and scenic views.",
+    "website": "http://www.chestergolfclub.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$50",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$60",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Mill Ridge Golf Course",
+    "location": "Chester, Nova Scotia",
+    "holes": 18,
+    "type": "Private",
+    "par": "",
+    "length": "",
+    "slope": "",
+    "rating": "",
+    "coordinates": {
+      "latitude": 44.5387,
+      "longitude": -64.2283
+    },
+    "description": "Mill Ridge offers a private and exclusive golfing experience with well-manicured fairways.",
+    "website": "http://www.millridgegolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$70",
+        "9_holes": "$40"
+      },
+      "weekend": {
+        "18_holes": "$80",
+        "9_holes": "$45"
+      }
+    }
+  },
+  {
+    "name": "Sherwood Golf and Country Club",
+    "location": "Chester, Nova Scotia",
+    "holes": 18,
+    "type": "Resort",
+    "par": 71,
+    "length": "6495 yards",
+    "slope": 127,
+    "rating": 67.6,
+    "coordinates": {
+      "latitude": 44.5533,
+      "longitude": -64.2246
+    },
+    "description": "A scenic resort course with challenging terrain, Sherwood Golf Club is ideal for a relaxing round.",
+    "website": "http://www.sherwoodgolfclub.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$55",
+        "9_holes": "$35"
+      },
+      "weekend": {
+        "18_holes": "$65",
+        "9_holes": "$40"
+      }
+    }
+  },
+  {
+    "name": "Clare Golf and Country Club",
+    "location": "Church Point, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 71,
+    "length": "6146 yards",
+    "slope": 118,
+    "rating": 69.8,
+    "coordinates": {
+      "latitude": 44.3486,
+      "longitude": -66.0974
+    },
+    "description": "Clare Golf Club offers a serene environment with a diverse course layout suited for all skill levels.",
+    "website": "http://www.claregolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45",
+        "9_holes": "$25"
+      },
+      "weekend": {
+        "18_holes": "$55",
+        "9_holes": "$30"
+      }
+    }
+  },
+  {
+    "name": "Springhill Centennial Golf Club",
+    "location": "Collingwood Corner, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private",
+    "par": 36,
+    "length": "3001 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.6486,
+      "longitude": -64.0489
+    },
+    "description": "A friendly 9-hole course in Springhill with scenic views and a relaxed atmosphere.",
+    "website": "http://www.springhillcentennialgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Debert Golf Club",
+    "location": "Debert, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private",
+    "par": 36,
+    "length": "2918 yards",
+    "slope": 117,
+    "rating": 34.6,
+    "coordinates": {
+      "latitude": 45.4328,
+      "longitude": -63.4961
+    },
+    "description": "Debert Golf Club is a semi-private 9-hole course offering enjoyable play for all ages and skill levels.",
+    "website": "http://www.debertgolfclub.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "Harbour Ridge Golf Club",
+    "location": "East Petpeswick, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 35,
+    "length": "2301 yards",
+    "slope": 101,
+    "rating": 31.6,
+    "coordinates": {
+      "latitude": 44.6965,
+      "longitude": -63.3228
+    },
+    "description": "Harbour Ridge offers a cozy 9-hole public course with breathtaking views of the coastline.",
+    "website": "http://www.harbourridgegolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Avon Valley Golf and Country Club",
+    "location": "Falmouth, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 71,
+    "length": "6106 yards",
+    "slope": 127,
+    "rating": 69.8,
+    "coordinates": {
+      "latitude": 44.9973,
+      "longitude": -64.1796
+    },
+    "description": "Avon Valley Golf Club offers a well-maintained 18-hole course with lush fairways and challenging greens.",
+    "website": "http://www.avonvalleygolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$50",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$60",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Passchendaele Golf Club",
+    "location": "Glace Bay, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 36,
+    "length": "2528 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 46.2027,
+      "longitude": -60.0541
+    },
+    "description": "Passchendaele Golf Club is a welcoming 9-hole course with a relaxed atmosphere, perfect for beginners.",
+    "website": "http://www.passchendaelegolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$10"
+      },
+      "weekend": {
+        "9_holes": "$15"
+      }
+    }
+  },
+  {
+    "name": "Indian Lake Golf Course",
+    "location": "Halifax, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 30,
+    "length": "1631 yards",
+    "slope": 103,
+    "rating": 29.7,
+    "coordinates": {
+      "latitude": 44.6832,
+      "longitude": -63.7158
+    },
+    "description": "Indian Lake Golf Course is a casual 9-hole course, perfect for a quick round in a scenic environment.",
+    "website": "http://www.indianlakegolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$18"
+      },
+      "weekend": {
+        "9_holes": "$22"
+      }
+    }
+  },
+  {
+    "name": "Above Par Golf Course",
+    "location": "Greenwood, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 30,
+    "length": "1445 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 44.9845,
+      "longitude": -64.9364
+    },
+    "description": "Above Par Golf Course provides an accessible 9-hole course experience for players of all levels.",
+    "website": "http://www.abovepargolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$12"
+      },
+      "weekend": {
+        "9_holes": "$15"
+      }
+    }
+  },
+  {
+    "name": "Greenwood Golf Club",
+    "location": "Greenwood, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6164 yards",
+    "slope": 122,
+    "rating": 70,
+    "coordinates": {
+      "latitude": 44.9782,
+      "longitude": -64.9297
+    },
+    "description": "A well-maintained semi-private course, Greenwood Golf Club provides a challenging 18-hole experience with lush surroundings.",
+    "website": "http://www.greenwoodgolfclub.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$55",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Ashburn Golf Club - Old",
+    "location": "Halifax, Nova Scotia",
+    "holes": 18,
+    "type": "Private",
+    "par": 67,
+    "length": "5210 yards",
+    "slope": 119,
+    "rating": 65.2,
+    "coordinates": {
+      "latitude": 44.6522,
+      "longitude": -63.6318
+    },
+    "description": "Ashburn's Old Course is a historic private course with classic fairways and a beautiful landscape.",
+    "website": "http://www.ashburngolfclub.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$90",
+        "9_holes": "$50"
+      },
+      "weekend": {
+        "18_holes": "$100",
+        "9_holes": "$60"
+      }
+    }
+  },
+  {
+    "name": "Prospect Short Game Golf",
+    "location": "Hatchet Lake, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Pitch & Putt",
+    "coordinates": {
+      "latitude": 44.5543,
+      "longitude": -63.7367
+    },
+    "description": "A short 9-hole pitch and putt course, perfect for beginners and short game practice.",
+    "website": "http://www.prospectgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$18"
+      }
+    }
+  },
+  {
+    "name": "The Cape Breton Highlands Golf Course",
+    "location": "Ingonish Beach, Nova Scotia",
+    "holes": 18,
+    "type": "Public/Resort",
+    "style": "Links",
+    "par": 72,
+    "length": "6592 yards",
+    "slope": 155,
+    "rating": 80.4,
+    "coordinates": {
+      "latitude": 46.6718,
+      "longitude": -60.3781
+    },
+    "description": "Set against stunning coastal scenery, this links-style course offers challenging play with breathtaking views.",
+    "website": "http://www.capehighlands.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$70"
+      },
+      "weekend": {
+        "18_holes": "$80"
+      }
+    }
+  },
+  {
+    "name": "Island Green Golf Club",
+    "location": "Kentville, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 32,
+    "length": "1505 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.0807,
+      "longitude": -64.4818
+    },
+    "description": "Island Green is a fun, accessible 9-hole course, suitable for all levels of golfers.",
+    "website": "http://www.islandgreengolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Bluenose Golf and Country Club",
+    "location": "Lunenburg, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private",
+    "par": 70,
+    "length": "5295 yards",
+    "slope": 108,
+    "rating": 66.7,
+    "coordinates": {
+      "latitude": 44.3775,
+      "longitude": -64.3086
+    },
+    "description": "Located in the heart of Lunenburg, Bluenose Golf Club offers 9 scenic holes with stunning views of the town.",
+    "website": "http://www.bluenosegolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$25"
+      },
+      "weekend": {
+        "9_holes": "$30"
+      }
+    }
+  },
+  {
+    "name": "River Oaks Golf Club - North",
+    "location": "Meaghers Grant, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private/Resort",
+    "par": 70,
+    "length": "5887 yards",
+    "slope": 120,
+    "rating": 69.7,
+    "coordinates": {
+      "latitude": 44.8531,
+      "longitude": -63.3468
+    },
+    "description": "A semi-private 18-hole course with resort amenities, ideal for a weekend getaway with friends.",
+    "website": "http://www.riveroaksgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$60"
+      },
+      "weekend": {
+        "18_holes": "$70"
+      }
+    }
+  },
+  {
+    "name": "River Oaks Golf Club - South",
+    "location": "Meaghers Grant, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private/Resort",
+    "par": 36,
+    "length": "3113 yards",
+    "slope": 124,
+    "rating": 35.4,
+    "coordinates": {
+      "latitude": 44.8531,
+      "longitude": -63.3468
+    },
+    "description": "A scenic 9-hole course ideal for a quick round or a warm-up before tackling the North Course.",
+    "website": "http://www.riveroaksgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Uniacke Pines Golf Course",
+    "location": "Mount Uniacke, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Parkland",
+    "par": 33,
+    "length": "2257 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 44.9288,
+      "longitude": -63.9183
+    },
+    "description": "A relaxed and friendly parkland-style course, Uniacke Pines is perfect for a quick round of 9.",
+    "website": "http://www.uniackepinesgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "KenWo Country Club",
+    "location": "New Minas, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 70,
+    "length": "6230 yards",
+    "slope": 130,
+    "rating": 76.2,
+    "coordinates": {
+      "latitude": 45.0763,
+      "longitude": -64.4577
+    },
+    "description": "KenWo Country Club is a popular semi-private club offering a well-kept 18-hole course with full facilities.",
+    "website": "http://www.kenwogolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$50"
+      },
+      "weekend": {
+        "18_holes": "$60"
+      }
+    }
+  },
+  {
+    "name": "Renfrew Camping & Golf",
+    "location": "Nine Mile River, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 27,
+    "length": "1472 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.0733,
+      "longitude": -63.8447
+    },
+    "description": "Renfrew offers a 9-hole course with easy access to camping amenities, perfect for a fun weekend outing.",
+    "website": "http://www.renfrewgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$12"
+      },
+      "weekend": {
+        "9_holes": "$15"
+      }
+    }
+  },
+  {
+    "name": "Seaview Golf and Country Club",
+    "location": "North Sydney, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 71,
+    "length": "6174 yards",
+    "slope": 131,
+    "rating": 71.3,
+    "coordinates": {
+      "latitude": 46.2065,
+      "longitude": -60.2652
+    },
+    "description": "Located in North Sydney, Seaview Golf and Country Club offers scenic views and challenging play on its 18-hole course.",
+    "website": "http://www.seaviewgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$50",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$60",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Parrsboro Golf Club",
+    "location": "Parrsboro, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private",
+    "style": "Executive",
+    "par": 33,
+    "length": "2343 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.3976,
+      "longitude": -64.324
+    },
+    "description": "Parrsboro Golf Club is a charming 9-hole executive course with scenic views and a relaxed atmosphere.",
+    "website": "http://www.parrsborogolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "Alderdale Greens Golf Course",
+    "location": "Point Edward, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 27,
+    "length": "2445 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 46.1035,
+      "longitude": -60.2154
+    },
+    "description": "Alderdale Greens is a public 9-hole course, ideal for beginners and families looking for a friendly golf experience.",
+    "website": "http://www.alderdalegreens.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$18"
+      }
+    }
+  },
+  {
+    "name": "Hartlen Point Forces Golf Club",
+    "location": "Shearwater, Nova Scotia",
+    "holes": 18,
+    "type": "Military",
+    "par": 71,
+    "length": "6482 yards",
+    "slope": 115,
+    "rating": 70.5,
+    "coordinates": {
+      "latitude": 44.6265,
+      "longitude": -63.4917
+    },
+    "description": "Hartlen Point is a military golf course offering a unique and challenging layout along the coast.",
+    "website": "http://www.hartlenpoint.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$40",
+        "9_holes": "$25"
+      },
+      "weekend": {
+        "18_holes": "$50",
+        "9_holes": "$30"
+      }
+    }
+  },
+  {
+    "name": "Juniper Hollow Par 3 Golf Course",
+    "location": "Sydney, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Parkland",
+    "par": 29,
+    "length": "1519 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 46.0559,
+      "longitude": -60.1787
+    },
+    "description": "A par-3 parkland course, Juniper Hollow is perfect for short-game practice and newcomers to golf.",
+    "website": "http://www.juniperhollowgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$12"
+      },
+      "weekend": {
+        "9_holes": "$15"
+      }
+    }
+  },
+  {
+    "name": "Lingan Golf and Country Club",
+    "location": "Sydney, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6620 yards",
+    "slope": 125,
+    "rating": 71.4,
+    "coordinates": {
+      "latitude": 46.1095,
+      "longitude": -60.1928
+    },
+    "description": "Lingan Golf Club is a popular semi-private club with a challenging 18-hole layout and excellent facilities.",
+    "website": "http://www.lingangolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$55",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$65",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Links at Brunello",
+    "location": "Timberlea, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "par": 72,
+    "length": "7089 yards",
+    "slope": 141,
+    "rating": 74.4,
+    "coordinates": {
+      "latitude": 44.625,
+      "longitude": -63.7203
+    },
+    "description": "A premier public course, Links at Brunello offers a challenging 18-hole experience with modern facilities and beautiful views.",
+    "website": "http://www.linksatbrunello.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$90",
+        "9_holes": "$55"
+      },
+      "weekend": {
+        "18_holes": "$100",
+        "9_holes": "$60"
+      }
+    }
+  },
+  {
+    "name": "Dundee Resort and Golf Club",
+    "location": "West Bay, Nova Scotia",
+    "holes": 18,
+    "type": "Resort",
+    "par": 72,
+    "length": "6384 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.7,
+      "longitude": -61.155
+    },
+    "description": "Dundee Resort offers a scenic 18-hole golf experience, with resort amenities for a complete getaway.",
+    "website": "http://www.dundeeresort.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$70",
+        "9_holes": "$40"
+      },
+      "weekend": {
+        "18_holes": "$80",
+        "9_holes": "$45"
+      }
+    }
+  },
+  {
+    "name": "Annapolis Royal Golf & Country Club",
+    "location": "Annapolis Royal, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 70,
+    "length": "5473 yards",
+    "slope": 117,
+    "rating": 67.1,
+    "coordinates": {
+      "latitude": 44.7432,
+      "longitude": -65.5111
+    },
+    "description": "Located in historic Annapolis Royal, this course offers a charming and scenic golfing experience.",
+    "website": "http://www.annapolisroyalgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$55",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Bell Bay Golf Club",
+    "location": "Baddeck, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "par": 72,
+    "length": "7037 yards",
+    "slope": 144,
+    "rating": 74.8,
+    "coordinates": {
+      "latitude": 46.1022,
+      "longitude": -60.7848
+    },
+    "description": "Bell Bay Golf Club offers a stunning 18-hole layout overlooking the Bras d'Or Lake, with a challenging design and beautiful views.",
+    "website": "http://www.bellbaygolf.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$80",
+        "9_holes": "$45"
+      },
+      "weekend": {
+        "18_holes": "$90",
+        "9_holes": "$50"
+      }
+    }
+  },
+  {
+    "name": "Lost Creek Golf Club and Village",
+    "location": "Beaver Bank, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 71,
+    "length": "5919 yards",
+    "slope": 130,
+    "rating": 69.4,
+    "coordinates": {
+      "latitude": 44.8636,
+      "longitude": -63.7643
+    },
+    "description": "Lost Creek Golf Club offers an 18-hole semi-private course surrounded by the scenic Beaver Bank countryside.",
+    "website": "http://www.lostcreek.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$40",
+        "9_holes": "$25"
+      },
+      "weekend": {
+        "18_holes": "$50",
+        "9_holes": "$30"
+      }
+    }
+  },
+  {
+    "name": "Berwick Heights Golf Course",
+    "location": "Kings, Subd. A, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "par": 72,
+    "length": "6464 yards",
+    "slope": 127,
+    "rating": 71.5,
+    "coordinates": {
+      "latitude": 45.0658,
+      "longitude": -64.6416
+    },
+    "description": "Berwick Heights offers a public 18-hole course with varied elevation and challenging fairways, perfect for golfers of all skill levels.",
+    "website": "http://www.berwickheightsgolf.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$50",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Olde Town Golf Course",
+    "location": "Bridgewater, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 34,
+    "length": "2500 yards",
+    "slope": 112,
+    "rating": 33.2,
+    "coordinates": {
+      "latitude": 44.3645,
+      "longitude": -64.5196
+    },
+    "description": "A quaint 9-hole course in Bridgewater, Olde Town provides a fun and relaxed atmosphere for golfers of all ages.",
+    "website": "http://www.oldetowngolf.com",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Osprey Ridge Golf Club",
+    "location": "Bridgewater, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6607 yards",
+    "slope": 139,
+    "rating": 72.6,
+    "coordinates": {
+      "latitude": 44.3574,
+      "longitude": -64.5152
+    },
+    "description": "Osprey Ridge offers an 18-hole semi-private course with breathtaking views and challenging play.",
+    "website": "http://www.ospreyridge.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$60",
+        "9_holes": "$35"
+      },
+      "weekend": {
+        "18_holes": "$70",
+        "9_holes": "$40"
+      }
+    }
+  },
+  {
+    "name": "Cambridge Cliffs Golf Club",
+    "location": "Walton, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Links",
+    "par": 31,
+    "length": "2156 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.2436,
+      "longitude": -64.0991
+    },
+    "description": "Cambridge Cliffs offers a unique links-style 9-hole course along the coastline, known for its beautiful views.",
+    "website": "http://www.cambridgecliffs.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "Eagle Crest Golf Course",
+    "location": "Centreville, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "par": 72,
+    "length": "6288 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.1455,
+      "longitude": -64.5586
+    },
+    "description": "A well-maintained public course, Eagle Crest offers 18 challenging holes with beautiful scenery in Centreville.",
+    "website": "http://www.eaglecrestgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$50",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$55",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Le Portage Golf Club",
+    "location": "Cheticamp, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "par": 72,
+    "length": "6777 yards",
+    "slope": 137,
+    "rating": 72.7,
+    "coordinates": {
+      "latitude": 46.6233,
+      "longitude": -61.0162
+    },
+    "description": "Situated in Cheticamp, Le Portage Golf Club offers challenging play with spectacular views of the Cape Breton Highlands.",
+    "website": "http://www.leportagegolfclub.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$55",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$65",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "River Hills Golf and Country Club",
+    "location": "Clyde River, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6479 yards",
+    "slope": 142,
+    "rating": 72,
+    "coordinates": {
+      "latitude": 43.9784,
+      "longitude": -65.9345
+    },
+    "description": "Located in Clyde River, River Hills Golf Club offers a semi-private 18-hole course nestled in a peaceful setting.",
+    "website": "http://www.riverhillsgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$60",
+        "9_holes": "$35"
+      },
+      "weekend": {
+        "18_holes": "$70",
+        "9_holes": "$40"
+      }
+    }
+  },
+  {
+    "name": "Brightwood Golf and Country Club",
+    "location": "Dartmouth, Nova Scotia",
+    "holes": 18,
+    "type": "Private",
+    "par": 68,
+    "length": "5554 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 44.6863,
+      "longitude": -63.5801
+    },
+    "description": "Brightwood Golf and Country Club offers a private, 18-hole course with excellent facilities and a welcoming environment.",
+    "website": "http://www.brightwoodgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "Members only",
+        "9_holes": "Members only"
+      },
+      "weekend": {
+        "18_holes": "Members only",
+        "9_holes": "Members only"
+      }
+    }
+  },
+  {
+    "name": "Grandview Golf and Country Club",
+    "location": "Dartmouth, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6584 yards",
+    "slope": 139,
+    "rating": 72.2,
+    "coordinates": {
+      "latitude": 44.7625,
+      "longitude": -63.5825
+    },
+    "description": "A scenic, semi-private 18-hole course, Grandview offers stunning views and challenging play in Dartmouth.",
+    "website": "http://www.grandviewgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$55",
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$65",
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "The Links at Montague",
+    "location": "Dartmouth, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Links/Executive",
+    "par": 31,
+    "length": "1880 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 44.7048,
+      "longitude": -63.5152
+    },
+    "description": "A challenging links-style executive course, perfect for a quick round or for golfers looking to practice their short game.",
+    "website": "http://www.linksatmontague.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20",
+        "18_holes": "$30"
+      },
+      "weekend": {
+        "9_holes": "$25",
+        "18_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Digby Pines Golf Resort and Spa Golf Course",
+    "location": "Digby, Nova Scotia",
+    "holes": 18,
+    "type": "Resort",
+    "par": 71,
+    "length": "6283 yards",
+    "slope": 127,
+    "rating": 70.7,
+    "coordinates": {
+      "latitude": 44.624,
+      "longitude": -65.7605
+    },
+    "description": "This beautiful resort course offers a challenging layout set against the scenic backdrop of the Digby Pines Resort and Spa.",
+    "website": "http://www.digbypines.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$50"
+      },
+      "weekend": {
+        "18_holes": "$60"
+      }
+    }
+  },
+  {
+    "name": "Ashburn Golf Club - New",
+    "location": "Fall River, Nova Scotia",
+    "holes": 18,
+    "type": "Private",
+    "par": 72,
+    "length": "7039 yards",
+    "slope": 139,
+    "rating": 74.3,
+    "coordinates": {
+      "latitude": 44.8101,
+      "longitude": -63.6038
+    },
+    "description": "A stunning course set in Fall River, Ashburn's new course offers a private experience with pristine conditions and a challenging design.",
+    "website": "http://www.ashburngolfclub.com",
+    "pricing": {
+      "weekday": {
+        "guest": "$80"
+      },
+      "weekend": {
+        "guest": "$90"
+      }
+    }
+  },
+  {
+    "name": "Lionel's Golf Center",
+    "location": "Gardiner Mines, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Executive",
+    "par": 31,
+    "length": "1872 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 46.0373,
+      "longitude": -60.0184
+    },
+    "description": "Lionel's Golf Center is an affordable and family-friendly executive course, ideal for beginners or those looking to improve their game.",
+    "website": "http://www.lionelsgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Airlane Golf Club",
+    "location": "Goffs, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 36,
+    "length": "3008 yards",
+    "slope": 126,
+    "rating": 34.6,
+    "coordinates": {
+      "latitude": 44.878,
+      "longitude": -63.5083
+    },
+    "description": "A convenient and scenic course near Halifax Stanfield International Airport, perfect for a quick game before a flight.",
+    "website": "http://www.airlanegolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$22"
+      },
+      "weekend": {
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "Greenfield Golf Club",
+    "location": "Greenfield, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "style": "Executive",
+    "par": 60,
+    "length": "2866 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 44.3973,
+      "longitude": -64.9475
+    },
+    "description": "A short and enjoyable executive course, ideal for honing skills or enjoying a quick round in a relaxed setting.",
+    "website": "http://www.greenfieldgolfclub.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20",
+        "18_holes": "$30"
+      },
+      "weekend": {
+        "9_holes": "$25",
+        "18_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Osprey Shores Golf Resort",
+    "location": "Guysborough, Nova Scotia",
+    "holes": 9,
+    "type": "Resort",
+    "par": 35,
+    "length": "2691 yards",
+    "slope": 112,
+    "rating": 34,
+    "coordinates": {
+      "latitude": 45.3963,
+      "longitude": -61.5024
+    },
+    "description": "Nestled along the coast, Osprey Shores offers a relaxing and scenic golfing experience in Guysborough.",
+    "website": "http://www.ospreyshoresresort.com",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$30",
+        "18_holes": "$45"
+      },
+      "weekend": {
+        "9_holes": "$35",
+        "18_holes": "$50"
+      }
+    }
+  },
+  {
+    "name": "Glen Arbour Golf Course - Short Course",
+    "location": "Hammonds Plains, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Executive",
+    "par": 27,
+    "length": "844 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 44.7435,
+      "longitude": -63.7972
+    },
+    "description": "A compact course at Glen Arbour, perfect for practicing short game skills in a peaceful, wooded setting.",
+    "website": "http://www.glenarbour.com",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Aspotogan Ridge Golf Club",
+    "location": "Hubbards, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 70,
+    "length": "5480 yards",
+    "slope": 126,
+    "rating": 67.2,
+    "coordinates": {
+      "latitude": 44.5482,
+      "longitude": -64.0487
+    },
+    "description": "A scenic, semi-private course with a unique layout, located in the community of Hubbards.",
+    "website": "http://www.aspotoganridge.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45"
+      },
+      "weekend": {
+        "18_holes": "$55"
+      }
+    }
+  },
+  {
+    "name": "Cabot Cliffs",
+    "location": "Inverness, Nova Scotia",
+    "holes": 18,
+    "type": "Resort",
+    "style": "Links",
+    "par": 72,
+    "length": "6768 yards",
+    "slope": 148,
+    "rating": 80.3,
+    "coordinates": {
+      "latitude": 46.2115,
+      "longitude": -61.31
+    },
+    "description": "One of Canada's top courses, Cabot Cliffs is a breathtaking links course set along the rugged coastline of Cape Breton.",
+    "website": "http://www.cabotcliffs.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$195"
+      },
+      "weekend": {
+        "18_holes": "$225"
+      }
+    }
+  },
+  {
+    "name": "Cabot Links",
+    "location": "Inverness, Nova Scotia",
+    "holes": 18,
+    "type": "Resort",
+    "style": "Links",
+    "par": 70,
+    "length": "6854 yards",
+    "slope": 132,
+    "rating": 73.7,
+    "coordinates": {
+      "latitude": 46.2315,
+      "longitude": -61.3048
+    },
+    "description": "Canada’s first authentic links course, Cabot Links offers breathtaking views and world-class golfing along the coast.",
+    "website": "http://www.cabotlinks.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$195"
+      },
+      "weekend": {
+        "18_holes": "$225"
+      }
+    }
+  },
+  {
+    "name": "Cabot Links - The Nest",
+    "location": "Inverness, Nova Scotia",
+    "holes": 10,
+    "type": "Resort",
+    "style": "Executive",
+    "par": "N/A",
+    "length": "N/A",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 46.2288,
+      "longitude": -61.3026
+    },
+    "description": "The Nest at Cabot Links is a short 10-hole course, ideal for a relaxed round with stunning coastal views.",
+    "website": "http://www.cabotlinks.com",
+    "pricing": {
+      "weekday": {
+        "10_holes": "$95"
+      },
+      "weekend": {
+        "10_holes": "$105"
+      }
+    }
+  },
+  {
+    "name": "Paragon Golf and Country Club",
+    "location": "Kingston, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6358 yards",
+    "slope": 122,
+    "rating": 70.8,
+    "coordinates": {
+      "latitude": 44.9865,
+      "longitude": -64.922
+    },
+    "description": "A picturesque semi-private course with a welcoming community feel, suitable for golfers of all skill levels.",
+    "website": "http://www.paragongolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$40"
+      },
+      "weekend": {
+        "18_holes": "$50"
+      }
+    }
+  },
+  {
+    "name": "Rosevale Par 3 Family Golf Course",
+    "location": "West Hants, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 29,
+    "length": "1272 yards",
+    "slope": 100,
+    "rating": 28.5,
+    "coordinates": {
+      "latitude": 45.0164,
+      "longitude": -64.0871
+    },
+    "description": "A family-friendly Par 3 course perfect for beginners and children, offering a fun and easygoing golf experience.",
+    "website": "http://www.rosevalegolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$15"
+      },
+      "weekend": {
+        "9_holes": "$18"
+      }
+    }
+  },
+  {
+    "name": "Abercrombie Golf Club",
+    "location": "New Glasgow, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 71,
+    "length": "6345 yards",
+    "slope": 134,
+    "rating": 71.1,
+    "coordinates": {
+      "latitude": 45.5932,
+      "longitude": -62.6455
+    },
+    "description": "A semi-private course featuring a challenging layout, lush fairways, and well-maintained greens.",
+    "website": "http://www.abercrombiegolf.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45"
+      },
+      "weekend": {
+        "18_holes": "$55"
+      }
+    }
+  },
+  {
+    "name": "Eagle's Chance Golf Club",
+    "location": "New Glasgow, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": "N/A",
+    "length": "N/A",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.6014,
+      "longitude": -62.6798
+    },
+    "description": "A relaxed and friendly public course in New Glasgow, great for casual players and beginners.",
+    "website": "http://www.eagleschancegolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$18"
+      },
+      "weekend": {
+        "9_holes": "$20"
+      }
+    }
+  },
+  {
+    "name": "Glen Lovat Golf Club",
+    "location": "New Glasgow, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6431 yards",
+    "slope": 139,
+    "rating": 72,
+    "coordinates": {
+      "latitude": 45.6007,
+      "longitude": -62.6476
+    },
+    "description": "A scenic course with rolling fairways and challenging greens, offering a great experience for all golfers.",
+    "website": "http://www.glenlovatgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$40"
+      },
+      "weekend": {
+        "18_holes": "$50"
+      }
+    }
+  },
+  {
+    "name": "Linacy Greens Golf Club",
+    "location": "New Glasgow, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "5838 yards",
+    "slope": 118,
+    "rating": 67.8,
+    "coordinates": {
+      "latitude": 45.6037,
+      "longitude": -62.6209
+    },
+    "description": "Linacy Greens provides a laid-back atmosphere with a compact course layout, perfect for relaxed rounds.",
+    "website": "http://www.linacygreens.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$40"
+      }
+    }
+  },
+  {
+    "name": "Coyote Hill Golf Course",
+    "location": "Newport Corner, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "par": 35,
+    "length": "2677 yards",
+    "slope": "N/A",
+    "rating": 33.1,
+    "coordinates": {
+      "latitude": 44.9843,
+      "longitude": -63.9547
+    },
+    "description": "A quaint public course with unique terrain, offering a relaxed game in the countryside.",
+    "website": "http://www.coyotehillgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "River Run Golf Club",
+    "location": "North River, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private",
+    "par": 34,
+    "length": "2637 yards",
+    "slope": 115,
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.3616,
+      "longitude": -63.3102
+    },
+    "description": "Nestled along the river, this course offers a serene setting with tree-lined fairways and beautiful views.",
+    "website": "http://www.riverrungolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$22"
+      },
+      "weekend": {
+        "9_holes": "$27"
+      }
+    }
+  },
+  {
+    "name": "Oakfield Golf and Country Club",
+    "location": "Oakfield, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6747 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 44.8807,
+      "longitude": -63.559
+    },
+    "description": "Oakfield offers an elegant setting with a challenging course layout, perfect for members and their guests.",
+    "website": "http://www.oakfieldgolf.ca",
+    "pricing": {
+      "weekday": {
+        "guest": "$70"
+      },
+      "weekend": {
+        "guest": "$80"
+      }
+    }
+  },
+  {
+    "name": "Pictou Harbour Golf Club",
+    "location": "Pictou, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private",
+    "par": 32,
+    "length": "2400 yards",
+    "slope": 99,
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.6763,
+      "longitude": -62.7138
+    },
+    "description": "A delightful 9-hole course with waterfront views, offering a peaceful golfing experience in Pictou.",
+    "website": "http://www.pictouharbourgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$20"
+      },
+      "weekend": {
+        "9_holes": "$25"
+      }
+    }
+  },
+  {
+    "name": "Northumberland Links",
+    "location": "Pugwash, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "style": "Links",
+    "par": 72,
+    "length": "6623 yards",
+    "slope": 132,
+    "rating": 72.5,
+    "coordinates": {
+      "latitude": 45.8731,
+      "longitude": -63.6688
+    },
+    "description": "With stunning ocean views, Northumberland Links is a top choice for links-style golf in Nova Scotia.",
+    "website": "http://www.northumberlandlinks.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$60"
+      },
+      "weekend": {
+        "18_holes": "$70"
+      }
+    }
+  },
+  {
+    "name": "The Links at Penn Hills",
+    "location": "Shubenacadie, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "7236 yards",
+    "slope": 136,
+    "rating": 75,
+    "coordinates": {
+      "latitude": 45.0928,
+      "longitude": -63.4821
+    },
+    "description": "A sprawling semi-private course known for its challenging fairways and scenic river views.",
+    "website": "http://www.pennhillsgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$45"
+      },
+      "weekend": {
+        "18_holes": "$55"
+      }
+    }
+  },
+  {
+    "name": "Fox Hollow Golf Club",
+    "location": "Stewiacke, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6596 yards",
+    "slope": 132,
+    "rating": 72.4,
+    "coordinates": {
+      "latitude": 45.1391,
+      "longitude": -63.3678
+    },
+    "description": "An accessible semi-private course with rolling greens and a welcoming clubhouse.",
+    "website": "http://www.foxhollowgolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$38"
+      },
+      "weekend": {
+        "18_holes": "$45"
+      }
+    }
+  },
+  {
+    "name": "Brule Point Golf",
+    "location": "Tatamagouche, Nova Scotia",
+    "holes": 14,
+    "type": "Semi-Private",
+    "par": 36,
+    "length": "2903 yards",
+    "slope": 108,
+    "rating": 33.4,
+    "coordinates": {
+      "latitude": 45.7395,
+      "longitude": -63.2776
+    },
+    "description": "A unique 14-hole course overlooking the bay, perfect for a quick and scenic round.",
+    "website": "http://www.brulepointgolf.ca",
+    "pricing": {
+      "weekday": {
+        "14_holes": "$30"
+      },
+      "weekend": {
+        "14_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Mountain Golf Club",
+    "location": "Truro, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "par": 71,
+    "length": "6126 yards",
+    "slope": 126,
+    "rating": 69.3,
+    "coordinates": {
+      "latitude": 45.357,
+      "longitude": -63.2821
+    },
+    "description": "Mountain Golf Club offers a great game for beginners and seasoned players alike, with beautiful surroundings.",
+    "website": "http://www.mountaingolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$40"
+      },
+      "weekend": {
+        "18_holes": "$50"
+      }
+    }
+  },
+  {
+    "name": "Ridgewood Golf Club",
+    "location": "Truro, Nova Scotia",
+    "holes": 9,
+    "type": "Public",
+    "style": "Parkland",
+    "coordinates": {
+      "latitude": 45.3686,
+      "longitude": -63.2933
+    },
+    "description": "A compact parkland course with a warm community vibe, ideal for a relaxed 9-hole game.",
+    "website": "http://www.ridgewoodgolf.ca",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$25"
+      },
+      "weekend": {
+        "9_holes": "$30"
+      }
+    }
+  },
+  {
+    "name": "Truro Golf Club",
+    "location": "Truro, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 71,
+    "length": "6339 yards",
+    "slope": 129,
+    "rating": 71.1,
+    "coordinates": {
+      "latitude": 45.3591,
+      "longitude": -63.2796
+    },
+    "description": "A semi-private course with a classic layout, offering tree-lined fairways and a welcoming clubhouse.",
+    "website": "http://www.trurogolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$42"
+      },
+      "weekend": {
+        "18_holes": "$50"
+      }
+    }
+  },
+  {
+    "name": "Fox Harb'r Resort",
+    "location": "Wallace, Nova Scotia",
+    "holes": 18,
+    "type": "Resort",
+    "style": "Links/Parkland",
+    "par": 72,
+    "length": "7253 yards",
+    "slope": 141,
+    "rating": 75.4,
+    "coordinates": {
+      "latitude": 45.8254,
+      "longitude": -63.4801
+    },
+    "description": "A luxurious resort course blending links and parkland styles, known for its upscale amenities and scenic views.",
+    "website": "http://www.foxharbr.com",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$180"
+      },
+      "weekend": {
+        "18_holes": "$200"
+      }
+    }
+  },
+  {
+    "name": "Fox Harb'r Resort - Par-3",
+    "location": "Wallace, Nova Scotia",
+    "holes": 9,
+    "type": "Resort",
+    "style": "Executive",
+    "par": 27,
+    "length": "1039 yards",
+    "slope": "N/A",
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 45.8255,
+      "longitude": -63.48
+    },
+    "description": "A par-3 executive course perfect for a short, enjoyable game at the luxury resort.",
+    "website": "http://www.foxharbr.com",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$40"
+      },
+      "weekend": {
+        "9_holes": "$50"
+      }
+    }
+  },
+  {
+    "name": "West Pubnico Golf and Country Club",
+    "location": "Pubnico, Nova Scotia",
+    "holes": 18,
+    "type": "Semi-Private",
+    "par": 72,
+    "length": "6052 yards",
+    "slope": 124,
+    "rating": "N/A",
+    "coordinates": {
+      "latitude": 43.6732,
+      "longitude": -65.7783
+    },
+    "description": "A welcoming course with coastal charm, offering enjoyable rounds for members and visitors alike.",
+    "website": "http://www.westpubnicogolf.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$30"
+      },
+      "weekend": {
+        "18_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "White Point Golf Club",
+    "location": "White Point, Nova Scotia",
+    "holes": 9,
+    "type": "Semi-Private/Resort",
+    "par": 35,
+    "length": "2991 yards",
+    "slope": 115,
+    "rating": 33.5,
+    "coordinates": {
+      "latitude": 43.9674,
+      "longitude": -64.7284
+    },
+    "description": "Nestled within White Point Resort, this 9-hole course offers relaxing rounds with beautiful ocean views.",
+    "website": "http://www.whitepoint.com",
+    "pricing": {
+      "weekday": {
+        "9_holes": "$30"
+      },
+      "weekend": {
+        "9_holes": "$35"
+      }
+    }
+  },
+  {
+    "name": "Yarmouth Links Golf Club",
+    "location": "Yarmouth, Nova Scotia",
+    "holes": 18,
+    "type": "Public",
+    "style": "Links",
+    "par": 72,
+    "length": "6039 yards",
+    "slope": 120,
+    "rating": 69.8,
+    "coordinates": {
+      "latitude": 43.8376,
+      "longitude": -66.1145
+    },
+    "description": "A true links-style course along the coast, known for its challenging winds and seaside atmosphere.",
+    "website": "http://www.yarmouthlinks.ca",
+    "pricing": {
+      "weekday": {
+        "18_holes": "$35"
+      },
+      "weekend": {
+        "18_holes": "$40"
+      }
+    }
+  }
+]
