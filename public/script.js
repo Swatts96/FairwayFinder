@@ -17,20 +17,37 @@ const golfCourseIcon = L.icon({
 let markers = {};
 let searchResults = [];
 let currentIndex = 0;
-let courseData = [];  // Global variable for storing course data
+// Global variable for storing course data
+let courseData = [];  
 
-// Fetch the golf courses data from the JSON file
+// Fetch the golf courses data from the JSON file once
 fetch('courses.json')
-  .then(response => response.json())
-  .then(golfCourses => {
-    courseData = golfCourses;  // Store all course data in courseData array
-    populateMarkers(golfCourses);  // Populate map markers
+  .then(response => {
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return response.json();
   })
-  .catch(error => {
-    console.error('Error fetching the courses data:', error);
-  });
+  .then(data => {
+    courseData = data;  // Store the data globally
+    populateCourseDropdown('courseSelect');  // Populate dropdown in scores.html
+    populateMarkers(data);   // Populate map markers if used in index.html
+  })
+  .catch(error => console.error('Error fetching courses data:', error));
 
-// Function to populate map markers based on course data
+// Utility function to populate any dropdown with course names
+function populateCourseDropdown(dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  if (!dropdown) return; // Exit if the dropdown is not found on the page
+
+  dropdown.innerHTML = '<option value="">Select a course...</option>'; // Reset dropdown
+  courseData.forEach(course => {
+    const option = document.createElement("option");
+    option.value = course.name;
+    option.textContent = course.name;
+    dropdown.appendChild(option);
+  });
+}
+
+// Function to populate map markers if using Leaflet in index.html
 function populateMarkers(golfCourses) {
   golfCourses.forEach(course => {
     if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
@@ -70,6 +87,197 @@ function populateMarkers(golfCourses) {
       marker.addTo(map);
     }
   });
+}
+
+// Function to show score tracking container when a course is selected
+function showScoreTracker() {
+  const selectedCourse = document.getElementById("courseSelect").value;
+  const scoreContainer = document.getElementById("scoreContainer");
+  const scoreInputs = document.getElementById("scoreInputs");
+
+  if (selectedCourse) {
+    scoreContainer.style.display = 'block';
+    scoreInputs.innerHTML = ''; // Clear any existing inputs
+
+    // Assuming 18 holes; create inputs for each hole
+    for (let i = 1; i <= 18; i++) {
+      const holeDiv = document.createElement("div");
+      holeDiv.className = "col-2 mb-2";
+      holeDiv.innerHTML = `
+        <label>Hole ${i}</label>
+        <input type="number" min="1" class="form-control" id="hole${i}" placeholder="Shots">
+      `;
+      scoreInputs.appendChild(holeDiv);
+    }
+  } else {
+    scoreContainer.style.display = 'none';
+  }
+}
+
+// Save score and redirect to round completed page
+function saveScore() {
+  const scores = [];
+  let totalScore = 0;
+
+  for (let i = 1; i <= 18; i++) {
+    const shots = parseInt(document.getElementById(`hole${i}`).value) || 0;
+    scores.push(shots);
+    totalScore += shots;
+  }
+
+  // Save scores and total in session storage for summary display
+  sessionStorage.setItem("lastRoundScores", JSON.stringify(scores));
+  sessionStorage.setItem("lastRoundTotal", totalScore);
+
+  // Redirect to round summary page
+  window.location.href = "round_completed.html";
+}
+
+// Function to update the selected course details in the #courseInfo section
+function updateSelectedCourseInfo(course) {
+  const courseDetailsContainer = document.getElementById("courseInfo");
+
+  // Format course name for the image file
+  const formattedCourseName = course.name.toLowerCase().replace(/ /g, '-') + '.jpg';
+  const imagePath = `/images/${formattedCourseName}`;
+
+  // Create image element if the image exists
+  const courseImage = `<img src="${imagePath}" alt="${course.name}" class="course-image" onerror="this.style.display='none'">`;
+
+  // Generate pricing details if available
+  const pricingDetails = course.pricing
+    ? `<div><strong>Weekday Price (18 holes):</strong> ${course.pricing.weekday['18_holes'] || 'N/A'}</div>
+       <div><strong>Weekend Price (18 holes):</strong> ${course.pricing.weekend['18_holes'] || 'N/A'}</div>`
+    : '<div><strong>Pricing:</strong> Not available</div>';
+
+  // Set inner HTML with additional fields for description, website, and pricing
+  courseDetailsContainer.innerHTML = `
+    <h2 class="h4">Selected Course Information</h2>
+    ${courseImage}
+    <div class="course-details-grid">
+      <div><strong>Name:</strong> ${course.name}</div>
+      <div><strong>Location:</strong> ${course.location}</div>
+      <div><strong>Holes:</strong> ${course.holes}</div>
+      <div><strong>Type:</strong> ${course.type}</div>
+      <div><strong>Style:</strong> ${course.style || 'N/A'}</div>
+      <div><strong>Par:</strong> ${course.par}</div>
+      <div><strong>Length:</strong> ${course.length}</div>
+      <div><strong>Slope:</strong> ${course.slope || 'N/A'}</div>
+      <div><strong>Rating:</strong> ${course.rating || 'N/A'}</div>
+      <div><strong>Description:</strong> ${course.description || 'N/A'}</div>
+      ${course.website ? `<div><strong>Website:</strong> <a href="${course.website}" target="_blank">Visit Website</a></div>` : ''}
+      ${pricingDetails}
+    </div>
+  `;
+}
+
+
+// Function to populate map markers if using Leaflet in index.html
+function populateMarkers(golfCourses) {
+  golfCourses.forEach(course => {
+    if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
+      const marker = L.marker(
+        [course.coordinates.latitude, course.coordinates.longitude],
+        { icon: golfCourseIcon }
+      );
+
+      // Store the marker for filtering
+      markers[course.name.toLowerCase()] = {
+        marker: marker,
+        holes: course.holes
+      };
+
+      // Event listener to update selected course details when marker is clicked
+      marker.on('click', () => {
+        updateSelectedCourseInfo(course);
+      });
+
+      // Add hover event to show tooltip with course name
+      marker.on('mouseover', () => {
+        const tooltip = L.tooltip({
+          permanent: false,
+          direction: 'top',
+          className: 'course-tooltip'
+        })
+        .setContent(course.name)
+        .setLatLng(marker.getLatLng())
+        .addTo(map);
+        
+        marker.on('mouseout', () => {
+          map.removeLayer(tooltip);
+        });
+      });
+
+      // Add the marker to the map
+      marker.addTo(map);
+    }
+  });
+}
+
+// Fetch courses from courses.json and populate the dropdown
+fetch('courses.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(courses => {
+    console.log('Courses data fetched:', courses); // Check if courses data is received
+    const courseSelect = document.getElementById("courseSelect");
+    courses.forEach(course => {
+      const option = document.createElement("option");
+      option.value = course.name;
+      option.textContent = course.name;
+      courseSelect.appendChild(option);
+    });
+  })
+  .catch(error => console.error('Error fetching courses:', error));
+
+
+
+  // Show score tracking container when a course is selected
+function showScoreTracker() {
+  const selectedCourse = document.getElementById("courseSelect").value;
+  const scoreContainer = document.getElementById("scoreContainer");
+  const scoreInputs = document.getElementById("scoreInputs");
+  
+  if (selectedCourse) {
+    scoreContainer.style.display = 'block';
+    scoreInputs.innerHTML = ''; // Clear any existing inputs
+
+    // Assuming 18 holes; create inputs for each hole
+    for (let i = 1; i <= 18; i++) {
+      const holeDiv = document.createElement("div");
+      holeDiv.className = "col-2 mb-2";
+      holeDiv.innerHTML = `
+        <label>Hole ${i}</label>
+        <input type="number" min="1" class="form-control" id="hole${i}" placeholder="Shots">
+      `;
+      scoreInputs.appendChild(holeDiv);
+    }
+  } else {
+    scoreContainer.style.display = 'none';
+  }
+}
+
+// Save score and redirect to round completed page
+function saveScore() {
+  const scores = [];
+  let totalScore = 0;
+
+  for (let i = 1; i <= 18; i++) {
+    const shots = parseInt(document.getElementById(`hole${i}`).value) || 0;
+    scores.push(shots);
+    totalScore += shots;
+  }
+
+  // Save scores and total in session storage for summary display
+  sessionStorage.setItem("lastRoundScores", JSON.stringify(scores));
+  sessionStorage.setItem("lastRoundTotal", totalScore);
+
+  // Redirect to round summary page
+  window.location.href = "round_completed.html";
 }
 
 // Function to update the selected course details in the #courseInfo section

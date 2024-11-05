@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round Summary</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="index.html">Fairway Finder</a>
+  <!-- Remainder of the navbar as in `index.html` -->
+</nav>
+
+<!-- Main Content -->
+<main class="container mt-4">
+  <h2>Round Summary</h2>
+  <div id="roundSummary">
+    <p><strong>Total Score:</strong> <span id="totalScore"></span></p>
+    <div id="scoreSummary" class="row"></div>
+    <button class="btn btn-primary mt-3" onclick="redirectToReview()">Review Course</button>
+  </div>
+</main>
+
+<!-- Footer Section -->
+<footer class="custom-footer py-4">
+  <!-- Footer content as in `index.html` -->
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Load round data from session storage
+document.addEventListener('DOMContentLoaded', function() {
+  const scores = JSON.parse(sessionStorage.getItem("lastRoundScores")) || [];
+  const totalScore = sessionStorage.getItem("lastRoundTotal") || 0;
+
+  document.getElementById("totalScore").textContent = totalScore;
+
+  const scoreSummary = document.getElementById("scoreSummary");
+  scores.forEach((score, index) => {
+    const holeDiv = document.createElement("div");
+    holeDiv.className = "col-2 mb-2";
+    holeDiv.innerHTML = `<strong>Hole ${index + 1}:</strong> ${score}`;
+    scoreSummary.appendChild(holeDiv);
+  });
+});
+
+function redirectToReview() {
+  window.location.href = "review.html";
+}
+</script>
+</body>
+</html>

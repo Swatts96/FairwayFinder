@@ -202,3 +202,13 @@ body {
   transform: scale(1.1) translateY(-2px); /* Slightly enlarge and lift */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
 }
+
+
+.course-image {
+  width: 100%;              /* Ensures the image takes up the full width of its container */
+  height: auto;             /* Maintains the image's aspect ratio */
+  max-height: 400px;        /* Optional: limits the max height for larger screens */
+  object-fit: cover;        /* Ensures the image scales without distortion */
+  border-radius: 8px;       /* Optional: adds rounded corners for a more polished look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}

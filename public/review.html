@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Course</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <a class="navbar-brand" href="index.html">Fairway Finder</a>
+  <!-- Remainder of the navbar as in `index.html` -->
+</nav>
+
+<!-- Main Content -->
+<main class="container mt-4">
+  <h2>Review Course</h2>
+  <form id="reviewForm">
+    <div class="form-group">
+      <label for="reviewText">Write your review</label>
+      <textarea class="form-control" id="reviewText" rows="4"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <select class="form-control" id="rating">
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Very Good</option>
+        <option value="3">3 - Good</option>
+        <option value="2">2 - Fair</option>
+        <option value="1">1 - Poor</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="submitReview()">Submit Review</button>
+  </form>
+</main>
+
+<!-- Footer Section -->
+<footer class="custom-footer py-4">
+  <!-- Footer content as in `index.html` -->
+</footer>
+
+<script>
+function submitReview() {
+  const reviewText = document.getElementById("reviewText").value;
+  const rating = document.getElementById("rating").value;
+
+  // Save the review (for now, we’ll just alert it as a demo)
+  alert(`Review submitted:\nRating: ${rating}\nReview: ${reviewText}`);
+  
+  // Redirect back to courses list or main page after submission
+  window.location.href = "courselist.html";
+}
+</script>
+</body>
+</html>
