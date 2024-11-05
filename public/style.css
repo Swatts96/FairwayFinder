@@ -98,7 +98,7 @@ body {
   filter: invert(1); /* White color for icons */
 }
 
-/* Hero section */ 
+/* Hero section */
 
 .aboutHero {
   position: relative;
@@ -107,7 +107,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,18 +118,27 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 43, 74, 0.451); /* Semi-transparent overlay */
+  background-color: rgba(0, 43, 74, 0.45); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.aboutHero h4 {
-  position: relative;
-  z-index: 1; /* Ensures the text is above the overlay */
-  font-size: 2rem; /* Adjust font size as needed */
-  color: #f0e0c6; /* Text color matching your palette */
-  padding: 20px;
-  font-family: 'Gloock', serif; /* Use the custom font you imported */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow for readability */
+.hero-text-container {
+  background-color: rgba(240, 224, 198, 0.8); /* Light background behind text */
+  padding: 20px 40px;
+  border-radius: 8px;
 }
+
+.hero-text {
+  color: #002b4a; /* Darker color for contrast */
+  font-size: 2rem; /* Adjust font size as needed */
+  font-family: 'Gloock', serif; /* Use the custom font you imported */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
+  margin: 0;
+  line-height: 1.3; /* Adjust line height for better readability */
+}
+
 
 /* Dropdown */
 

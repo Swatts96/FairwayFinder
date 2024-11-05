@@ -30,36 +30,46 @@ function populateCourseDropdown(dropdownId) {
 
 // Update selected course details in the #courseInfo section
 function updateSelectedCourseInfo(course) {
-  const courseDetailsContainer = document.getElementById("courseInfo");
+    const courseDetailsContainer = document.getElementById("courseInfo");
+  
+    const imagePath = `/images/${course.name.toLowerCase().replace(/ /g, '-')}.jpg`;
+    const courseImage = `<img src="${imagePath}" alt="${course.name}" class="course-image" onerror="this.style.display='none'">`;
+  
+    const pricingDetails = course.pricing
+      ? `<div><strong>Weekday Price (18 holes):</strong> ${course.pricing.weekday['18_holes'] || 'N/A'}</div>
+         <div><strong>Weekend Price (18 holes):</strong> ${course.pricing.weekend['18_holes'] || 'N/A'}</div>`
+      : '<div><strong>Pricing:</strong> Not available</div>';
+  
+    // Add course information along with Play a Round and Review buttons
+    courseDetailsContainer.innerHTML = `
+      <h2 class="h4">Selected Course Information</h2>
+      ${courseImage}
+      <div class="course-details-grid">
+        <div><strong>Name:</strong> ${course.name}</div>
+        <div><strong>Location:</strong> ${course.location}</div>
+        <div><strong>Holes:</strong> ${course.holes}</div>
+        <div><strong>Type:</strong> ${course.type}</div>
+        <div><strong>Style:</strong> ${course.style || 'N/A'}</div>
+        <div><strong>Par:</strong> ${course.par}</div>
+        <div><strong>Length:</strong> ${course.length}</div>
+        <div><strong>Slope:</strong> ${course.slope || 'N/A'}</div>
+        <div><strong>Rating:</strong> ${course.rating || 'N/A'}</div>
+        ${course.website ? `<div><strong>Website:</strong> <a href="${course.website}" target="_blank">Visit Website</a></div>` : ''}
+        ${pricingDetails}
+        <div><strong>Description:</strong> ${course.description || 'N/A'}</div>
+      </div>
+      <div class="d-flex justify-content-around mt-3">
+        <button class="btn btn-primary" onclick="playRound('${course.name}')">Play a Round</button>
+        <button class="btn btn-secondary" onclick="reviewCourse('${course.name}')">Review Course</button>
+      </div>
+    `;
+  }
 
-  const imagePath = `/images/${course.name.toLowerCase().replace(/ /g, '-')}.jpg`;
-  const courseImage = `<img src="${imagePath}" alt="${course.name}" class="course-image" onerror="this.style.display='none'">`;
-
-  const pricingDetails = course.pricing
-    ? `<div><strong>Weekday Price (18 holes):</strong> ${course.pricing.weekday['18_holes'] || 'N/A'}</div>
-       <div><strong>Weekend Price (18 holes):</strong> ${course.pricing.weekend['18_holes'] || 'N/A'}</div>`
-    : '<div><strong>Pricing:</strong> Not available</div>';
-
-  courseDetailsContainer.innerHTML = `
-    <h2 class="h4">Selected Course Information</h2>
-    ${courseImage}
-    <div class="course-details-grid">
-      <div><strong>Name:</strong> ${course.name}</div>
-      <div><strong>Location:</strong> ${course.location}</div>
-      <div><strong>Holes:</strong> ${course.holes}</div>
-      <div><strong>Type:</strong> ${course.type}</div>
-      <div><strong>Style:</strong> ${course.style || 'N/A'}</div>
-      <div><strong>Par:</strong> ${course.par}</div>
-      <div><strong>Length:</strong> ${course.length}</div>
-      <div><strong>Slope:</strong> ${course.slope || 'N/A'}</div>
-      <div><strong>Rating:</strong> ${course.rating || 'N/A'}</div>
-      
-      ${course.website ? `<div><strong>Website:</strong> <a href="${course.website}" target="_blank">Visit Website</a></div>` : ''}
-      ${pricingDetails}
-      <div><strong>Description:</strong> ${course.description || 'N/A'}</div>
-    </div>
-  `;
-}
+  // Handle Review Course button click
+function reviewCourse(courseName) {
+    window.location.href = `review_course.html?course=${encodeURIComponent(courseName)}`;
+  }
+  
 
 
 // Handle Play a Round button click
@@ -67,11 +77,6 @@ function playRound(courseName) {
     window.location.href = `play_round.html?course=${encodeURIComponent(courseName)}`;
   }
   
-
-  // Handle Review Course button click (placeholder functionality)
-function reviewCourse(courseName) {
-    alert(`Reviewing course: ${courseName}`); // Replace with actual functionality
-  }
 
 // Function to show all courses
 function showAllCourses() {
