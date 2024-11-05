@@ -13,3 +13,16 @@ function populateCourseDropdown(dropdownId) {
     });
   }
   
+  // Toggle the user dropdown menu
+function toggleUserMenu() {
+    const userMenu = document.getElementById("userDropdownMenu");
+    userMenu.classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.addEventListener("click", function(event) {
+    const userMenu = document.getElementById("userDropdownMenu");
+    if (!event.target.matches('.user-icon') && userMenu.classList.contains("show")) {
+        userMenu.classList.remove("show");
+    }
+});

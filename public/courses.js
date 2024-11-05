@@ -58,3 +58,58 @@ function updateSelectedCourseInfo(course) {
     </div>
   `;
 }
+
+
+// Function to show all courses
+function showAllCourses() {
+    Object.values(markers).forEach(item => item.marker.addTo(map));
+}
+
+// Function to show only 18-hole courses
+function show18HoleCourses() {
+    Object.values(markers).forEach(item => {
+        map.removeLayer(item.marker);
+        if (item.holes === 18) item.marker.addTo(map);
+    });
+}
+
+// Function to show only 9-hole courses
+function show9HoleCourses() {
+    Object.values(markers).forEach(item => {
+        map.removeLayer(item.marker);
+        if (item.holes === 9) item.marker.addTo(map);
+    });
+}
+
+function searchCourseDropdown() {
+    const input = document.getElementById("courseSearchInput").value.toLowerCase();
+    const filteredCourses = courseData.filter(course => course.name.toLowerCase().includes(input));
+    const dropdownMenu = document.getElementById("dropdownCourseList");
+
+    dropdownMenu.innerHTML = ""; // Clear the previous results
+
+    filteredCourses.forEach(course => {
+        const option = document.createElement("a");
+        option.className = "dropdown-item";
+        option.href = "#";
+        option.textContent = course.name;
+        option.addEventListener("click", () => {
+            document.getElementById("courseSearchInput").value = course.name;
+            dropdownMenu.innerHTML = "";
+            highlightCourse(course.name.toLowerCase());
+        });
+        dropdownMenu.appendChild(option);
+    });
+
+    dropdownMenu.style.display = filteredCourses.length ? "block" : "none";
+}
+
+function highlightCourse(courseName) {
+    const marker = markers[courseName.toLowerCase()];
+    if (marker) {
+        map.flyTo(marker.marker.getLatLng(), 12, {
+            duration: 0.25
+        });
+    }
+}
+
