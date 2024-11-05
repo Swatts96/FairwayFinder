@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Scores & Rounds</title>
+  <title>Favorite Courses</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" /> <!-- Additional custom CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script> <!-- Drag-and-Drop Library -->
 </head>
 <body>
 
@@ -17,20 +19,10 @@
 
 <!-- Main Content -->
 <main class="container mt-4">
-  <h2>My Scores & Rounds</h2>
-  <div class="form-group">
-    <label for="courseSelect">Select Course</label>
-    <select class="form-control" id="courseSelect" onchange="showScoreTracker()">
-      <option value="">Select a course...</option>
-    </select>
-  </div>
-  <div id="scoreContainer" class="mt-3" style="display: none;">
-    <h4>Scorecard</h4>
-    <div id="scoreInputs" class="row">
-      <!-- Score inputs will be dynamically added here based on the course -->
-    </div>
-    <button class="btn btn-primary mt-3" onclick="saveScore()">Save Score</button>
-  </div>
+  <h2>Favorite Courses</h2>
+  <ul id="favoriteCoursesList" class="list-group">
+    <!-- Favorite courses go here -->
+  </ul>
 </main>
 
 <!-- Footer Section -->
@@ -38,6 +30,6 @@
   <!-- Footer content as in `index.html` -->
 </footer>
 
-<script src="script.js"></script> <!-- External JS File for score functionality -->
+<script src="script.js"></script> <!-- External JS File for favorite courses functionality -->
 </body>
 </html>

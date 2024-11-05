@@ -208,4 +208,44 @@ window.onclick = function(event) {
       userMenu.style.display = "none";
     }
   }
-};
+}
+
+function saveScore() {
+  // Code to save score locally or temporarily for demonstration
+  alert('Score saved successfully (simulation).');
+}
+
+function populateScoreInputs(holes) {
+  const scoreContainer = document.getElementById('scoreInputs');
+  scoreContainer.innerHTML = '';
+  for (let i = 1; i <= holes; i++) {
+    scoreContainer.innerHTML += `
+      <div class="col-2">
+        <label>Hole ${i}</label>
+        <input type="number" class="form-control" placeholder="Score">
+      </div>
+    `;
+  }
+}
+
+// Initialize sortable list with Sortable.js
+const favoriteCoursesList = document.getElementById("favoriteCoursesList");
+new Sortable(favoriteCoursesList, {
+  animation: 150,
+  onEnd: function (/**Event*/evt) {
+    // Logic to handle reordering
+    console.log(`Item moved from ${evt.oldIndex} to ${evt.newIndex}`);
+  }
+});
+
+// Sample data to populate list
+function populateFavorites() {
+  favoriteCoursesList.innerHTML = `
+    <li class="list-group-item">1. Course A</li>
+    <li class="list-group-item">2. Course B</li>
+    <li class="list-group-item">3. Course C</li>
+  `;
+}
+
+populateFavorites();  // Initial population for demo
+
