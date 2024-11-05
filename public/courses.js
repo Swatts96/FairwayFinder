@@ -52,9 +52,10 @@ function updateSelectedCourseInfo(course) {
       <div><strong>Length:</strong> ${course.length}</div>
       <div><strong>Slope:</strong> ${course.slope || 'N/A'}</div>
       <div><strong>Rating:</strong> ${course.rating || 'N/A'}</div>
-      <div><strong>Description:</strong> ${course.description || 'N/A'}</div>
+      
       ${course.website ? `<div><strong>Website:</strong> <a href="${course.website}" target="_blank">Visit Website</a></div>` : ''}
       ${pricingDetails}
+      <div><strong>Description:</strong> ${course.description || 'N/A'}</div>
     </div>
   `;
 }
@@ -113,3 +114,54 @@ function highlightCourse(courseName) {
     }
 }
 
+let coursesPerPage = 10;
+let currentPage = 1;
+
+function populateCourseList() {
+    const courseGrid = document.getElementById("courseGrid");
+    if (!courseGrid) return;
+
+    const startIndex = (currentPage - 1) * coursesPerPage;
+    const endIndex = startIndex + coursesPerPage;
+    const coursesToDisplay = courseData.slice(startIndex, endIndex);
+
+    coursesToDisplay.forEach(course => {
+        const courseCard = document.createElement("div");
+        courseCard.className = "col-md-6 mb-4";
+
+        courseCard.innerHTML = `
+            <div class="card h-100 shadow">
+                <img src="/images/${course.name.toLowerCase().replace(/ /g, '-')}.jpg" 
+                     class="card-img-top course-image" 
+                     alt="${course.name}" 
+                     onerror="this.style.display='none'">
+                <div class="card-body">
+                    <h5 class="card-title">${course.name}</h5>
+                    <p class="card-text">${course.description || 'No description available.'}</p>
+                    <p><strong>Location:</strong> ${course.location}</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary" onclick="playRound('${course.name}')">Play a Round</button>
+                        <button class="btn btn-secondary" onclick="reviewCourse('${course.name}')">Review Course</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        courseGrid.appendChild(courseCard);
+    });
+}
+
+function loadMoreCourses() {
+    currentPage++;
+    populateCourseList();
+
+    // Hide Load More button if all courses are displayed
+    if ((currentPage * coursesPerPage) >= courseData.length) {
+        document.getElementById("loadMore").style.display = 'none';
+    }
+}
+
+// Initialize course list and attach event to Load More button
+document.addEventListener("DOMContentLoaded", () => {
+    populateCourseList();
+    document.getElementById("loadMore").addEventListener("click", loadMoreCourses);
+});

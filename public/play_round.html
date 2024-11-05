@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golf Course List - Fairway Finder</title>
+  <title>Play a Round - Fairway Finder</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,28 +11,44 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg custom-navbar">
-  <a class="navbar-brand" href="index.html">Home</a>
+  <a class="navbar-brand" href="index.html">Fairway Finder</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item active"><a class="nav-link" href="courselist.html">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="courselist.html">Courses</a></li>
       <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- Course List -->
+<!-- Scorecard Interface -->
 <div class="container my-5">
-  <h1 class="text-center mb-4">Golf Courses in Nova Scotia</h1>
-  <div id="courseListContainer" class="container mt-4">
-    <div class="row" id="courseGrid"></div>
-</div>
-  <div class="text-center mt-4">
-    <button id="loadMore" class="btn btn-primary">Load More</button>
+  <h1 class="text-center mb-4">Play a Round</h1>
+  <div class="card shadow p-4">
+    <h3 class="text-center" id="holeTitle">Hole 1</h3>
+    
+    <div class="text-center mb-4">
+      <label for="holeScore" class="form-label">Enter Score:</label>
+      <input type="number" id="holeScore" class="form-control mx-auto" style="width: 100px;" min="1" placeholder="Score">
+    </div>
+    
+    <div class="d-flex justify-content-between">
+      <button id="prevHole" class="btn btn-secondary" onclick="prevHole()" disabled>Previous Hole</button>
+      <button id="nextHole" class="btn btn-primary" onclick="nextHole()">Next Hole</button>
+    </div>
+  </div>
+  
+  <!-- Finalized Score Summary -->
+  <div class="card shadow p-4 mt-4" id="finalScoreCard" style="display: none;">
+    <h3 class="text-center mb-3">Round Summary</h3>
+    <ul class="list-group mb-3" id="scoreList">
+      <!-- Hole scores will be displayed here -->
+    </ul>
+    <h4 class="text-center">Total Score: <span id="totalScore"></span></h4>
   </div>
 </div>
 

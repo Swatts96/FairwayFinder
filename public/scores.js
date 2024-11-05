@@ -40,3 +40,64 @@ function showScoreTracker() {
     window.location.href = "round_completed.html";
   }
   
+
+  let currentHole = 1;
+const totalHoles = 18;
+let scores = Array(totalHoles).fill(null); // Array to hold scores for each hole
+
+// Update the UI for the current hole
+function updateHoleUI() {
+  document.getElementById("holeTitle").innerText = `Hole ${currentHole}`;
+  document.getElementById("holeScore").value = scores[currentHole - 1] || ''; // Show score if already entered
+
+  // Enable/Disable navigation buttons
+  document.getElementById("prevHole").disabled = currentHole === 1;
+  document.getElementById("nextHole").innerText = currentHole === totalHoles ? 'Finish Round' : 'Next Hole';
+}
+
+// Move to the next hole
+function nextHole() {
+  // Save the current score
+  const scoreInput = document.getElementById("holeScore").value;
+  scores[currentHole - 1] = scoreInput ? parseInt(scoreInput) : 0;
+
+  // If this is the last hole, show the final scorecard
+  if (currentHole === totalHoles) {
+    displayFinalScore();
+  } else {
+    currentHole++;
+    updateHoleUI();
+  }
+}
+
+// Move to the previous hole
+function prevHole() {
+  currentHole--;
+  updateHoleUI();
+}
+
+// Display the final scorecard
+function displayFinalScore() {
+  let totalScore = 0;
+  const scoreList = document.getElementById("scoreList");
+  scoreList.innerHTML = ''; // Clear any existing scores
+
+  // Calculate total score and populate score list
+  scores.forEach((score, index) => {
+    const listItem = document.createElement("li");
+    listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+    listItem.innerHTML = `Hole ${index + 1} <span class="badge badge-primary badge-pill">${score}</span>`;
+    scoreList.appendChild(listItem);
+    totalScore += score;
+  });
+
+  // Display total score
+  document.getElementById("totalScore").innerText = totalScore;
+
+  // Show the final scorecard and hide the score input interface
+  document.querySelector(".card.shadow.p-4").style.display = 'none';
+  document.getElementById("finalScoreCard").style.display = 'block';
+}
+
+// Initialize the UI
+document.addEventListener("DOMContentLoaded", updateHoleUI);
