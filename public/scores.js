@@ -101,3 +101,47 @@ function displayFinalScore() {
 
 // Initialize the UI
 document.addEventListener("DOMContentLoaded", updateHoleUI);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all Play a Round buttons
+    const playRoundButtons = document.querySelectorAll(".play-round-btn");
+  
+    playRoundButtons.forEach(button => {
+      button.addEventListener("click", (event) => {
+        // Get the course name from the button's data attribute
+        const courseName = event.target.getAttribute("data-course");
+  
+        // Redirect to play_round.html with the course name as a query parameter
+        window.location.href = `play_round.html?course=${encodeURIComponent(courseName)}`;
+      });
+    });
+  });
+  
+// Function to get query parameters from the URL
+function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+  
+  // Display the course name if present
+  document.addEventListener("DOMContentLoaded", () => {
+    const courseName = getQueryParameter("course");
+  
+    if (courseName) {
+      document.querySelector("h1").innerText = `Play a Round - ${courseName}`;
+  
+      // Fetch course data to populate details if needed
+      fetch('courses.json')
+        .then(response => response.json())
+        .then(courses => {
+          const course = courses.find(c => c.name === courseName);
+          if (course) {
+            // Use course data as needed, e.g., displaying course details
+            // Example: document.querySelector("#courseDetails").innerText = course.description;
+          }
+        })
+        .catch(error => console.error('Error fetching course data:', error));
+    }
+  });
+  

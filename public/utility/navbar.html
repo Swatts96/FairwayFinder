@@ -1,0 +1,31 @@
+<!-- navbar.html -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="play_round.html" onclick="playRandomCourse()">Play a Random Course!</a></li>
+        <li class="nav-item"><a class="nav-link" href="courselist.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+  
+      <!-- Login/Logout Button -->
+      <div class="login-logout-container text-center ml-auto">
+        <button id="loginLogoutBtn" class="btn custom-btn" onclick="handleLoginLogout()">Login</button>
+      </div>
+  
+      <!-- User Icon and Dropdown Menu -->
+      <div class="user-menu-container text-center">
+        <img src="../images/user.png" alt="User Icon" class="user-icon" onclick="toggleUserMenu()" />
+        <div id="userDropdownMenu" class="dropdown-menu">
+          <a href="scores.html" onclick="viewScores()">My Scores & Rounds</a>
+          <a href="friends.html" onclick="viewFriends()">Friends List</a>
+          <a href="favourites.html" onclick="viewFavorites()">Favorite Courses</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

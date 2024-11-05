@@ -26,3 +26,13 @@ window.addEventListener("click", function(event) {
         userMenu.classList.remove("show");
     }
 });
+
+  // JavaScript to load the navbar
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch('utility/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  });
+

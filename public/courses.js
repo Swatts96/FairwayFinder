@@ -10,6 +10,7 @@ fetch('courses.json')
     courseData = data;
     populateCourseDropdown('courseSelect');  // For scores.html
     populateMarkers(data);  // For index.html map
+    populateCourseList();   // For courselist.html
   })
   .catch(error => console.error('Error fetching courses data:', error));
 
@@ -61,6 +62,17 @@ function updateSelectedCourseInfo(course) {
 }
 
 
+// Handle Play a Round button click
+function playRound(courseName) {
+    window.location.href = `play_round.html?course=${encodeURIComponent(courseName)}`;
+  }
+  
+
+  // Handle Review Course button click (placeholder functionality)
+function reviewCourse(courseName) {
+    alert(`Reviewing course: ${courseName}`); // Replace with actual functionality
+  }
+
 // Function to show all courses
 function showAllCourses() {
     Object.values(markers).forEach(item => item.marker.addTo(map));
@@ -82,37 +94,40 @@ function show9HoleCourses() {
     });
 }
 
+
+// Search and highlight course on map based on dropdown input
 function searchCourseDropdown() {
     const input = document.getElementById("courseSearchInput").value.toLowerCase();
     const filteredCourses = courseData.filter(course => course.name.toLowerCase().includes(input));
     const dropdownMenu = document.getElementById("dropdownCourseList");
-
+  
     dropdownMenu.innerHTML = ""; // Clear the previous results
-
+  
     filteredCourses.forEach(course => {
-        const option = document.createElement("a");
-        option.className = "dropdown-item";
-        option.href = "#";
-        option.textContent = course.name;
-        option.addEventListener("click", () => {
-            document.getElementById("courseSearchInput").value = course.name;
-            dropdownMenu.innerHTML = "";
-            highlightCourse(course.name.toLowerCase());
-        });
-        dropdownMenu.appendChild(option);
+      const option = document.createElement("a");
+      option.className = "dropdown-item";
+      option.href = "#";
+      option.textContent = course.name;
+      option.addEventListener("click", () => {
+        document.getElementById("courseSearchInput").value = course.name;
+        dropdownMenu.innerHTML = "";
+        highlightCourse(course.name.toLowerCase());
+      });
+      dropdownMenu.appendChild(option);
     });
-
+  
     dropdownMenu.style.display = filteredCourses.length ? "block" : "none";
-}
-
-function highlightCourse(courseName) {
+  }
+  
+  // Highlight the selected course on the map
+  function highlightCourse(courseName) {
     const marker = markers[courseName.toLowerCase()];
     if (marker) {
-        map.flyTo(marker.marker.getLatLng(), 12, {
-            duration: 0.25
-        });
+      map.flyTo(marker.marker.getLatLng(), 12, {
+        duration: 0.25
+      });
     }
-}
+  }
 
 let coursesPerPage = 10;
 let currentPage = 1;
@@ -150,6 +165,16 @@ function populateCourseList() {
     });
 }
 
+
+function playRandomCourse() {
+    if (courseData.length === 0) return;
+  
+    // Select a random course from courseData
+    const randomCourse = courseData[Math.floor(Math.random() * courseData.length)].name;
+    playRound(randomCourse);  // Reuse the playRound function to navigate
+  }
+
+  
 function loadMoreCourses() {
     currentPage++;
     populateCourseList();
@@ -165,3 +190,17 @@ document.addEventListener("DOMContentLoaded", () => {
     populateCourseList();
     document.getElementById("loadMore").addEventListener("click", loadMoreCourses);
 });
+
+// Function to get query parameters from the URL
+function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  // Display the course name if present in the query parameters
+  document.addEventListener("DOMContentLoaded", () => {
+    const courseName = getQueryParameter("course");
+    if (courseName) {
+      document.querySelector("h1").innerText = `Play a Round - ${courseName}`;
+    }
+  });

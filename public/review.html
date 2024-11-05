@@ -6,53 +6,138 @@
   <title>Review Course</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Star Rating Styles */
+    .star-rating {
+      direction: rtl;
+      display: inline-flex;
+      font-size: 1.5rem;
+      justify-content: flex-end;
+    }
+    .star-rating input {
+      display: none;
+    }
+    .star-rating label {
+      color: #ccc;
+      cursor: pointer;
+    }
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: #f5c518;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Custom Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar">
-  <a class="navbar-brand" href="index.html">Fairway Finder</a>
-  <!-- Remainder of the navbar as in `index.html` -->
-</nav>
+<!-- Navbar dynamically loaded -->
+<div id="navbar"></div>
 
 <!-- Main Content -->
 <main class="container mt-4">
   <h2>Review Course</h2>
   <form id="reviewForm">
     <div class="form-group">
+      <label for="courseSelect">Select Course</label>
+      <select class="form-control" id="courseSelect">
+        <option value="">Select a course...</option>
+        <!-- Courses will be populated dynamically here -->
+      </select>
+    </div>
+
+    <div class="form-group">
       <label for="reviewText">Write your review</label>
       <textarea class="form-control" id="reviewText" rows="4"></textarea>
     </div>
+
+    <!-- Overall Rating -->
     <div class="form-group">
-      <label for="rating">Rating</label>
-      <select class="form-control" id="rating">
-        <option value="5">5 - Excellent</option>
-        <option value="4">4 - Very Good</option>
-        <option value="3">3 - Good</option>
-        <option value="2">2 - Fair</option>
-        <option value="1">1 - Poor</option>
-      </select>
+      <label>Overall Rating</label>
+      <div class="star-rating" id="overallRating">
+        <input type="radio" name="overallRating" id="overall5" value="5"><label for="overall5">&#9733;</label>
+        <input type="radio" name="overallRating" id="overall4" value="4"><label for="overall4">&#9733;</label>
+        <input type="radio" name="overallRating" id="overall3" value="3"><label for="overall3">&#9733;</label>
+        <input type="radio" name="overallRating" id="overall2" value="2"><label for="overall2">&#9733;</label>
+        <input type="radio" name="overallRating" id="overall1" value="1"><label for="overall1">&#9733;</label>
+      </div>
     </div>
+
+    <!-- Price Rating -->
+    <div class="form-group">
+      <label>Price Rating</label>
+      <div class="star-rating" id="priceRating">
+        <input type="radio" name="priceRating" id="price5" value="5"><label for="price5">&#9733;</label>
+        <input type="radio" name="priceRating" id="price4" value="4"><label for="price4">&#9733;</label>
+        <input type="radio" name="priceRating" id="price3" value="3"><label for="price3">&#9733;</label>
+        <input type="radio" name="priceRating" id="price2" value="2"><label for="price2">&#9733;</label>
+        <input type="radio" name="priceRating" id="price1" value="1"><label for="price1">&#9733;</label>
+      </div>
+    </div>
+
+    <!-- Difficulty Rating -->
+    <div class="form-group">
+      <label>Difficulty Rating</label>
+      <div class="star-rating" id="difficultyRating">
+        <input type="radio" name="difficultyRating" id="difficulty5" value="5"><label for="difficulty5">&#9733;</label>
+        <input type="radio" name="difficultyRating" id="difficulty4" value="4"><label for="difficulty4">&#9733;</label>
+        <input type="radio" name="difficultyRating" id="difficulty3" value="3"><label for="difficulty3">&#9733;</label>
+        <input type="radio" name="difficultyRating" id="difficulty2" value="2"><label for="difficulty2">&#9733;</label>
+        <input type="radio" name="difficultyRating" id="difficulty1" value="1"><label for="difficulty1">&#9733;</label>
+      </div>
+    </div>
+
     <button type="button" class="btn btn-primary" onclick="submitReview()">Submit Review</button>
+    <br>
+    <br>
   </form>
 </main>
 
-<!-- Footer Section -->
+<!-- Footer -->
 <footer class="custom-footer py-4">
-  <!-- Footer content as in `index.html` -->
+  <ul class="list-inline mb-2">
+    <li class="list-inline-item"><a href="#" class="footer-link">Terms of Use</a></li>
+    <li class="list-inline-item"><a href="#" class="footer-link">Contact Us</a></li>
+    <li class="list-inline-item"><a href="#" class="footer-link">FAQ</a></li>
+  </ul>
+  <p>&copy; 2024 Fairway Finder App.</p>
 </footer>
 
-<script>
-function submitReview() {
-  const reviewText = document.getElementById("reviewText").value;
-  const rating = document.getElementById("rating").value;
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="courses.js"></script>
+<script src="map.js"></script>
+<script src="scores.js"></script>
+<script src="favorites.js"></script>
+<script src="utils.js"></script>
 
-  // Save the review (for now, we’ll just alert it as a demo)
-  alert(`Review submitted:\nRating: ${rating}\nReview: ${reviewText}`);
-  
-  // Redirect back to courses list or main page after submission
-  window.location.href = "courselist.html";
-}
+<script>
+  // Populate course dropdown (assuming courses are in the 'courseData' array)
+  document.addEventListener("DOMContentLoaded", function () {
+    const courseSelect = document.getElementById("courseSelect");
+    courseData.forEach(course => {
+      const option = document.createElement("option");
+      option.value = course.name;
+      option.textContent = course.name;
+      courseSelect.appendChild(option);
+    });
+  });
+
+  function submitReview() {
+    const courseName = document.getElementById("courseSelect").value;
+    const reviewText = document.getElementById("reviewText").value;
+    const overallRating = document.querySelector('input[name="overallRating"]:checked')?.value || "No rating";
+    const priceRating = document.querySelector('input[name="priceRating"]:checked')?.value || "No rating";
+    const difficultyRating = document.querySelector('input[name="difficultyRating"]:checked')?.value || "No rating";
+
+    // Temporary alert for review submission
+    alert(`Review submitted:\nCourse: ${courseName}\nOverall Rating: ${overallRating}\nPrice Rating: ${priceRating}\nDifficulty Rating: ${difficultyRating}\nReview: ${reviewText}`);
+
+    // Redirect back to the course list
+    window.location.href = "courselist.html";
+  }
 </script>
+
 </body>
 </html>
