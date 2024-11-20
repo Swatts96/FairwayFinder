@@ -1,19 +1,17 @@
-import express from 'express';
-import path from 'path';
-
+require('dotenv').config(); // Load environment variables
+const mongoose = require('mongoose');
+const express = require('express');
 const app = express();
-const __dirname = path.resolve();
 
-// Serve static files from the "public" directory
-app.use(express.static('public'));
-
-// Root route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
 });
+
+app.listen(3000, () => console.log('Server is running on http://localhost:3000'));
