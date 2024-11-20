@@ -1,11 +1,23 @@
 let courseData = [];  // Global variable for storing course data
 
 // Fetch course data and populate dropdowns and markers
-fetch('/api/courses')
+fetch('http://localhost:3333/api/courses')
   .then((response) => response.json())
   .then((data) => {
+    if (!data || data.length === 0) {
+      console.error('No courses found');
+      return;
+    }
+
     console.log(data); // Use the data to populate the map or UI
-  });
+    courseData = data;
+    populateCourseDropdown("courseSelect"); // Example: Populate dropdown
+    populateMarkers(courseData); // Example: Populate markers on the map
+    populateCourseList(); // Display courses
+  })
+  .catch((error) => console.error('Error fetching courses:', error));
+
+
 
 // Populate any dropdown with course names
 function populateCourseDropdown(dropdownId) {

@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import courseRoutes from './routes/courses.js';
 import userRoutes from './routes/users.js';
-
+import cors from 'cors';
 dotenv.config(); // Initialize dotenv to load .env variables
 
 const app = express();
@@ -18,10 +18,7 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
@@ -37,6 +34,8 @@ const __dirname = path.dirname(__filename); // Derive the directory name
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
+
+app.use(cors()); // Enable CORS for all routes
 app.use('/api/courses', courseRoutes);
 app.use('/api/users', userRoutes);
 
