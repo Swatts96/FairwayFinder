@@ -1,13 +1,15 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
+// Define the User schema
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
   favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }],
 });
 
-// Hash password before saving
+// Pre-save middleware to hash the password
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   const salt = await bcrypt.genSalt(10);
@@ -15,4 +17,6 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-module.exports = mongoose.model('User', userSchema);
+// Export the model
+const User = mongoose.model('User', userSchema);
+export default User;
