@@ -9,13 +9,20 @@
         <li class="nav-item"><a class="nav-link" href="#" onclick="playRandomCourse()">Play a Random Course!</a></li>
         <li class="nav-item"><a class="nav-link" href="courselist.html">Courses</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
       </ul>
   
-      <!-- Login/Logout Button -->
-      <div class="login-logout-container text-center ml-auto">
-        <button id="loginLogoutBtn" class="btn custom-btn" onclick="handleLoginLogout()">Login</button>
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle user-icon" href="../images/user.png" role="button" id="userDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-circle"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownMenu">
+          <li><a class="dropdown-item" href="login.html" id="loginOption">Login</a></li>
+          <li><a class="dropdown-item" href="register.html" id="registerOption">Register</a></li>
+          <li><a class="dropdown-item d-none" href="#" id="logoutOption" onclick="logout()">Logout</a></li>
+        </ul>
       </div>
+      
   
       <!-- User Icon and Dropdown Menu -->
       <div class="user-menu-container text-center">

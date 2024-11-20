@@ -1,18 +1,11 @@
 let courseData = [];  // Global variable for storing course data
 
 // Fetch course data and populate dropdowns and markers
-fetch('courses.json')
-  .then(response => {
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    return response.json();
-  })
-  .then(data => {
-    courseData = data;
-    populateCourseDropdown('courseSelect');  // For scores.html
-    populateMarkers(data);  // For index.html map
-    populateCourseList();   // For courselist.html
-  })
-  .catch(error => console.error('Error fetching courses data:', error));
+fetch('/api/courses')
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data); // Use the data to populate the map or UI
+  });
 
 // Populate any dropdown with course names
 function populateCourseDropdown(dropdownId) {

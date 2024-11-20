@@ -36,3 +36,26 @@ window.addEventListener("click", function(event) {
       });
   });
 
+// Check if the user is logged in
+document.addEventListener('DOMContentLoaded', () => {
+  const token = localStorage.getItem('authToken');
+  const loginOption = document.getElementById('loginOption');
+  const registerOption = document.getElementById('registerOption');
+  const logoutOption = document.getElementById('logoutOption');
+
+  if (token) {
+    loginOption.classList.add('d-none');
+    registerOption.classList.add('d-none');
+    logoutOption.classList.remove('d-none');
+  } else {
+    loginOption.classList.remove('d-none');
+    registerOption.classList.remove('d-none');
+    logoutOption.classList.add('d-none');
+  }
+});
+
+// Logout function
+function logout() {
+  localStorage.removeItem('authToken');
+  location.reload();
+}
