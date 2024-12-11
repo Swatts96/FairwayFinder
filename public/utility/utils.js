@@ -34,7 +34,6 @@ function updateUserMenu() {
   const menuDivider = document.getElementById("menuDivider");
   const scoresOption = document.getElementById("scoresOption");
   const friendsOption = document.getElementById("friendsOption");
-  const favoritesOption = document.getElementById("favoritesOption");
 
   if (token) {
     // User is logged in
@@ -45,7 +44,6 @@ function updateUserMenu() {
     menuDivider.classList.remove("d-none");
     scoresOption.classList.remove("d-none");
     friendsOption.classList.remove("d-none");
-    favoritesOption.classList.remove("d-none");
   } else {
     // User is not logged in
     loginOption.classList.remove("d-none");
@@ -55,7 +53,6 @@ function updateUserMenu() {
     menuDivider.classList.add("d-none");
     scoresOption.classList.add("d-none");
     friendsOption.classList.add("d-none");
-    favoritesOption.classList.add("d-none");
   }
 }
 
