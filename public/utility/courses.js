@@ -1,22 +1,30 @@
 let courseData = [];  // Global variable for storing course data
 
-// Fetch course data and populate dropdowns and markers
-fetch('http://localhost:3333/api/courses')
-  .then((response) => response.json())
-  .then((data) => {
-    if (!data || data.length === 0) {
-      console.error('No courses found');
-      return;
-    }
 
-    console.log(data); // Use the data to populate the map or UI
-    courseData = data;
-    populateCourseDropdown("courseSelect"); // Example: Populate dropdown
-    populateMarkers(courseData); // Example: Populate markers on the map
-    populateCourseList(); // Display courses
-  })
-  .catch((error) => console.error('Error fetching courses:', error));
+let currentPage = 1; // Track the current page
+const coursesPerPage = 10; // Number of courses per page
 
+
+function clearMarkers() {
+  Object.values(markers).forEach(item => map.removeLayer(item.marker));
+  markers = {}; // Reset markers
+}
+
+function fetchCourses(page = 1) {
+  fetch(`http://localhost:3333/api/courses?page=${page}&limit=${coursesPerPage}`)
+    .then(response => response.json())
+    .then(data => {
+      const { courses, totalPages } = data;
+      courseData = courses; // Update global courseData array
+      populateMarkers(courseData); // Populate map markers
+      populateCourseList(); // Render the courses in the grid
+      updatePaginationButtons(page, totalPages); // Handle pagination UI
+    })
+    .catch(error => console.error('Error fetching courses:', error));
+}
+
+// Fetch the initial set of courses
+fetchCourses();
 
 
 // Populate any dropdown with course names
@@ -85,24 +93,23 @@ function playRound(courseName) {
 
 // Function to show all courses
 function showAllCourses() {
-    Object.values(markers).forEach(item => item.marker.addTo(map));
+  Object.values(markers).forEach(item => item.marker.addTo(map));
 }
 
-// Function to show only 18-hole courses
 function show18HoleCourses() {
-    Object.values(markers).forEach(item => {
-        map.removeLayer(item.marker);
-        if (item.holes === 18) item.marker.addTo(map);
-    });
+  Object.values(markers).forEach(item => {
+    map.removeLayer(item.marker);
+    if (item.holes === 18) item.marker.addTo(map);
+  });
 }
 
-// Function to show only 9-hole courses
 function show9HoleCourses() {
-    Object.values(markers).forEach(item => {
-        map.removeLayer(item.marker);
-        if (item.holes === 9) item.marker.addTo(map);
-    });
+  Object.values(markers).forEach(item => {
+    map.removeLayer(item.marker);
+    if (item.holes === 9) item.marker.addTo(map);
+  });
 }
+
 
 
 // Search and highlight course on map based on dropdown input
@@ -139,8 +146,6 @@ function searchCourseDropdown() {
     }
   }
 
-let coursesPerPage = 10;
-let currentPage = 1;
 
 function populateCourseList() {
     const courseGrid = document.getElementById("courseGrid");
@@ -177,28 +182,39 @@ function populateCourseList() {
 
 
 function playRandomCourse() {
-    if (courseData.length === 0) return;
-  
-    // Select a random course from courseData
-    const randomCourse = courseData[Math.floor(Math.random() * courseData.length)].name;
-    playRound(randomCourse);  // Reuse the playRound function to navigate
+  if (!courseData.length) {
+    console.error('No courses available');
+    return;
   }
+  const randomCourse = courseData[Math.floor(Math.random() * courseData.length)];
+  playRound(randomCourse.name); // Redirect to play round page
+}
+
+// Ensure playRandomCourse is attached to the relevant button
+document.getElementById('playRandom').addEventListener('click', playRandomCourse);
+
 
   
 function loadMoreCourses() {
-    currentPage++;
-    populateCourseList();
-
-    // Hide Load More button if all courses are displayed
-    if ((currentPage * coursesPerPage) >= courseData.length) {
-        document.getElementById("loadMore").style.display = 'none';
-    }
+  currentPage++;
+  fetchCourses(currentPage);
 }
 
-// Initialize course list and attach event to Load More button
-document.addEventListener("DOMContentLoaded", () => {
-    populateCourseList();
-    document.getElementById("loadMore").addEventListener("click", loadMoreCourses);
+function updatePaginationButtons(currentPage, totalPages) {
+  const loadMoreButton = document.getElementById('loadMore');
+  if (currentPage >= totalPages) {
+    loadMoreButton.style.display = 'none'; // Hide the button when all pages are loaded
+  } else {
+    loadMoreButton.style.display = 'block';
+  }
+}
+
+// Add event listener for the "Load More" button
+document.addEventListener('DOMContentLoaded', () => {
+  const loadMoreButton = document.getElementById('loadMore');
+  if (loadMoreButton) {
+    loadMoreButton.addEventListener('click', loadMoreCourses);
+  }
 });
 
 // Function to get query parameters from the URL

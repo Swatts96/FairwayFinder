@@ -15,22 +15,16 @@ const golfCourseIcon = L.icon({
 
 let markers = {}; // Store markers globally for filtering and search
 
-// Function to populate map markers
 function populateMarkers(golfCourses) {
   golfCourses.forEach(course => {
-    if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
+    if (course.coordinates?.latitude && course.coordinates?.longitude) {
       const marker = L.marker(
         [course.coordinates.latitude, course.coordinates.longitude],
         { icon: golfCourseIcon }
       );
 
-      // Store the marker for filtering
+      // Add marker to the global storage
       markers[course.name.toLowerCase()] = { marker: marker, holes: course.holes };
-
-      // Event listener to update selected course details when marker is clicked
-      marker.on('click', () => {
-        updateSelectedCourseInfo(course);
-      });
 
       // Tooltip with course name on hover
       marker.on('mouseover', () => {
@@ -40,11 +34,16 @@ function populateMarkers(golfCourses) {
           className: 'course-tooltip'
         }).setContent(course.name).setLatLng(marker.getLatLng()).addTo(map);
 
+        // Remove tooltip on mouseout
         marker.on('mouseout', () => map.removeLayer(tooltip));
       });
 
-      // Add the marker to the map
+      // Add event listener for clicks
+      marker.on('click', () => updateSelectedCourseInfo(course));
+
+      // Add marker to the map
       marker.addTo(map);
     }
   });
 }
+
