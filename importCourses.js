@@ -1,4 +1,3 @@
-import { db } from './public/utility/firebase.js'; // Adjust path as necessary
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -41,33 +40,6 @@ function sanitizeCourse(course) {
   
     return sanitized;
   }
-  
-  
-  const importCourses = async () => {
-    try {
-      const coursesCollection = 'courses';
-  
-      for (const course of coursesData) {
-        try {
-          const sanitizedCourse = sanitizeCourse(course);
-  
-          // Use a custom ID, e.g., course name
-          const docId = sanitizedCourse.name.replace(/\s+/g, '-').toLowerCase();
-  
-          await setDoc(doc(db, coursesCollection, docId), sanitizedCourse);
-          console.log(`Added course with ID: ${docId}`);
-        } catch (error) {
-          console.error(
-            `Error importing course: ${JSON.stringify(course, null, 2)}\nSanitized Course: ${JSON.stringify(sanitizedCourse, null, 2)}\nError: ${error.message}`
-          );
-        }
-      }
-  
-      console.log('All courses imported successfully!');
-    } catch (error) {
-      console.error('Critical error during import process:', error.message);
-    }
-  };
   
   
 

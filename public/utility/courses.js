@@ -1,6 +1,3 @@
-let courseData = [];  // Global variable for storing course data
-
-
 let currentPage = 1; // Track the current page
 const coursesPerPage = 10; // Number of courses per page
 
@@ -192,7 +189,6 @@ function playRandomCourse() {
 
 // Ensure playRandomCourse is attached to the relevant button
 document.getElementById('playRandom').addEventListener('click', playRandomCourse);
-
 
   
 function loadMoreCourses() {

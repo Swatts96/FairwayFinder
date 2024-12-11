@@ -1,22 +1,16 @@
 import express from 'express';
-import Course from '../models/Course.js'; // Make sure the Course model is properly imported
+import Course from '../models/Course.js'; // Ensure this is the correct path
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
-    const skip = (page - 1) * limit;
-
-    const courses = await Course.find().skip(skip).limit(limit);
-    const totalCourses = await Course.countDocuments();
-    res.json({
-      courses,
-      totalPages: Math.ceil(totalCourses / limit),
-      currentPage: page,
-    });
+    console.log('Fetching courses...');
+    const courses = await Course.find(); // Query the `courses` collection
+    console.log('Courses retrieved:', courses);
+    res.json(courses);
   } catch (error) {
+    console.error('Error fetching courses:', error);
     res.status(500).send('Error fetching courses');
   }
 });

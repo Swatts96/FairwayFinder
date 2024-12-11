@@ -23,27 +23,23 @@ function populateMarkers(golfCourses) {
         { icon: golfCourseIcon }
       );
 
-      // Add marker to the global storage
+      // Add marker to global storage
       markers[course.name.toLowerCase()] = { marker: marker, holes: course.holes };
 
-      // Tooltip with course name on hover
+      // Add event listeners
+      marker.on('click', () => updateSelectedCourseInfo(course));
       marker.on('mouseover', () => {
-        const tooltip = L.tooltip({
-          permanent: false,
-          direction: 'top',
-          className: 'course-tooltip'
-        }).setContent(course.name).setLatLng(marker.getLatLng()).addTo(map);
-
-        // Remove tooltip on mouseout
+        const tooltip = L.tooltip()
+          .setContent(course.name)
+          .setLatLng(marker.getLatLng())
+          .addTo(map);
         marker.on('mouseout', () => map.removeLayer(tooltip));
       });
 
-      // Add event listener for clicks
-      marker.on('click', () => updateSelectedCourseInfo(course));
-
-      // Add marker to the map
+      // Add marker to map
       marker.addTo(map);
     }
   });
 }
+
 
