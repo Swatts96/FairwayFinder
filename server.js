@@ -19,6 +19,7 @@ const MONGO_URI = process.env.MONGO_URI;
 // Middleware
 app.use(cors({ origin: '*' })); // Debugging only; restrict in production
 app.use(express.json()); // Built-in middleware for JSON parsing
+app.use('/api', userRoutes);
 
 // Connect to MongoDB
 mongoose

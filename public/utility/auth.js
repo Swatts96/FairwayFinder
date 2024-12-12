@@ -5,27 +5,31 @@ export async function handleLogin(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-  
+
+    console.log('Attempting login with:', { email, password });
+
     try {
-      const response = await fetch('http://localhost:3333/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
-  
-      if (response.ok) {
-        const data = await response.json();
-        sessionStorage.setItem('user', JSON.stringify(data));
-        alert(`Welcome back, ${data.email}`);
-        window.location.href = 'index.html';
-      } else {
-        const error = await response.text();
-        alert(`Login failed: ${error}`);
-      }
+        const response = await fetch('http://localhost:3333/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            sessionStorage.setItem('user', JSON.stringify(data));
+            alert(`Welcome back, ${data.email}`);
+            window.location.href = 'index.html';
+        } else {
+            const error = await response.text();
+            console.log('Login failed:', error);
+            alert(`Login failed: ${error}`);
+        }
     } catch (error) {
-      console.error('Error logging in:', error);
+        console.error('Error logging in:', error);
     }
-  }
+}
+
   
 
 export async function handleRegister(event) {

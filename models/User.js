@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema(
 
 // Pre-save middleware to hash the password
 userSchema.pre('save', async function (next) {
-  if (!this.isModified('password_hash')) return next(); // Avoid rehashing if not modified
+  if (!this.isModified('password_hash')) return next(); // Avoid rehashing
   const salt = await bcrypt.genSalt(10);
   this.password_hash = await bcrypt.hash(this.password_hash, salt);
   next();
@@ -27,6 +27,8 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.comparePassword = async function (password) {
   return bcrypt.compare(password, this.password_hash);
 };
+
+
 
 // Export the model
 const User = mongoose.model('User', userSchema);
