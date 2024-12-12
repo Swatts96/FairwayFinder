@@ -1,13 +1,14 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import User from '../models/User.js'; // Assuming your User schema is already defined
+import User from '../models/User.js'; 
+
 const router = express.Router();
 
-// Secret key for JWT
-const JWT_SECRET = 'your_secret_key'; // Store this securely in a .env file
+// Use your environment variable for JWT_SECRET
+const JWT_SECRET = process.env.JWT_SECRET;
 
-// User registration
+// User Registration
 router.post('/register', async (req, res) => {
   try {
     const { firstName, lastName, username, email, password } = req.body;
@@ -28,7 +29,7 @@ router.post('/register', async (req, res) => {
       lastName,
       username,
       email,
-      password_hash: hashedPassword, // Correctly assign the hashed password
+      password_hash: hashedPassword,
     });
 
     await user.save();
@@ -37,9 +38,6 @@ router.post('/register', async (req, res) => {
     res.status(400).send(error.message);
   }
 });
-
-
-
 
 // User Login
 router.post('/login', async (req, res) => {
@@ -53,8 +51,11 @@ router.post('/login', async (req, res) => {
       return res.status(404).send('User not found');
     }
 
-    console.log(`Found user: ${user}`);
-    const isMatch = await user.comparePassword(password);
+    console.log(`Found user:`, user);
+
+    // Compare the plain password with the hashed password
+    const isMatch = await bcrypt.compare(password, user.password_hash);
+    console.log(`Password comparison result: ${isMatch}`);
     if (!isMatch) {
       console.log('Invalid password');
       return res.status(401).send('Invalid credentials');
@@ -69,7 +70,7 @@ router.post('/login', async (req, res) => {
 });
 
 
-
+// Test Hash (for debugging purposes)
 router.post('/test-hash', async (req, res) => {
   try {
     const { plainPassword } = req.body;
@@ -80,9 +81,5 @@ router.post('/test-hash', async (req, res) => {
     res.status(500).send(error.message);
   }
 });
-
-
-
-
 
 export default router;
