@@ -45,35 +45,34 @@ let currentHole = 1;
 const totalHoles = 18;
 let scores = Array(totalHoles).fill(null); // Array to hold scores for each hole
 
-// Update the UI for the current hole
-function updateHoleUI() {
-document.getElementById("holeTitle").innerText = `Hole ${currentHole}`;
-document.getElementById("holeScore").value = scores[currentHole - 1] || ''; // Show score if already entered
+export function updateHoleUI() {
+  document.getElementById("holeTitle").innerText = `Hole ${currentHole}`;
+  document.getElementById("holeScore").value = scores[currentHole - 1] || ''; // Show score if already entered
 
-// Enable/Disable navigation buttons
-document.getElementById("prevHole").disabled = currentHole === 1;
-document.getElementById("nextHole").innerText = currentHole === totalHoles ? 'Finish Round' : 'Next Hole';
+  // Enable/Disable navigation buttons
+  document.getElementById("prevHole").disabled = currentHole === 1;
+  document.getElementById("nextHole").innerText = currentHole === totalHoles ? 'Finish Round' : 'Next Hole';
 }
+
+
 
 // Move to the next hole
-function nextHole() {
-// Save the current score
-const scoreInput = document.getElementById("holeScore").value;
-scores[currentHole - 1] = scoreInput ? parseInt(scoreInput) : 0;
+export function nextHole() {
+  const scoreInput = document.getElementById("holeScore").value;
+  scores[currentHole - 1] = scoreInput ? parseInt(scoreInput) : 0;
 
-// If this is the last hole, show the final scorecard
-if (currentHole === totalHoles) {
-  displayFinalScore();
-} else {
-  currentHole++;
-  updateHoleUI();
-}
+  if (currentHole === totalHoles) {
+      displayFinalScore();
+  } else {
+      currentHole++;
+      updateHoleUI();
+  }
 }
 
 // Move to the previous hole
-function prevHole() {
-currentHole--;
-updateHoleUI();
+export function prevHole() {
+  currentHole--;
+  updateHoleUI();
 }
 
 // Display the final scorecard
@@ -144,3 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(error => console.error('Error fetching course data:', error));
   }
 });
+
+export { displayFinalScore };
+

@@ -9,7 +9,6 @@ initializeMap();
 fetch('http://localhost:3333/api/courses')
   .then((response) => response.json())
   .then((data) => {
-    console.log('Fetched data:', data); // Debug log
     courseData = data; // Populate global variable
     populateCourseDropdown("courseSelect");
     populateMarkers(courseData);
@@ -147,8 +146,16 @@ function highlightCourse(courseName) {
 window.highlightCourse = highlightCourse;
 
 
+export function playRound(courseName) {
+  // Redirect the user to the play_round.html page with the selected course as a query parameter
+  window.location.href = `play_round.html?course=${encodeURIComponent(courseName)}`;
+}
 
-function playRandomCourse() {
+// Attach to the global window object for dynamic events
+window.playRound = playRound;
+
+
+export function playRandomCourse() {
     if (courseData.length === 0) return;
   
     // Select a random course from courseData
@@ -156,6 +163,8 @@ function playRandomCourse() {
     playRound(randomCourse);  // Reuse the playRound function to navigate
   }
 
+  // Attach to the global window object for dynamic events
+  window.playRandomCourse = playRandomCourse;
   
 
 // Function to get query parameters from the URL
