@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fairway Finder</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script type="module" src="./utility/courses.js"></script>
+        <script type="module" src="./utility/utils.js"></script>
+        <script type="module" src="./utility/auth.js"></script>
+      </head>
 <body>
+
+      <!-- Dynamic nav-->
+<div id="navbar"></div>
+
+
   <div class="container my-5">
     <h1 class="text-center">Login</h1>
     <form id="loginForm">
@@ -22,9 +34,22 @@
     </form>
   </div>
 
+  <footer class="custom-footer text-center py-4">
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+      <li class="list-inline-item"><a href="#">FAQ</a></li>
+    </ul>
+    <p>&copy; 2024 Fairway Finder. Made by Sam Watts for INFT4000.</p>
+  </footer>
+
   <script type="module">
     import { handleLogin } from './utility/auth.js';
     document.getElementById('loginForm').addEventListener('submit', handleLogin);
   </script>
+  <script type="module">
+    import { loadNavbar } from './utility/loadNavbar.js';
+    loadNavbar();
+  </script>
+
 </body>
 </html>
