@@ -145,27 +145,25 @@ function highlightCourse(courseName) {
 // Attach highlightCourse to the global window object if needed
 window.highlightCourse = highlightCourse;
 
-
-export function playRound(courseName) {
-  // Redirect the user to the play_round.html page with the selected course as a query parameter
-  window.location.href = `play_round.html?course=${encodeURIComponent(courseName)}`;
-}
-
 // Attach to the global window object for dynamic events
 window.playRound = playRound;
 
 
 export function playRandomCourse() {
-    if (courseData.length === 0) return;
-  
-    // Select a random course from courseData
-    const randomCourse = courseData[Math.floor(Math.random() * courseData.length)].name;
-    playRound(randomCourse);  // Reuse the playRound function to navigate
-  }
+  if (courseData.length === 0) return;
 
-  // Attach to the global window object for dynamic events
-  window.playRandomCourse = playRandomCourse;
-  
+  // Select a random course from courseData
+  const randomCourse = courseData[Math.floor(Math.random() * courseData.length)].name;
+  playRound(randomCourse); // Reuse the playRound function to navigate
+}
+
+export function playRound(courseName) {
+  window.location.href = `play_round.html?course=${encodeURIComponent(courseName)}`;
+}
+
+// Attach these to the global window object
+window.playRandomCourse = playRandomCourse;
+window.playRound = playRound;
 
 // Function to get query parameters from the URL
 function getQueryParameter(name) {

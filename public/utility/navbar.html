@@ -22,16 +22,26 @@
         <li><a class="dropdown-item d-none" href="#" id="logoutOption" onclick="logout()">Logout</a></li>
       </ul>
     </div>
-    
 
     <!-- User Icon and Dropdown Menu -->
     <div class="user-menu-container text-center">
       <img src="../images/user.png" alt="User Icon" class="user-icon" onclick="toggleUserMenu()" />
       <div id="userDropdownMenu" class="dropdown-menu">
         <a href="scores.html" onclick="viewScores()">My Scores & Rounds</a>
-        <a href="friends.html" onclick="viewFriends()">Friends List</a>
         <a href="favourites.html" onclick="viewFavorites()">Favorite Courses</a>
       </div>
     </div>
   </div>
 </nav>
+
+<script type="module">
+  import { playRandomCourse } from './utility/courses.js';
+
+  // Expose the function globally for the navigation
+  window.playRandomCourse = playRandomCourse;
+
+  import { loadNavbar } from './utility/loadNavbar.js';
+  loadNavbar();
+</script>
+
+
