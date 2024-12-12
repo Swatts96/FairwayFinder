@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script type="module" src="./utility/courses.js"></script>
+  <script type="module" src="./utility/map.js"></script>
+  <script type="module" src="./utility/utils.js"></script>
 </head>
 <body>
 
@@ -16,7 +19,7 @@
 
 <main class="container mt-4">
   <div class="jumbotron text-center py-4">
-    <img src="../images/FairwayFinderLogo.png" alt="Fairway Finder Logo" class="mb-3">
+    <img src="images/FairwayFinderLogo.png" alt="Fairway Finder Logo" class="mb-3">
     <div>
       <button onclick="showAllCourses()" class="btn btn-primary">All Courses</button>
       <button onclick="show18HoleCourses()" class="btn btn-primary">18-Hole Courses</button>
@@ -41,10 +44,6 @@
   </ul>
   <p>&copy; 2024 Fairway Finder. Made by Sam Watt for INFT4000.</p>
 </footer>
-<script type="module" src="/public/utility/courses.js"></script>
-<script type="module" src="/public/utility/map.js"></script>
-<script type="module" src="/public/utility/scores.js"></script>
-<script type="module" src="/public/utility/utils.js"></script>
 
 </body>
 </html>

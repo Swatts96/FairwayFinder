@@ -1,28 +1,16 @@
-let currentPage = 1; // Track the current page
-const coursesPerPage = 10; // Number of courses per page
+let courseData = [];  // Global variable for storing course data
+import { populateMarkers } from './map.js';
 
-
-function clearMarkers() {
-  Object.values(markers).forEach(item => map.removeLayer(item.marker));
-  markers = {}; // Reset markers
-}
-
-function fetchCourses(page = 1) {
-  fetch(`http://localhost:3333/api/courses?page=${page}&limit=${coursesPerPage}`)
-    .then(response => response.json())
-    .then(data => {
-      const { courses, totalPages } = data;
-      courseData = courses; // Update global courseData array
-      populateMarkers(courseData); // Populate map markers
-      populateCourseList(); // Render the courses in the grid
-      updatePaginationButtons(page, totalPages); // Handle pagination UI
-    })
-    .catch(error => console.error('Error fetching courses:', error));
-}
-
-// Fetch the initial set of courses
-fetchCourses();
-
+// Fetch course data and populate dropdowns and markers
+fetch('http://localhost:3333/api/courses')
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Fetched data:', data); // Debug log
+    courseData = data; // Populate global variable
+    populateCourseDropdown("courseSelect");
+    populateMarkers(courseData);
+  })
+  .catch((error) => console.error('Error fetching courses:', error));
 
 // Populate any dropdown with course names
 function populateCourseDropdown(dropdownId) {
@@ -90,23 +78,24 @@ function playRound(courseName) {
 
 // Function to show all courses
 function showAllCourses() {
-  Object.values(markers).forEach(item => item.marker.addTo(map));
+    Object.values(markers).forEach(item => item.marker.addTo(map));
 }
 
+// Function to show only 18-hole courses
 function show18HoleCourses() {
-  Object.values(markers).forEach(item => {
-    map.removeLayer(item.marker);
-    if (item.holes === 18) item.marker.addTo(map);
-  });
+    Object.values(markers).forEach(item => {
+        map.removeLayer(item.marker);
+        if (item.holes === 18) item.marker.addTo(map);
+    });
 }
 
+// Function to show only 9-hole courses
 function show9HoleCourses() {
-  Object.values(markers).forEach(item => {
-    map.removeLayer(item.marker);
-    if (item.holes === 9) item.marker.addTo(map);
-  });
+    Object.values(markers).forEach(item => {
+        map.removeLayer(item.marker);
+        if (item.holes === 9) item.marker.addTo(map);
+    });
 }
-
 
 
 // Search and highlight course on map based on dropdown input
@@ -144,74 +133,15 @@ function searchCourseDropdown() {
   }
 
 
-function populateCourseList() {
-    const courseGrid = document.getElementById("courseGrid");
-    if (!courseGrid) return;
-
-    const startIndex = (currentPage - 1) * coursesPerPage;
-    const endIndex = startIndex + coursesPerPage;
-    const coursesToDisplay = courseData.slice(startIndex, endIndex);
-
-    coursesToDisplay.forEach(course => {
-        const courseCard = document.createElement("div");
-        courseCard.className = "col-md-6 mb-4";
-
-        courseCard.innerHTML = `
-            <div class="card h-100 shadow">
-                <img src="/images/${course.name.toLowerCase().replace(/ /g, '-')}.jpg" 
-                     class="card-img-top course-image" 
-                     alt="${course.name}" 
-                     onerror="this.style.display='none'">
-                <div class="card-body">
-                    <h5 class="card-title">${course.name}</h5>
-                    <p class="card-text">${course.description || 'No description available.'}</p>
-                    <p><strong>Location:</strong> ${course.location}</p>
-                    <div class="d-flex justify-content-between">
-                        <button class="btn btn-primary" onclick="playRound('${course.name}')">Play a Round</button>
-                        <button class="btn btn-secondary" onclick="reviewCourse('${course.name}')">Review Course</button>
-                    </div>
-                </div>
-            </div>
-        `;
-        courseGrid.appendChild(courseCard);
-    });
-}
-
-
 function playRandomCourse() {
-  if (!courseData.length) {
-    console.error('No courses available');
-    return;
+    if (courseData.length === 0) return;
+  
+    // Select a random course from courseData
+    const randomCourse = courseData[Math.floor(Math.random() * courseData.length)].name;
+    playRound(randomCourse);  // Reuse the playRound function to navigate
   }
-  const randomCourse = courseData[Math.floor(Math.random() * courseData.length)];
-  playRound(randomCourse.name); // Redirect to play round page
-}
-
-// Ensure playRandomCourse is attached to the relevant button
-document.getElementById('playRandom').addEventListener('click', playRandomCourse);
 
   
-function loadMoreCourses() {
-  currentPage++;
-  fetchCourses(currentPage);
-}
-
-function updatePaginationButtons(currentPage, totalPages) {
-  const loadMoreButton = document.getElementById('loadMore');
-  if (currentPage >= totalPages) {
-    loadMoreButton.style.display = 'none'; // Hide the button when all pages are loaded
-  } else {
-    loadMoreButton.style.display = 'block';
-  }
-}
-
-// Add event listener for the "Load More" button
-document.addEventListener('DOMContentLoaded', () => {
-  const loadMoreButton = document.getElementById('loadMore');
-  if (loadMoreButton) {
-    loadMoreButton.addEventListener('click', loadMoreCourses);
-  }
-});
 
 // Function to get query parameters from the URL
 function getQueryParameter(name) {
