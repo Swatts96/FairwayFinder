@@ -100,6 +100,10 @@ body {
 
 /* Hero section */
 
+
+.jumbotron{
+  background-color: rgba(240, 224, 198, 0.8); /* Light background behind text */
+}
 .aboutHero {
   position: relative;
   height: 300px; /* Adjust height as needed */

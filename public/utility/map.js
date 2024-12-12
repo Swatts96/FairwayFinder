@@ -1,58 +1,57 @@
-// Initialize the map centered on Nova Scotia
-let map = L.map('map').setView([44.681986, -63.744311], 8);
+// Initialize the map
+export let map;
+export let markers = {};
 
-// Load and display map tiles from OpenStreetMap
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
 
 const golfCourseIcon = L.icon({
-  iconUrl: '../icons/greenIcon.png',
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32]
+  iconUrl: './icons/greenIcon.png', // Ensure the path is correct relative to your public folder
+  iconSize: [32, 32], // Size of the icon
+  iconAnchor: [16, 32], // Point of the icon that will correspond to marker's location
+  popupAnchor: [0, -32] // Point where the popup should open relative to the iconAnchor
 });
 
-let markers = {}; // Store markers globally for filtering and search
+export function initializeMap() {
+  if (!map) {
+    map = L.map('map').setView([44.681986, -63.744311], 8);
 
-// Function to populate map markers
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+    }).addTo(map);
+  }
+  console.log('Map initialized:', map);
+}
+
+
+
 export function populateMarkers(courses) {
-  initializeMap(); // Ensure the map is initialized
-
   courses.forEach((course) => {
-    if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
-      const marker = L.marker([course.coordinates.latitude, course.coordinates.longitude])
-        .addTo(map)
-        .bindPopup(`
-          <b>${course.name}</b><br>
-          ${course.location}<br>
-          Holes: ${course.holes || 'N/A'}<br>
-          Par: ${course.par || 'N/A'}<br>
-          <a href="${course.website}" target="_blank">Visit Website</a>
-        `);
+      if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
+          // Use the golfCourseIcon for the marker
+          const marker = L.marker(
+              [course.coordinates.latitude, course.coordinates.longitude],
+              { icon: golfCourseIcon } // Assign the custom icon here
+          );
 
-      markers[course.name.toLowerCase()] = marker;
+          marker
+              .addTo(map)
+              .bindPopup(`
+                  <b>${course.name}</b><br>
+                  ${course.location}<br>
+                  Holes: ${course.holes || 'N/A'}<br>
+                  Par: ${course.par || 'N/A'}<br>
+                  <a href="${course.website}" target="_blank">Visit Website</a>
+              `);
 
-      // Event listener to update selected course details when marker is clicked
-      marker.on('click', () => {
-        updateSelectedCourseInfo(course);
-      });
+          // Call updateSelectedCourseInfo on marker click
+          marker.on("click", () => {
+              updateSelectedCourseInfo(course);
+          });
 
-      // Tooltip with course name on hover
-      marker.on('mouseover', () => {
-        const tooltip = L.tooltip({
-          permanent: false,
-          direction: 'top',
-          className: 'course-tooltip'
-        }).setContent(course.name).setLatLng(marker.getLatLng()).addTo(map);
-
-        marker.on('mouseout', () => map.removeLayer(tooltip));
-      });
-
-      // Add the marker to the map
-      marker.addTo(map);
-    }
+          markers[course.name.toLowerCase()] = marker;
+      }
   });
 }
-// Export markers if needed for other operations
-export { markers, map };
+
+
+
+export { golfCourseIcon }; // Export the icon for reuse

@@ -10,8 +10,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script type="module" src="./utility/courses.js"></script>
-  <script type="module" src="./utility/map.js"></script>
   <script type="module" src="./utility/utils.js"></script>
+  
 </head>
 <body>
 
@@ -21,10 +21,11 @@
   <div class="jumbotron text-center py-4">
     <img src="images/FairwayFinderLogo.png" alt="Fairway Finder Logo" class="mb-3">
     <div>
-      <button onclick="showAllCourses()" class="btn btn-primary">All Courses</button>
-      <button onclick="show18HoleCourses()" class="btn btn-primary">18-Hole Courses</button>
-      <button onclick="show9HoleCourses()" class="btn btn-primary">9-Hole Courses</button>
+      <button id="showAllCoursesBtn" class="btn btn-primary">All Courses</button>
+      <button id="show18HoleCoursesBtn" class="btn btn-primary">18-Hole Courses</button>
+      <button id="show9HoleCoursesBtn" class="btn btn-primary">9-Hole Courses</button>
     </div>
+    
     <div class="input-group mt-3">
       <input type="text" id="courseSearchInput" class="form-control" placeholder="Search for a golf course..." oninput="searchCourseDropdown()" />
       <div id="dropdownCourseList" class="dropdown-menu"></div>
@@ -45,5 +46,54 @@
   <p>&copy; 2024 Fairway Finder. Made by Sam Watt for INFT4000.</p>
 </footer>
 
+
+
+<script>
+
+let markers = {}; // Store markers globally for filtering and search
+
+// Function to populate map markers
+function populateMarkers(courses) {
+
+  courses.forEach((course) => {
+    if (course.coordinates && course.coordinates.latitude && course.coordinates.longitude) {
+      const marker = L.marker([course.coordinates.latitude, course.coordinates.longitude])
+        .addTo(map)
+        .bindPopup(`
+          <b>${course.name}</b><br>
+          ${course.location}<br>
+          Holes: ${course.holes || 'N/A'}<br>
+          Par: ${course.par || 'N/A'}<br>
+          <a href="${course.website}" target="_blank">Visit Website</a>
+        `);
+
+      markers[course.name.toLowerCase()] = marker;
+
+      // Event listener to update selected course details when marker is clicked
+      marker.on('click', () => {
+        updateSelectedCourseInfo(course);
+      });
+
+      // Tooltip with course name on hover
+      marker.on('mouseover', () => {
+        const tooltip = L.tooltip({
+          permanent: false,
+          direction: 'top',
+          className: 'course-tooltip'
+        }).setContent(course.name).setLatLng(marker.getLatLng()).addTo(map);
+
+        marker.on('mouseout', () => map.removeLayer(tooltip));
+      });
+
+      // Add the marker to the map
+      marker.addTo(map);
+    }
+  });
+
+
+  
+}
+
+</script>
 </body>
 </html>
