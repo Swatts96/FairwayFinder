@@ -59,12 +59,16 @@ export async function handleRegister(event) {
   }
   
 
-export function logout() {
-  sessionStorage.removeItem('user');
-  alert('Logged out successfully.');
-  window.location.href = 'index.html';
-}
-
-export function getLoggedInUser() {
-  return JSON.parse(sessionStorage.getItem('user'));
-}
+  export function getLoggedInUser() {
+    const user = sessionStorage.getItem('user');
+    console.log('Retrieved user from sessionStorage:', user); // Debugging
+    return user ? JSON.parse(user) : null;
+  }
+  
+  
+  export function logout() {
+    sessionStorage.removeItem('user'); // Clear user data
+    alert('Logged out successfully.');
+    window.location.href = 'index.html'; // Redirect to home
+  }
+  

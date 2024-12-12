@@ -6,6 +6,5 @@ mongoose.connect('mongodb://localhost:27018/app', {
   useUnifiedTopology: true,
 }).then(async () => {
   const courses = await Course.find();
-  console.log(courses); // Check fetched courses
   mongoose.connection.close();
 }).catch(err => console.error(err));

@@ -1,4 +1,3 @@
-<!-- navbar.html -->
 <nav class="navbar navbar-expand-lg custom-navbar">
   <a class="navbar-brand" href="index.html">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,45 +8,15 @@
       <li class="nav-item"><a class="nav-link" href="#" onclick="playRandomCourse()">Play a Random Course!</a></li>
       <li class="nav-item"><a class="nav-link" href="courselist.html">Courses</a></li>
       <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-      <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
     </ul>
-
-    <div class="dropdown">
-      <a class="nav-link dropdown-toggle user-icon" href="../images/user.png" role="button" id="userDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="bi bi-person-circle"></i>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdownMenu">
-        <li><a class="dropdown-item" href="login.html" id="loginOption">Login</a></li>
-        <li><a class="dropdown-item" href="register.html" id="registerOption">Register</a></li>
-        <li><a class="dropdown-item d-none" href="#" id="logoutOption" onclick="logout()">Logout</a></li>
-      </ul>
-    </div>
-
-    <!-- User Icon and Dropdown Menu -->
-    <div class="user-menu-container text-center">
-      <img src="../images/user.png" alt="User Icon" class="user-icon" onclick="toggleUserMenu()" />
-      <div id="userDropdownMenu" class="dropdown-menu">
-        <a href="scores.html" onclick="viewScores()">My Scores & Rounds</a>
-        <a href="favourites.html" onclick="viewFavorites()">Favorite Courses</a>
-      </div>
-    </div>
+    <!-- User section -->
+    <ul class="navbar-nav ml-auto" id="userNav">
+      <!-- Placeholder for dynamic user info -->
+    </ul>
   </div>
 </nav>
 
 <script type="module">
-  import { playRandomCourse } from './utility/courses.js';
-
-  // Expose the function globally for the navigation
-  window.playRandomCourse = playRandomCourse;
-
-  import { loadNavbar } from './utility/loadNavbar.js';
-  loadNavbar();
+  import { initializeUserNav } from './utility/shared.js';
+  initializeUserNav();
 </script>
-
-<script type="module">
-  import { initializeUserDropdown } from './utility/shared.js';
-  initializeUserDropdown();
-</script>
-
-
-

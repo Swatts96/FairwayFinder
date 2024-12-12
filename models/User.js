@@ -6,21 +6,23 @@ const userSchema = new mongoose.Schema(
   {
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    username: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     password_hash: { type: String, required: true }, // Renamed from "password" for clarity
-    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }], // Optional
+    // favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }], // Optional
   },
   { timestamps: true }
 );
 
 // Pre-save middleware to hash the password
 userSchema.pre('save', async function (next) {
-  if (!this.isModified('password_hash')) return next(); // Avoid rehashing
+  if (!this.isModified('password_hash')) return next(); // Skip if not modified
+  
   const salt = await bcrypt.genSalt(10);
-  this.password_hash = await bcrypt.hash(this.password_hash, salt);
+  this.password_hash = await bcrypt.hash(this.password_hash, salt); // Hash the plain password
   next();
 });
+
+
 
 
 
